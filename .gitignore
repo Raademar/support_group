@@ -17,5 +17,6 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 /nextjs/node_modules
+/nextjs/next.config.js
 /nextjs/.next
 **/.next
