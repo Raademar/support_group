@@ -9,7 +9,7 @@ export default class extends Component {
 		const slug = context.query.slug
 
 		const response = await axios.get(
-			`http://wordpress_3.test/wp-json/wp/v2/branches?slug=${slug}`
+			`http://supportgroup.test/wp-json/wp/v2/branches?slug=${slug}`
 		)
 
 		return {

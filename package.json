@@ -1,11 +1,11 @@
 {
-  "name": "sgn",
-  "version": "1.0.0",
-  "description": "A project at YRGO for SGN",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Mattias Rådemar & Erik Arvidsson",
-  "license": "MIT"
+	"name": "sgn",
+	"version": "1.0.0",
+	"description": "A project at YRGO for SGN",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Mattias Rådemar & Erik Arvidsson",
+	"license": "MIT"
 }
