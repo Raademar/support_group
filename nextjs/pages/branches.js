@@ -8,7 +8,7 @@ export default class extends Component {
 	// Resolve promise and get initial props
 	static async getInitialProps() {
 		// Make request for props
-		const response = await axios.get('http://wordpress_3.test/wp-json/wp/v2/branches')
+		const response = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`)
 
 		// Return the data
 

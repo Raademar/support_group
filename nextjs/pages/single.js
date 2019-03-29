@@ -10,7 +10,7 @@ export default class extends Component {
 		console.log(`***** ${slug} ******`)
 
 		const response = await axios.get(
-			`http://wordpress_3.test/wp-json/wp/v2/branches?slug=${slug}`
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches?slug=${slug}`
 		)
 
 		return {
