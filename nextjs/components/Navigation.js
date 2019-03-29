@@ -8,8 +8,8 @@ export default () => (
 			</Link>
 		</li>
 		<li>
-			<Link href="/posts">
-				<a href="/posts">Posts</a>
+			<Link href="/branches">
+				<a href="/branches">Posts</a>
 			</Link>
 		</li>
 	</ul>
