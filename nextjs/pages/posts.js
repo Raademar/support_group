@@ -1,7 +1,6 @@
 import Navigation from '../components/Navigation'
 import { Component, Fragment } from 'react'
 import axios from 'axios'
-import Link from 'next/link'
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -22,11 +21,7 @@ export default class extends Component {
 				<h1>Our Posts Page!</h1>
 				<ul>
 					{this.props.branches.map(item => (
-						<li key={item.id}>
-							<Link href={`/branches/${item.slug}`}>
-								<a href={`/branches/${item.slug}`}>{item.title.rendered}</a>
-							</Link>
-						</li>
+						<li key={item.id}>{item.title.rendered}</li>
 					))}
 				</ul>
 			</Fragment>
