@@ -1,12 +1,13 @@
 import Navigation from '../components/Navigation'
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import axios from 'axios'
 import { Fragment } from 'react'
 
 export default class extends Component {
 	static async getInitialProps(context) {
-		console.log(`***** ${slug} ******`)
 		const slug = context.query.slug
+		console.log(`***** ${slug} ******`)
 
 		const response = await axios.get(
 			`http://supportgroup.test/wp-json/wp/v2/branches?slug=${slug}`

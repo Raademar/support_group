@@ -1,5 +1,6 @@
 import Navigation from '../components/Navigation'
 import { Component, Fragment } from 'react'
+import styled from 'styled-components'
 import axios from 'axios'
 
 export default class extends Component {
