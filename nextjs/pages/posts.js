@@ -2,6 +2,7 @@ import Navigation from '../components/Navigation'
 import { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import Layout from '../compenents/Layout'
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -17,15 +18,14 @@ export default class extends Component {
 	}
 	render() {
 		return (
-			<Fragment>
-				<Navigation />
+				<Layout> 
 				<h1>Our Posts Page!</h1>
 				<ul>
 					{this.props.branches.map(item => (
 						<li key={item.id}>{item.title.rendered}</li>
 					))}
 				</ul>
-			</Fragment>
+				</Layout>
 		)
 	}
 }
