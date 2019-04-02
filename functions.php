@@ -138,3 +138,21 @@ function header_menu( $data ) {
     /* Return array of list items with title and url properties */
 	return $menuItems;
 }
+
+add_theme_support( 'custom-logo' );
+
+function themename_custom_logo_setup() {
+    $defaults = array(
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+
+// $custom_logo_id = get_theme_mod( 'custom_logo' );
+// $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+// if ( has_custom_logo() ) {
+//         echo '&gt;img src="' . esc_url( $logo[0] ) . '"' . 'alt="' . get_bloginfo( 'name' ) . '"&lt;';
+// } else {
+//         echo '&lt;h1&gt;'. get_bloginfo( 'name' ) .'&lt;/h1&gt;';
+// }

@@ -1,10 +1,23 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import Axios from 'axios';
 
-const StyledHeader = styled.div`
-	display: flex;
-	flex-direction: column;
-	grid-column: 2/3;
+const Image = styled.div`
+		display: flex;
+		flex-direction: column;
+		grid-column: 3;
+
 `
 
-export default () => <img src="" alt="LOGO" />
+const url = 'http://wordpress_3.test/wp-json/wp/v2/media/';
+
+Axios.get(url).then(response => console.log(response))
+
+export default () => {
+	return (
+	<Image>
+		<img src="" alt="LOGO" />
+	</Image>
+	)}	
+
+
