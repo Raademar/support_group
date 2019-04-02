@@ -6,12 +6,9 @@ const Image = styled.div`
 		display: flex;
 		flex-direction: column;
 		grid-column: 3;
+		justify-content: center;
 
 `
-
-const url = 'http://wordpress_3.test/wp-json/wp/v2/media/';
-
-Axios.get(url).then(response => console.log(response))
 
 export default () => {
 	return (
@@ -19,5 +16,4 @@ export default () => {
 		<img src="" alt="LOGO" />
 	</Image>
 	)}	
-
 

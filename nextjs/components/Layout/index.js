@@ -2,23 +2,22 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
+import axios from 'axios'
 
 class Layout extends Component {
-	static async getInitialProps() {
-		// Make request for props
-		const response = await axios.get(
-			`http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
-		)
+    constructor(props) {
+        super(props)
+        this.state = {
+            menuOpen: false,
+            navigationMenu: []
+        }
+    }
 
-		// Return the data
-
-		return {
-			navigationMenu: response.data
-		}
-	}
-	state = {
-		menuOpen: false
-	}
+    componentDidMount() {
+    this.setState({
+		navigationMenu: this.props.pages
+    })
+    }
 	handleClick = () => {
 		console.log('clicked hamburger')
 		this.setState({
@@ -26,6 +25,7 @@ class Layout extends Component {
 		})
 	}
 	render() {
+        
 		const { children } = this.props
 		return (
 			<div>

@@ -9,19 +9,19 @@ export default class extends Component {
 	// Resolve promise and get initial props
 	static async getInitialProps() {
 		// Make request for props
-		const response = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`)
+		const response = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages`)
 
 		// Return the data
 
 		return {
-			branches: response.data
+			pages: response.data
 		}
 	}
 	render() {
 		return (
-			<Layout>
+			<Layout pages={this.props.pages}>
 				<h1>Our Posts Page!</h1>
-				<ul>
+				{/* <ul>
 					{this.props.branches.map(item => (
 						<li key={item.id}>
 							<Link href={`/branches/${item.slug}`}>
@@ -29,7 +29,7 @@ export default class extends Component {
 							</Link>
 						</li>
 					))}
-				</ul>
+				</ul> */}
 			</Layout>
 		)
 	}
