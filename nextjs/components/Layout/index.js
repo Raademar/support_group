@@ -32,6 +32,7 @@ class Layout extends Component {
 				<Header
 					menuItems={this.props.navigationMenu}
 					toggleMenu={this.handleClick}
+					images={this.props.images}
 				/>
 				{this.state.menuOpen && <HamburgerMenu toggleMenu={this.handleClick} />}
 				{children}

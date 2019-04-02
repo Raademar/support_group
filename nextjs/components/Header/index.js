@@ -26,7 +26,7 @@ const Header = props => {
 					margin: 0;
 				}
 			`}</style>
-			<Logo />
+			<Logo images={props.images} />
 			{props.isDesktop ? (
 				<Navigation menuItems={this.props.navigationMenu} />
 			) : (

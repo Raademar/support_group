@@ -8,12 +8,16 @@ export default class extends Component {
 	// Resolve promise and get initial props
 	static async getInitialProps() {
 		// Make request for props
-		const response = await axios.get('http://${process.env.HOSTNAME}/wp-json/wp/v2/branches')
+		const pages = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages`)
+		const branches = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`)
+		const images = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/media/`)
 
 		// Return the data
 
 		return {
-			branches: response.data
+			pages: pages.data,
+			images: images.data,
+			branches: branches.data
 		}
 	}
 	render() {
