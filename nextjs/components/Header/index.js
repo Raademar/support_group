@@ -12,9 +12,7 @@ const StyledHeader = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
 `
-const handleClick = () => {
-	console.log('clicked hamburger')
-}
+
 const Header = props => {
 	return (
 		<StyledHeader>
@@ -32,7 +30,7 @@ const Header = props => {
 			{props.isDesktop ? (
 				<Navigation menuItems={this.props.navigationMenu} />
 			) : (
-				<HamburgerBar onClick={handleClick} />
+				<HamburgerBar onClick={props.toggleMenu} />
 			)}
 		</StyledHeader>
 	)
