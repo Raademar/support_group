@@ -19,4 +19,5 @@ wp-content/plugins/hello.php
 /nextjs/node_modules
 /nextjs/next.config.js
 /nextjs/.next
+/nextjs/next.config.js
 **/.next
