@@ -19,12 +19,12 @@ export default class extends Component {
 	render() {
 		return (
 				<Layout> 
-				<h1>Our Posts Page!</h1>
-				<ul>
-					{this.props.branches.map(item => (
-						<li key={item.id}>{item.title.rendered}</li>
-					))}
-				</ul>
+					<h1>Our Posts Page!</h1>
+					<ul>
+						{this.props.branches.map(item => (
+							<li key={item.id}>{item.title.rendered}</li>
+						))}
+					</ul>
 				</Layout>
 		)
 	}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../Header'
+import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
 
 class Layout extends Component {
@@ -15,11 +16,24 @@ class Layout extends Component {
 			navigationMenu: response.data
 		}
 	}
+	state = {
+		menuOpen: false
+	}
+	handleClick = () => {
+		console.log('clicked hamburger')
+		this.setState({
+			menuOpen: !this.state.menuOpen
+		})
+	}
 	render() {
 		const { children } = this.props
 		return (
 			<div>
-				<Header menuItems={this.props.navigationMenu} />
+				<Header
+					menuItems={this.props.navigationMenu}
+					toggleMenu={this.handleClick}
+				/>
+				{this.state.menuOpen && <HamburgerMenu toggleMenu={this.handleClick} />}
 				{children}
 				<Footer menuItems={this.props.navigationMenu} />
 			</div>
