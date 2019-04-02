@@ -1,10 +1,17 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-const StyledHeader = styled.div`
+const Image = styled.div`
 	display: flex;
 	flex-direction: column;
-	grid-column: 2/3;
+	grid-column: 3;
+	justify-content: center;
 `
 
-export default () => <img src="" alt="LOGO" />
+export default () => {
+	return (
+		<Image>
+			<img src="" alt="LOGO" />
+		</Image>
+	)
+}
