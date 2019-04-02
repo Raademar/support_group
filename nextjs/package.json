@@ -18,6 +18,10 @@
 		"next-routes": "^1.4.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
-		"styled-components": "^4.2.0"
+		"styled-components": "^4.2.0",
+		"webpack": "^4.29.6"
+	},
+	"devDependencies": {
+		"babel-plugin-styled-components": "^1.8.0"
 	}
 }
