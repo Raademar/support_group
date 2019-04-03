@@ -14,6 +14,9 @@ const StyledHeader = styled.div`
 `
 
 const Header = props => {
+	{
+		// console.log(props.navigationMenu)
+	}
 	return (
 		<StyledHeader>
 			<Head>
@@ -28,7 +31,7 @@ const Header = props => {
 			`}</style>
 			<Logo images={props.images} />
 			{props.isDesktop ? (
-				<Navigation menuItems={this.props.navigationMenu} />
+				<Navigation navigationMenu={props.navigationMenu} />
 			) : (
 				<HamburgerBar onClick={props.toggleMenu} />
 			)}

@@ -22,7 +22,7 @@ const HamburgerMenu = props => {
 	return (
 		<StyledMenu>
 			<span onClick={props.toggleMenu}>&times;</span>
-			<Navigation />
+			<Navigation navigationMenu={props.navigationMenu} />
 		</StyledMenu>
 	)
 }
