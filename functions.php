@@ -149,10 +149,30 @@ function themename_custom_logo_setup() {
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
 
-// $custom_logo_id = get_theme_mod( 'custom_logo' );
-// $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-// if ( has_custom_logo() ) {
-//         echo '&gt;img src="' . esc_url( $logo[0] ) . '"' . 'alt="' . get_bloginfo( 'name' ) . '"&lt;';
-// } else {
-//         echo '&lt;h1&gt;'. get_bloginfo( 'name' ) .'&lt;/h1&gt;';
-// }
+function get_latest_logo() {
+    
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , "thumbnail" );
+    $logolol = [
+        'current_site_logo' => $logo[0]
+    ];
+    if (empty($logo)) {
+    return new WP_Error( 'empty_category', 'there is no post in this category', array('status' => 404) );
+
+    }
+
+    $response = new WP_REST_Response($logolol);
+    $response->set_status(200);
+
+    return $response;
+}
+
+
+add_action('rest_api_init', 'custom_logo_api' );
+
+function custom_logo_api() {
+    register_rest_route( 'sgn/v1', 'site_logo',array(
+                  'methods'  => 'GET',
+                  'callback' => 'get_latest_logo'
+        ));
+  };
