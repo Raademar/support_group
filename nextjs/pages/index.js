@@ -17,6 +17,15 @@ export default class extends Component {
 		)
 		const images = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/site_logo`
+<<<<<<< HEAD
+=======
+		)
+		const heroImagePath = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=home&?_embed`
+		)
+		const heroImage = await axios.get(
+			`${heroImagePath.data[0]._links['wp:featuredmedia'][0].href}`
+>>>>>>> ccfc6eeb1e12c7e84f082012cb65c6cd897e51e3
 		)
 
 		// Return the data
@@ -24,11 +33,12 @@ export default class extends Component {
 		return {
 			pages: pages.data,
 			images: images.data,
-			branches: branches.data
+			branches: branches.data,
+			heroImage: heroImage.data
 		}
 	}
 	render() {
-		// console.log('index ', this.props.pages)
+		console.log(this.props.heroImage.media_details.sizes.full.source_url)
 		return (
 			<Layout navigationMenu={this.props.pages} images={this.props.images}>
 				<h1>Our Posts Page!</h1>

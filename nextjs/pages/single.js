@@ -9,10 +9,18 @@ export default class extends Component {
 		const slug = context.query.slug
 		console.log(`***** ${slug} ******`)
 
-		const response = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches?slug=${slug}`)
-		const pages = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages`)
-		const branches = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`)
-		const images = await axios.get(`http://${process.env.HOSTNAME}/wp-json/wp/v2/media/`)
+		const response = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches?slug=${slug}`
+		)
+		const pages = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages`
+		)
+		const branches = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
+		)
+		const images = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/site_logo`
+		)
 
 		return {
 			branch: response.data[0],
