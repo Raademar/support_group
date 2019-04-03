@@ -16,7 +16,7 @@ export default class extends Component {
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
 		)
 		const images = await axios.get(
-			`http://supportgroup.test/wp-json/sgn/v1/site_logo`
+			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/site_logo`
 		)
 
 		// Return the data
