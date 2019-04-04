@@ -13,12 +13,12 @@ const Navigation = props => {
 
 		return (
 			<MenuItemsList>
-				{menuItem.map(item => (
-					<li key={item.id}>
-						<Link href={`/${item.title.toLowerCase()}`}>
-							<a
-								href={`/${item.title.toLowerCase()}`}
-							>{`${item.title.toLowerCase()}`}</a>
+				{menuItem.map((item, index) => (
+					<li>
+						<Link key={index} href={`/${item.title.toLowerCase()}`}>
+							<a href={`/${item.title.toLowerCase()}`}>
+								{`${item.title.toLowerCase()}`}
+							</a>
 						</Link>
 					</li>
 				))}
