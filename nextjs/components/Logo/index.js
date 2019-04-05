@@ -5,16 +5,16 @@ import Axios from 'axios'
 const Image = styled.div`
 	display: flex;
 	flex-direction: column;
-	grid-column: 3;
+	grid-column: 1;
 	justify-content: center;
 `
 
 export default props => {
-	const thumb = props.images.current_site_logo
+	const thumb = '/static/images/logo_sgn.svg'
 
 	return (
 		<Image>
-			<img src={thumb} />
+			<img src={thumb} alt="" />
 		</Image>
 	)
 }
