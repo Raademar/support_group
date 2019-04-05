@@ -9,7 +9,6 @@ const HeadingStyle = styled.div `
 `
 
 const Heading = props => {
-    console.log(props.heading)
     return (
         <HeadingStyle {...props}>
             <h1>{props.heading}</h1>

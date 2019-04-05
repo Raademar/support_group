@@ -9,10 +9,9 @@ const BodyTextStyle = styled.div`
 `
 
 const BodyText = props => {
-    console.log(props.BodyText)
     return (
         <BodyTextStyle>
-            <h1>{props.BodyText}</h1>
+            <p>{props.bodyText}</p>
         </BodyTextStyle>
     )
 }

@@ -11,14 +11,21 @@ const AboutStyle = styled.div`
 `
 
 const About = props => {
-    console.log(props.About)
-    return (
-        <Section>
-            <Heading backgroundColor="blue" />
-            <Image />
-            <BodyText />
-            <Button />
-        </Section>
-    )
+    if (props.pageData) {
+        console.log(props.pageData)
+
+        return (
+            <Section>
+                <Heading backgroundColor="blue" heading={props.pageData.title.rendered} />
+                <Image />
+                <BodyText bodyText={props.pageData.content.rendered}/>
+                <Button />
+            </Section>
+        )
+    } else {
+        return null
+    }
 }
+
 export default About
+

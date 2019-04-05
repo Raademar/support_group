@@ -9,7 +9,6 @@ const SectionStyle = styled.section`
 `
 
 const Section = props => {
-    console.log(props.children)
     const {children} = props
     return (
         <SectionStyle>

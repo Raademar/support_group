@@ -176,3 +176,15 @@ function custom_logo_api() {
                   'callback' => 'get_latest_logo'
         ));
   };
+
+
+
+  function rm_wpautop($content) {
+    global $post;
+    // Remove the filter
+    remove_filter('the_content', 'wpautop');
+    return $content;
+}
+
+// Hook into the Plugin API
+add_filter('the_content', 'rm_wpautop', 9);
