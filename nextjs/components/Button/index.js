@@ -8,11 +8,11 @@ const StyledButton = styled.button`
 	align-content: center;
 	width: ${props => props.width};
 	height: ${props => props.height};
-	background-color: white;
-	color: black;
+	background-color: ${props => (props.primary ? '#3D73CF' : '#F9C943')};
+	color: #fff;
 	font-size: 1.3rem;
-	margin-left: 1.5px;
-	margin-right: 1.5px;
+	margin-bottom: 12px;
+	border-radius: 8px;
 `
 
 const Button = props => {

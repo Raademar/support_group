@@ -41,8 +41,8 @@ export default class extends Component {
 		return (
 			<Layout navigationMenu={this.props.pages} images={this.props.images}>
 				<Hero
-					heroText="Kawaii girl"
-					heroSmallText="Veri cute"
+					heroText="Together for a bright future"
+					heroSmallText="We believe in and work for a bright future together"
 					heroImage={correctHeroImagePath}
 				/>
 			</Layout>

@@ -6,7 +6,7 @@ import React from 'react'
 import Head from 'next/head'
 
 const StyledHeader = styled.div`
-	background-color: tomato;
+	background-color: #3d73cf;
 	width: 100vw;
 	height: 76px;
 	display: grid;
@@ -22,11 +22,20 @@ const Header = props => {
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
+				<link
+					href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+					rel="stylesheet"
+				/>
+				<link
+					href="https://fonts.googleapis.com/css?family=Paytone+One"
+					rel="stylesheet"
+				/>
 			</Head>
 			<style jsx global>{`
 				body {
 					padding: 0;
 					margin: 0;
+					font-family: 'Lato', sans-serif;
 				}
 			`}</style>
 			<Logo images={props.images} />
