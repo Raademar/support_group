@@ -4,6 +4,8 @@ import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
 import axios from 'axios'
 import Link from 'next/link'
+import Section from '../Section';
+import About from '../About';
 class Layout extends Component {
 	constructor(props) {
 		super(props)
@@ -41,7 +43,10 @@ class Layout extends Component {
 						navigationMenu={this.props.navigationMenu}
 					/>
 				)}
+
 				{children}
+
+				<About />
 				<Footer navigationMenu={this.props.navigationMenu} />
 			</div>
 		)
