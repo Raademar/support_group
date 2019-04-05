@@ -45,7 +45,7 @@ export default class extends Component {
 		}
 	}
 	render() {
-		console.log(this.props.aboutImage)
+		console.log(this.props.aboutImage.source_url)
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
@@ -55,7 +55,7 @@ export default class extends Component {
 					heroSmallText="We believe in and work for a bright future together"
 					heroImage={correctHeroImagePath}
 				/>
-				<About pageData={this.props.about[0]} />
+				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url} />
 			</Layout>
 		)
 	}

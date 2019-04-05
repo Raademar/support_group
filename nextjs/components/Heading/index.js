@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import Button from '../Button'
 
 const HeadingStyle = styled.h1`
-	font-size: ${props => props.fontSize || '36px'};
+	font-size: ${props => props.fontSize || '24px'};
 	font-weight: ${props => props.fontWeight || 'bold'};
+    margin-top: ${props => props.marginTop || '144px;'};
+	color: ${props => props.color || '#558FF0'};
 	font-family: 'Paytone One', sans-serif;
-	margin: 0;
-	padding: 0;
-	position: absolute;
+	position: ${props => props.position || 'absolute'};
+    text-align: ${props => props.textAlign || 'center'};
 `
 
 const Heading = props => {

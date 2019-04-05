@@ -6,6 +6,7 @@ import axios from 'axios'
 import Link from 'next/link'
 import Section from '../Section';
 import About from '../About';
+
 class Layout extends Component {
 	constructor(props) {
 		super(props)
