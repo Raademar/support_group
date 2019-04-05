@@ -40,8 +40,11 @@ export default class extends Component {
 			.source_url
 		return (
 			<Layout navigationMenu={this.props.pages} images={this.props.images}>
-				<h1>Our Posts Page!</h1>
-				<Hero heroText="TEST TEXT" heroImage={correctHeroImagePath} />
+				<Hero
+					heroText="Kawaii girl"
+					heroSmallText="Veri cute"
+					heroImage={correctHeroImagePath}
+				/>
 			</Layout>
 		)
 	}

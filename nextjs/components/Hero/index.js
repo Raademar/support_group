@@ -8,14 +8,32 @@ const HeroStyle = styled.section`
 	width: 100vw;
 	height: auto;
 	text-align: center;
-	justify-content: center;
 	position: relative;
+	& h2 {
+		color: #fff;
+		position: absolute;
+		top: 4rem;
+		margin: 0;
+		width: 100vw;
+	}
+	& h4 {
+		position: absolute;
+		top: 6rem;
+		margin: 0;
+		color: #fff;
+		width: 100vw;
+	}
 	& img {
 		width: 100%;
+		height: auto;
 	}
 	& div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
 		bottom: 3rem;
+		width: 100%;
 	}
 `
 
@@ -24,11 +42,11 @@ const Hero = props => {
 	return (
 		<HeroStyle>
 			<h2>{props.heroText}</h2>
-			<h2> {props.heroSmallText}</h2>
+			<h4> {props.heroSmallText}</h4>
 			<img src={props.heroImage} />
 			<div>
-				<Button border={'2px solid black'} text="Bli medlem" />
-				<Button border={'2px solid black'} text="Bli volontär" />
+				<Button width={'162px'} height={'68px'} text="Bli medlem" />
+				<Button width="162px" height="68px" text="Bli volontär" />
 			</div>
 		</HeroStyle>
 	)
