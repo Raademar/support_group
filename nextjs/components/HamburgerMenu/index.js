@@ -12,7 +12,7 @@ const StyledMenu = styled.div`
 	width: 100vw;
 	z-index: 2;
 	opacity: 1;
-	transition: 0.3s ease;
+	transition: 3s ease;
 	color: #fff;
 	& span {
 		font-size: 50px;

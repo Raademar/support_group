@@ -6,11 +6,13 @@ const StyledButton = styled.button`
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	width: 211px;
-	height: 71px;
+	width: ${props => props.width};
+	height: ${props => props.height};
 	background-color: white;
 	color: black;
-	font-size: 1rem;
+	font-size: 1.3rem;
+	margin-left: 1.5px;
+	margin-right: 1.5px;
 `
 
 const Button = props => {
