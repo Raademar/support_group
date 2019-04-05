@@ -10,7 +10,6 @@ const Image = styled.div`
 `
 
 export default props => {
-	console.log(props.images)
 	const thumb = props.images.current_site_logo
 
 	return (

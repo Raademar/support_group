@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../Header'
 import HamburgerMenu from '../HamburgerMenu'
-import Hero from '../Hero'
 import Footer from '../Footer'
 import axios from 'axios'
 import Link from 'next/link'
@@ -41,10 +40,7 @@ class Layout extends Component {
 						toggleMenu={this.handleClick}
 						navigationMenu={this.props.navigationMenu}
 					/>
-
-					
 				)}
-				<Hero heroText="TEST TEXT" />
 				{children}
 				<Footer navigationMenu={this.props.navigationMenu} />
 			</div>
