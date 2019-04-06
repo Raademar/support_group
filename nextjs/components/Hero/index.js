@@ -20,17 +20,18 @@ const HeroStyle = styled.section`
 	}
 	& h4 {
 		position: absolute;
-		top: 6rem;
+		top: 12rem;
 		margin: 0;
 		color: #fff;
-		width: 100vw;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 	& img {
 		width: 100%;
 		height: auto;
-  		left: 0px;
-  		top: 0px;
-  		z-index: 0;
+		left: 0px;
+		top: 0px;
+		z-index: 0;
 	}
 	& div {
 		display: flex;
@@ -47,7 +48,7 @@ const Hero = props => {
 	console.log(props.heroText)
 	return (
 		<HeroStyle>
-			<Heading heroText={props.heroText} fontSize="36px" />
+			<Heading heroText={props.heroText} top="3rem" fontSize="36px" />
 			<h4>{props.heroSmallText}</h4>
 			<img src={props.heroImage} />
 			<div>

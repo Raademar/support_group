@@ -14,7 +14,11 @@ export default props => {
 
 	return (
 		<Image>
-			<img src={thumb} alt="" />
+			<Link href="/">
+				<a href="/">
+					<img src={thumb} alt="" />
+				</a>
+			</Link>
 		</Image>
 	)
 }

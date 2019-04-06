@@ -17,7 +17,7 @@ const Navigation = props => {
 					<li>
 						<Link key={index} href={`/${item.title.toLowerCase()}`}>
 							<a href={`/${item.title.toLowerCase()}`}>
-								{`${item.title.toLowerCase()}`}
+								{`${item.title.toUpperCase()}`}
 							</a>
 						</Link>
 					</li>
