@@ -7,7 +7,6 @@ const Image = styled.div`
 	flex-direction: column;
 	grid-column: 1;
 	justify-content: center;
-	margin-left: 14px;
 `
 
 export default props => {

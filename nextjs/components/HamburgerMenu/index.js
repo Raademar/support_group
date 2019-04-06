@@ -16,7 +16,7 @@ const StyledMenu = styled.div`
 	transition: 3s ease;
 	color: #fff;
 	display: grid;
-	grid-template-columns: repeat(3, 33.3333%);
+	grid-template-columns: repeat(2, 50%);
 	grid-template-rows: 10% 50% 40%;
 	& div {
 		grid-row: 1;
