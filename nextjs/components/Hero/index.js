@@ -22,6 +22,7 @@ const HeroStyle = styled.section`
 		position: absolute;
 		top: 6rem;
 		margin: 0;
+		margin-top: 140px;
 		color: #fff;
 		width: 100vw;
 	}
@@ -47,7 +48,7 @@ const Hero = props => {
 	console.log(props.heroText)
 	return (
 		<HeroStyle>
-			<Heading heroText={props.heroText} fontSize="36px" />
+			<Heading heroText={props.heroText} fontSize="36px" marginTop="120px" />
 			<h4>{props.heroSmallText}</h4>
 			<img src={props.heroImage} />
 			<div>

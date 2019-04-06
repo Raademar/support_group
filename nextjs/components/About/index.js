@@ -20,7 +20,7 @@ const About = props => {
         return (
             <AboutStyle>
                 <Section>
-                    <Heading position="relative" heroText={props.pageData.title.rendered} />
+                    <Heading position="relative" heroText={props.pageData.title.rendered} marginTop="100px" />
                     {/* <Image position="relative" image={props.aboutImage} /> */}
                     <BodyText position="relative" bodyText={props.pageData.content.rendered}/>
                     {/* <Button /> */}
