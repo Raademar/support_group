@@ -22,6 +22,7 @@ const HeroStyle = styled.section`
 		position: absolute;
 		top: 12rem;
 		margin: 0;
+		margin-top: 140px;
 		color: #fff;
 		padding-left: 3rem;
 		padding-right: 3rem;
