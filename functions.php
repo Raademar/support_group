@@ -118,7 +118,8 @@ function header_menu( $data ) {
                         array_push(
                             $menuItems, array(
                                 'title' => $menu_item->title,
-                                'url' => $menu_item->url
+                                'url' => $menu_item->url,
+                                'slug' => $menu_item->slug
                             )
                         );
                     }

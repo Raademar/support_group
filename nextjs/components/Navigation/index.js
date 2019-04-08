@@ -14,9 +14,9 @@ const Navigation = props => {
 		return (
 			<MenuItemsList>
 				{menuItem.map((item, index) => (
-					<li>
-						<Link key={index} href={`/${item.title.toLowerCase()}`}>
-							<a href={`/${item.title.toLowerCase()}`}>
+					<li key={index}>
+						<Link href={`${item.url.toLowerCase()}`}>
+							<a href={`${item.url.toLowerCase()}`}>
 								{`${item.title.toUpperCase()}`}
 							</a>
 						</Link>
