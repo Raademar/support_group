@@ -6,6 +6,8 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
+import Volunteer from '../components/Volunteer';
+import Member from '../components/Member';
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -56,6 +58,8 @@ export default class extends Component {
 					heroImage={correctHeroImagePath}
 				/>
 				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url} />
+				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
+				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 			</Layout>
 		)
 	}
