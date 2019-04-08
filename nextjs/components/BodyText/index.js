@@ -6,7 +6,7 @@ const BodyTextStyle = styled.div`
         width: ${props => props.width || '100%'};
     p{
         font-size: ${props => props.fontSize || '18px'};
-        font-weight: ${props => props.fontWeight || 'regular'};
+        font-weight: ${props => props.fontWeight || 400};
         margin-top: ${props => props.marginTop || '22px;'};
         background-color: ${props => props.backgroundColor || 'white'};
         position: ${props => props.position || 'relative'};
@@ -19,7 +19,7 @@ const BodyTextStyle = styled.div`
 
 const BodyText = props => {
     return (
-        <BodyTextStyle>
+        <BodyTextStyle {...props}>
             <p>{props.bodyText}</p>
         </BodyTextStyle>
     )

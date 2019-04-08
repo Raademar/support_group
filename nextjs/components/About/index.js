@@ -21,9 +21,11 @@ const About = props => {
 				<Section>
 					<Heading
 						position="relative"
-						heroText={props.pageData.title.rendered}
+						heroText={props.pageData.title.rendered.toUpperCase()}
+						letterSpacing='4px'
+						
 					/>
-					<Image position="relative" image={props.aboutImage} />
+					{/* <Image position="relative" image={props.aboutImage} /> */}
 					<BodyText
 						position="relative"
 						bodyText={props.pageData.content.rendered}

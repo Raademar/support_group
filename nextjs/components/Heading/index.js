@@ -10,6 +10,7 @@ const HeadingStyle = styled.h1`
 	position: ${props => props.position || 'absolute'};
 	top: ${props => props.top};
 	text-align: ${props => props.textAlign || 'center'};
+	letter-spacing: ${props => props.letterSpacing || 'initial'}
 `
 
 const Heading = props => {
