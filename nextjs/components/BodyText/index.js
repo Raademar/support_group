@@ -4,7 +4,7 @@ import Button from '../Button'
 
 const BodyTextStyle = styled.div`
         width: ${props => props.width || '100%'};
-    p{
+    &p{
         font-size: ${props => props.fontSize || '18px'};
         font-weight: ${props => props.fontWeight || 400};
         margin-top: ${props => props.marginTop || '22px;'};
@@ -12,7 +12,7 @@ const BodyTextStyle = styled.div`
         position: ${props => props.position || 'relative'};
         color: ${props => props.color || '#393939'};
         text-align: ${props => props.textAlign || 'center'};
-        width: 100%;
+        line-height: ${props => props.lineHeight || '140%'};
     }
 
 `

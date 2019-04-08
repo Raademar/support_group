@@ -6,6 +6,8 @@ import axios from 'axios'
 import Link from 'next/link'
 import Section from '../Section';
 import About from '../About';
+import Volunteer from '../Volunteer';
+import Member from '../Member';
 
 class Layout extends Component {
 	constructor(props) {
@@ -48,6 +50,8 @@ class Layout extends Component {
 				{children}
 
 				<About />
+				<Volunteer />
+				<Member />
 				<Footer navigationMenu={this.props.navigationMenu} />
 			</div>
 		)
