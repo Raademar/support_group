@@ -7,15 +7,17 @@ import Heading from '../Heading'
 import Section from '../Section'
 
 const VolunteerStyle = styled.div`
+    position: relative;
 	margin: 0 auto;
 	height: 100vh;
 	background-color: ${props => props.backGroundColor || '#558FF0'};
 
-    img{
+    svg{
         position: absolute;
         z-index: 1;
-        margin-top: 21px;
+        margin-top: -109px;
         left: 0;
+        bottom: 0;
     }
 `
 
@@ -46,13 +48,13 @@ const Volunteer = props => {
 
                     />
                     <Button 
-                         position="absolute"
+                        position="absolute"
                         color="#fff" 
                         fontSize="16px" 
                         width="198px" 
                         height="52px" 
                         text="BECOME A VOLUNTEER"
-                        marginTop="50px"
+                        marginTop="12%"
                         marginBottom="90px"
                         zIndex="3"
                     />
@@ -65,11 +67,19 @@ const Volunteer = props => {
                         bodyText="“As a member i get a democratic possibility to vote. That together with all fun activities makes my membership a great thing.”
                         Kajsa Nilsson"
                         textAlign="left"
+                        fontSize="14px"
                         widthP="50%"
                         zIndex="3"
-                        marginTop="150px;"
+                        marginBottom="24%"
+                        width="50%"
+                        left="40%"
+                        lineHeight="130%"
+                        bottom="0"
                         />
-                    <img src="../../static/images/voul_bg.svg" alt="bg" />
+                    {/* <img src="../../static/images/voul_bg.svg" alt="bg" /> */}
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 317.7"><path d="M0 317l.9.6h345.8V198.3c3.1-64.8-16.5-188-119.8-162.7C97.8 67.2 55.2 46.1 10.5 7.7 7.1 4.8 3.6 2.2 0 0v317z" fill="#fff" /></svg>
+
                 </Section>
             </VolunteerStyle>
         )
