@@ -9,7 +9,7 @@ import Section from '../Section'
 const MemberStyle = styled.div`
 	margin: 0 auto;
 	height: 100vh;
-	background-color: ${props => props.backGroundColor || '#558FF0'};
+	background-color: ${props => props.backGroundColor || '#FFDD7E'};
 `
 
 const Member = props => {
@@ -18,14 +18,13 @@ const Member = props => {
 
         return (
             <MemberStyle>
-                <Section backGroundColor="#FFDD7E">
+                <Section backgroundColor="#FFDD7E">
                     <Heading
                         textAlign="left"
                         position="relative"
                         heroText="BECOME A MEMBER"
                         width="70%"
                         paddingTop="46px"
-
                         color="black"
                         // heroText={props.pageData.title.rendered}
                     />
@@ -35,6 +34,7 @@ const Member = props => {
                         textAlign="left"
                         width="80%"
                         lineHeight="140%"
+                        color="white"
                     />
                     <Button 
                         color="#fff" 
@@ -44,6 +44,7 @@ const Member = props => {
                         text="BECOME A MEMBER"
                         marginTop="50px"
                         marginBottom="150px"
+                        primary
                     />
                     <Image  
                         position="relative" 

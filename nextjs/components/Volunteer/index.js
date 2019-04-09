@@ -18,7 +18,7 @@ const Volunteer = props => {
 
         return (
             <VolunteerStyle>
-                <Section backGroundColor="#558FF0">
+                <Section backgroundColor="#558FF0">
                     <Heading
                         textAlign="left"
                         position="relative"
@@ -46,6 +46,7 @@ const Volunteer = props => {
                         text="BECOME A VOLUNTEER"
                         marginTop="50px"
                         marginBottom="150px"
+                        primary
                     />
                     <Image  
                         position="relative" 
@@ -58,7 +59,7 @@ const Volunteer = props => {
                         Kajsa Nilsson"
                         textAlign="left"
                         widthP="50%"
-                        primary/>
+                        />
                     
                 </Section>
             </VolunteerStyle>

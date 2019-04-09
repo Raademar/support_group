@@ -9,6 +9,7 @@ const HeadingStyle = styled.h1`
 	font-family: ${props => props.fontFamily || "'Paytone One', sans-serif"};
 	position: ${props => props.position || 'absolute'};
 	top: ${props => props.top};
+	margin-top: ${props => props.top || '0px'};
 	padding-top: ${props => props.paddingTop};
 	text-align: ${props => props.textAlign || 'center'};
     width: ${props => props.width || '100%'};

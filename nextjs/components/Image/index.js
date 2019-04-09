@@ -20,7 +20,7 @@ const ImageStyle = styled.div`
 const Image = props => {
 	console.log(props.image)
 	return (
-		<ImageStyle>
+		<ImageStyle {...props}>
 			<img src={props.image} />
 		</ImageStyle>
 	)

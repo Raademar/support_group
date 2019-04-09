@@ -20,7 +20,7 @@ const BodyTextStyle = styled.div`
 const BodyText = props => {
     return (
         <BodyTextStyle>
-            <p>{props.bodyText}</p>
+            <p {...props}>{props.bodyText}</p>
         </BodyTextStyle>
     )
 }
