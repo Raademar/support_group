@@ -10,7 +10,16 @@ const MemberStyle = styled.div`
 	margin: 0 auto;
 	height: 100vh;
 	background-color: ${props => props.backGroundColor || '#FFDD7E'};
-`
+    position: relative;
+
+    svg{
+        position: absolute;
+        z-index: 1;
+        margin-top:-109px;
+        left: 0;
+        bottom: 0;
+    }   
+    `
 
 const Member = props => {
     if (props.pageData) {
@@ -23,7 +32,7 @@ const Member = props => {
                         textAlign="left"
                         position="relative"
                         heroText="BECOME A MEMBER"
-                        width="70%"
+                        width="90%"
                         paddingTop="46px"
                         color="black"
                         // heroText={props.pageData.title.rendered}
@@ -32,7 +41,7 @@ const Member = props => {
                         position="relative"
                         bodyText={props.pageData.content.rendered}
                         textAlign="left"
-                        width="80%"
+                        width="96%"
                         lineHeight="140%"
                     />
                     <Button 
@@ -51,15 +60,21 @@ const Member = props => {
                     />
                     <BodyText
                         position="absolute"
-                        fontSize="14px"
                         bodyText="“As a member i get a democratic possibility to vote. That together with all fun activities makes my membership a great thing.”
                         Kajsa Nilsson"
                         textAlign="left"
-                        widthP="90%"
+                        fontSize="14px"
+                        widthP="50%"
+                        zIndex="3"
+                        marginBottom="44%"
+                        width="50%"
+                        left="6%"
+                        lineHeight="130%"
+                        bottom="0"
 
                         
                     />
-                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 363"><path d="M375 104.2C246.4 117.7 188.3 84 127.8 32.1 90.1-.3 41.6-9.2 0 10.1V363h375V104.2z" fill="#fff" /></svg>
                 </Section>
             </MemberStyle>
         )

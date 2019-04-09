@@ -9,7 +9,7 @@ const StyledButton = styled.button`
 	align-content: center;
 	width: ${props => props.width};
 	height: ${props => props.height};
-	background-color: ${props => (props.primary ? '#3D73CF' : '#F9C943')};
+	background-color: ${props => (props.primary ? '#3D73CF' : '#FFDD7E')};
 	color:${props => props.color || '#fff'};
 	font-size: ${props => props.fontSize || '1.3rem' };;
 	margin-bottom: ${props => props.marginBottom || '12px' };

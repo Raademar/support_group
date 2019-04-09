@@ -10,7 +10,7 @@ const VolunteerStyle = styled.div`
     position: relative;
 	margin: 0 auto;
 	height: 100vh;
-	background-color: ${props => props.backGroundColor || '#558FF0'};
+	background-color: ${props => props.backGroundColor || '#3D73CF'};
 
     svg{
         position: absolute;
@@ -27,7 +27,7 @@ const Volunteer = props => {
 
         return (
             <VolunteerStyle>
-                <Section backgroundColor="#558FF0">
+                <Section backgroundColor="#3D73CF">
                     <Heading
                         textAlign="left"
                         position="relative"
@@ -40,7 +40,7 @@ const Volunteer = props => {
                     <BodyText
                         position="relative"
                         textAlign="left"
-                        widthP="90%"
+                        width="96%"
                         color="#fff"
                         marginTop="18px"
                         lineHeight="140%"
@@ -49,7 +49,7 @@ const Volunteer = props => {
                     />
                     <Button 
                         position="absolute"
-                        color="#fff" 
+                        color="#000" 
                         fontSize="16px" 
                         width="198px" 
                         height="52px" 
