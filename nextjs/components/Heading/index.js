@@ -12,7 +12,8 @@ const HeadingStyle = styled.h1`
 	margin-top: ${props => props.top || '0px'};
 	padding-top: ${props => props.paddingTop};
 	text-align: ${props => props.textAlign || 'center'};
-    width: ${props => props.width || '100%'};
+	letter-spacing: ${props => props.letterSpacing || 'initial'};
+	width: ${props => props.width || '100%'};
 `
 
 const Heading = props => {

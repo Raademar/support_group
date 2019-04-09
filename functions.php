@@ -184,8 +184,10 @@ function custom_logo_api() {
     global $post;
     // Remove the filter
     remove_filter('the_content', 'wpautop');
+    remove_filter('the_excerpt', 'wpautop');
     return $content;
 }
 
 // Hook into the Plugin API
 add_filter('the_content', 'rm_wpautop', 9);
+

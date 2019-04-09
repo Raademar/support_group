@@ -2,6 +2,7 @@ import Navigation from '../components/Navigation'
 import styled from 'styled-components'
 import Head from 'next/head'
 import About from '../components/About'
+import News from '../components/News'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import React, { Component, Fragment } from 'react'
@@ -25,8 +26,8 @@ export default class extends Component {
 		const aboutImage = await axios.get(
 			`${about.data[0]._links['wp:featuredmedia'][0].href}`
 		)
-		const images = await axios.get(
-			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/site_logo`
+		const news = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/posts?_embed`
 		)
 		const heroImagePath = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=home&?_embed`
@@ -39,11 +40,11 @@ export default class extends Component {
 
 		return {
 			pages: pages.data,
-			images: images.data,
 			branches: branches.data,
 			about: about.data,
 			aboutImage: aboutImage.data,
-			heroImage: heroImage.data
+			heroImage: heroImage.data,
+			posts: news.data
 		}
 	}
 	render() {
@@ -51,13 +52,14 @@ export default class extends Component {
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-			<Layout navigationMenu={this.props.pages} images={this.props.images}>
+			<Layout navigationMenu={this.props.pages} >
 				<Hero
 					heroText="Together for a bright future"
 					heroSmallText="We believe in and work for a bright future together"
 					heroImage={correctHeroImagePath}
 				/>
 				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url} />
+				<News posts={this.props.posts} />
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 			</Layout>

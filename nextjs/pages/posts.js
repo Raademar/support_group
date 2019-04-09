@@ -14,15 +14,12 @@ export default class extends Component {
 		const branches = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
 		)
-		const images = await axios.get(
-			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/site_logo`
-		)
+
 
 		// Return the data
 
 		return {
 			pages: pages.data,
-			images: images.data,
 			branches: branches.data
 		}
 	}
