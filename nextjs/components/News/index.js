@@ -27,7 +27,7 @@ class News extends Component {
           <Section>
             {this.props.posts.map((item, index) => (
               <div key={index}>
-                <img src={item._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url || ''} alt=""/>
+                <img src={item._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url || ''} alt=""/>
                 <h3>{item.title.rendered}</h3>
                 {/* <Image position="relative" image={props.aboutImage} /> */}
                 <BodyText

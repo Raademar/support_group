@@ -10,6 +10,13 @@ const VolunteerStyle = styled.div`
 	margin: 0 auto;
 	height: 100vh;
 	background-color: ${props => props.backGroundColor || '#558FF0'};
+
+    img{
+        position: absolute;
+        z-index: 1;
+        margin-top: 21px;
+        left: 0;
+    }
 `
 
 const Volunteer = props => {
@@ -25,7 +32,7 @@ const Volunteer = props => {
                         heroText="BECOME A VOLUNTEER"
                         width="70%"
                         paddingTop="46px"
-                        color="white"
+                        color="#fff"
                         // heroText={props.pageData.title.rendered}
                     />
                     <BodyText
@@ -39,14 +46,15 @@ const Volunteer = props => {
 
                     />
                     <Button 
-                        color="#000" 
+                         position="absolute"
+                        color="#fff" 
                         fontSize="16px" 
                         width="198px" 
                         height="52px" 
                         text="BECOME A VOLUNTEER"
                         marginTop="50px"
-                        marginBottom="150px"
-                        primary
+                        marginBottom="90px"
+                        zIndex="3"
                     />
                     <Image  
                         position="relative" 
@@ -54,13 +62,14 @@ const Volunteer = props => {
                     />
                     <BodyText
                         position="absolute"
-                        marginTop="70vh"
                         bodyText="“As a member i get a democratic possibility to vote. That together with all fun activities makes my membership a great thing.”
                         Kajsa Nilsson"
                         textAlign="left"
                         widthP="50%"
+                        zIndex="3"
+                        marginTop="150px;"
                         />
-                    
+                    <img src="../../static/images/voul_bg.svg" alt="bg" />
                 </Section>
             </VolunteerStyle>
         )

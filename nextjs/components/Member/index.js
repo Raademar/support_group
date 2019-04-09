@@ -34,7 +34,6 @@ const Member = props => {
                         textAlign="left"
                         width="80%"
                         lineHeight="140%"
-                        color="white"
                     />
                     <Button 
                         color="#fff" 
@@ -43,7 +42,7 @@ const Member = props => {
                         height="52px" 
                         text="BECOME A MEMBER"
                         marginTop="50px"
-                        marginBottom="150px"
+                        marginBottom="80px"
                         primary
                     />
                     <Image  
@@ -52,11 +51,12 @@ const Member = props => {
                     />
                     <BodyText
                         position="absolute"
-                        marginTop="70vh"
+                        fontSize="14px"
                         bodyText="“As a member i get a democratic possibility to vote. That together with all fun activities makes my membership a great thing.”
                         Kajsa Nilsson"
                         textAlign="left"
                         widthP="90%"
+
                         
                     />
                     

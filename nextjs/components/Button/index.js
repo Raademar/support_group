@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
 	border: ${props => props.border || 'none'};
+	position: ${props => props.position || 'relative'};
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -14,6 +15,7 @@ const StyledButton = styled.button`
 	margin-bottom: ${props => props.marginBottom || '12px' };
 	margin-top: ${props => props.marginTop || '12px' };
 	border-radius: 8px;
+    z-index: ${props => props.zIndex || ''}
 `
 
 const Button = props => {
