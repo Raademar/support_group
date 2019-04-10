@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
-import About from '../About';
-import Volunteer from '../Volunteer';
-import Member from '../Member';
+
 
 class Layout extends Component {
 	constructor(props) {
@@ -30,7 +28,10 @@ class Layout extends Component {
 	}
 
 	render() {
-		const { children } = this.props
+		// Extract children and map over to assign new props before we render child components.
+		const childrenWithProps = React.Children.map(this.props.children, (child) => {
+			return React.cloneElement(child, {isDesktop: this.state.isDesktop})
+		})
 		return (
 			<div>
 				<Header
@@ -46,11 +47,7 @@ class Layout extends Component {
 					/>
 				)}
 
-				{children}
-
-				<About />
-				<Volunteer />
-				<Member />
+				{childrenWithProps}
 				<Footer navigationMenu={this.props.navigationMenu} />
 			</div>
 		)

@@ -6,7 +6,6 @@ import Heading from '../Heading'
 const HeroStyle = styled.section`
 	padding: 0;
 	margin: 0;
-	width: 100vw;
 	height: auto;
 	text-align: center;
 	position: relative;
@@ -27,12 +26,12 @@ const HeroStyle = styled.section`
 		text-align: center;
 	}
 	& img {
-		width: 100%;
+		width: ${props => props.isDesktop ? null : '100%'};
 		height: auto;
 		left: 0px;
 		top: 0px;
 		z-index: 0;
-		max-height: 100vh;
+		max-height: 95vh;
 	}
 	& div {
 		display: flex;
@@ -48,7 +47,7 @@ const HeroStyle = styled.section`
 const Hero = props => {
 	console.log(props.heroText)
 	return (
-		<HeroStyle>
+		<HeroStyle {...props}>
 			<Heading heroText={props.heroText} top="3rem" fontSize="36px" />
 			<h4>{props.heroSmallText}</h4>
 			<img src={props.heroImage} />

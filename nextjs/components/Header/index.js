@@ -7,7 +7,6 @@ import Head from 'next/head'
 
 const StyledHeader = styled.div`
 	background-color: #3d73cf;
-	width: 100vw;
 	height: 76px;
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
