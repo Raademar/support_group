@@ -32,18 +32,6 @@ const StyledMenu = styled.div`
 	}
 	& ul {
 		grid-row: 2;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		list-style: none;
-		padding: 0 24px;
-		& li {
-			color: #fff;
-			& a {
-				text-decoration: none;
-				color: #fff;
-			}
-		}
 	}
 `
 

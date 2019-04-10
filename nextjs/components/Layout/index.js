@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
-import axios from 'axios'
-import Link from 'next/link'
-import Section from '../Section';
 import About from '../About';
 import Volunteer from '../Volunteer';
 import Member from '../Member';
@@ -13,24 +10,26 @@ class Layout extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			menuOpen: false
-			// navigationMenu: []
+			menuOpen: false,
+			isDesktop: false
 		}
 	}
-
-	// componentDidMount() {
-	// 	this.setState({
-	// 		navigationMenu: this.props.pages
-	// 	})
-	// }
 	handleClick = () => {
 		console.log('clicked hamburger')
 		this.setState({
 			menuOpen: !this.state.menuOpen
 		})
 	}
+
+	componentDidMount = () => {
+		if(window.innerWidth > 900) {
+			this.setState({
+				isDesktop: true
+			})			
+		}
+	}
+
 	render() {
-		// console.log(this.props.navigationMenu)
 		const { children } = this.props
 		return (
 			<div>
@@ -38,7 +37,7 @@ class Layout extends Component {
 					navigationMenu={this.props.navigationMenu}
 					toggleMenu={this.handleClick}
 					images={this.props.images}
-					isDesktop={false}
+					isDesktop={this.state.isDesktop}
 				/>
 				{this.state.menuOpen && (
 					<HamburgerMenu

@@ -23,8 +23,8 @@ const HeroStyle = styled.section`
 		top: 12rem;
 		margin: 0;
 		color: #fff;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		width: 100%;
+		text-align: center;
 	}
 	& img {
 		width: 100%;
@@ -32,6 +32,7 @@ const HeroStyle = styled.section`
 		left: 0px;
 		top: 0px;
 		z-index: 0;
+		max-height: 100vh;
 	}
 	& div {
 		display: flex;

@@ -10,6 +10,7 @@ const AboutStyle = styled.div`
 	margin: 0 auto;
 	height: 100vh;
 	background-color: ${props => props.backgroundColor || 'white'};
+	margin-top: 3em;
 `
 
 const About = props => {
@@ -27,7 +28,6 @@ const About = props => {
 					/>
 					{/* <Image position="relative" image={props.aboutImage} /> */}
 					<BodyText
-						position="relative"
 						bodyText={props.pageData.content.rendered}
 					/>
 					{/* <Button /> */}
