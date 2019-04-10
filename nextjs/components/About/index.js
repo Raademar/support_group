@@ -15,7 +15,7 @@ const AboutStyle = styled.div`
 
 const About = props => {
 	if (props.pageData) {
-		console.log(props.pageData)
+		// console.log(props.pageData)
 
 		return (
 			<AboutStyle>

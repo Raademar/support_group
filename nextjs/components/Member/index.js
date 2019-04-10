@@ -23,7 +23,7 @@ const MemberStyle = styled.div`
 
 const Member = props => {
     if (props.pageData) {
-        console.log(props.pageData)
+        // console.log(props.pageData)
 
         return (
             <MemberStyle>
