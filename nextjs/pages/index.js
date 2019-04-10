@@ -36,6 +36,8 @@ export default class extends Component {
 			`${heroImagePath.data[0]._links['wp:featuredmedia'][0].href}`
 		)
 
+		const aboutUsCards = await axios.get(`http://${process.env.HOSTNAME}/wp-json/sgn/v1/about_us`)
+
 		// Return the data
 
 		return {
@@ -44,11 +46,12 @@ export default class extends Component {
 			about: about.data,
 			aboutImage: aboutImage.data,
 			heroImage: heroImage.data,
-			posts: news.data
+			posts: news.data,
+			aboutUsCards: aboutUsCards.data
 		}
 	}
 	render() {
-		console.log(this.props.aboutImage.source_url)
+		console.log(this.props.aboutUsCards)
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (

@@ -8,7 +8,6 @@ import Section from '../Section'
 
 const AboutStyle = styled.div`
 	margin: 0 auto;
-	height: 100vh;
 	background-color: ${props => props.backgroundColor || 'white'};
 	margin-top: 3em;
 `
