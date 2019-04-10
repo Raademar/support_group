@@ -23,7 +23,7 @@ const MemberStyle = styled.div`
 
 const Member = props => {
     if (props.pageData) {
-        console.log(props.pageData)
+        // console.log(props.pageData)
 
         return (
             <MemberStyle>
@@ -52,6 +52,7 @@ const Member = props => {
                         text="BECOME A MEMBER"
                         marginTop="50px"
                         marginBottom="80px"
+                        zIndex="2"
                         primary
                     />
                     <Image  

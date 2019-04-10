@@ -23,7 +23,7 @@ const VolunteerStyle = styled.div`
 
 const Volunteer = props => {
     if (props.pageData) {
-        console.log(props.pageData)
+        // console.log(props.pageData)
 
         return (
             <VolunteerStyle>

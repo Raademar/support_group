@@ -9,6 +9,7 @@ import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import Volunteer from '../components/Volunteer';
 import Member from '../components/Member';
+import Activities from '../components/Activities';
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -19,6 +20,12 @@ export default class extends Component {
 		)
 		const branches = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
+		)
+		const activities = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/activities`
+		)
+		const activitiesImagePath = await axios.get(
+			`${activities.data[0]._links['wp:featuredmedia'][0].href}`
 		)
 		const about = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages/?slug=about&?_embed`
@@ -47,7 +54,9 @@ export default class extends Component {
 			aboutImage: aboutImage.data,
 			heroImage: heroImage.data,
 			posts: news.data,
-			aboutUsCards: aboutUsCards.data
+			aboutUsCards: aboutUsCards.data,
+			activities: activities.data,
+			activitiesImagePath: activitiesImagePath.data
 		}
 	}
 	render() {
@@ -65,6 +74,7 @@ export default class extends Component {
 				<News posts={this.props.posts} />
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
+				<Activities activitiesData={this.props.activities} activitiesImage={this.props.activitiesImagePath.media_details.sizes.thumbnail.source_url} />
 			</Layout>
 		)
 	}
