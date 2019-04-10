@@ -58,6 +58,16 @@ function my_branch_cpt() {
     register_post_type( 'branches', $args );
 }
 
+add_action( 'init', 'my_activities_cpt' );
+function my_activities_cpt() {
+    $args = array(
+      'public'       => true,
+      'show_in_rest' => true,
+      'label'        => 'activities'
+    );
+    register_post_type( 'activities', $args );
+}
+
 function my_rest_prepare_branches($data, $post, $request) {
   $_data = $data->data;
 

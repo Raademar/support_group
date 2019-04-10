@@ -52,6 +52,7 @@ const Member = props => {
                         text="BECOME A MEMBER"
                         marginTop="50px"
                         marginBottom="80px"
+                        zIndex="2"
                         primary
                     />
                     <Image  
