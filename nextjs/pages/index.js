@@ -71,7 +71,7 @@ export default class extends Component {
 				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
-				<Activities activitiesData={this.props.activities} activitiesImage={this.props.activitiesImagePath.media_details.sizes.thumbnail.source_url} />
+				<Activities activitiesData={this.props.activities} activitiesImage={this.props.activitiesImagePath} />
 			</Layout>
 		)
 	}

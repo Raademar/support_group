@@ -35,6 +35,14 @@ const ActivitiesList = styled.section`
   }
 `;
 
+const getBeer = async () => {
+  await fetch(
+    `http://${process.env.HOSTNAME}wp-json/wp/v2/media?parent=${index}`
+  )
+    .then(res => res.json())
+    .then(data => data);
+    return data
+};
 
 const Activities = props => {
     if (props.activitiesData || props.activitisImage) {
@@ -43,19 +51,26 @@ const Activities = props => {
     //   console.log(activitiesData);
       console.log(activitiesImage);
 
-      return (
-        <ActivitiesList {...props}>
-          <Heading heroText="ACTIVITIES" position="relative" />
-          <ul>
-            {activitiesData.map((item, index) => (
-              <div>
-                <img src={activitiesImage} />
-                <li key={index}>{`${item.title.rendered}`}</li>
-              </div>
-            ))}
-          </ul>
-        </ActivitiesList>
-      );
+
+      //wordpress_3.test/wp-json/wp/v2/media?parent=88
+      http: return (
+              <ActivitiesList {...props}>
+                <Heading
+                  heroText="ACTIVITIES"
+                  position="relative"
+                />
+                <ul>
+                  {activitiesData.map((item, index) => (
+                    <div>
+                      <img src={activitiesImage.media_details.sizes.thumbnail.source_url} />
+                      <li key={index}>{`${
+                        item.title.rendered
+                      }`}</li>
+                    </div>
+                  ))}
+                </ul>
+              </ActivitiesList>
+            );
     } else {
       return null;
     }
