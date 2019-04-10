@@ -15,7 +15,7 @@ const BodyTextStyle = styled.div`
         text-align: ${props => props.textAlign || 'center'};
         line-height: ${props => props.lineHeight || '140%'};
         z-index: ${props => props.zIndex || ''};
-        width: ${props => props.width};
+        /* width: ${props => props.width}; */
         left: ${props => props.left};
         bottom : ${props => props.bottom};
         /* margin-right: 10em;

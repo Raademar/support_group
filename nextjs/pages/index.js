@@ -1,11 +1,8 @@
-import Navigation from '../components/Navigation'
-import styled from 'styled-components'
-import Head from 'next/head'
 import About from '../components/About'
 import News from '../components/News'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import Volunteer from '../components/Volunteer';
 import Member from '../components/Member';
@@ -70,8 +67,8 @@ export default class extends Component {
 					heroSmallText="We believe in and work for a bright future together"
 					heroImage={correctHeroImagePath}
 				/>
-				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url} />
-				<News posts={this.props.posts} />
+				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}  />
+				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Activities activitiesData={this.props.activities} activitiesImage={this.props.activitiesImagePath.media_details.sizes.thumbnail.source_url} />

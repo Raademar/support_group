@@ -371,3 +371,9 @@ if (function_exists('acf_add_local_field_group')) {
 			);
 			register_post_type( 'activities', $args );
 	}
+
+
+	function custom_excerpt_length( $length ) {
+		return 10;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
