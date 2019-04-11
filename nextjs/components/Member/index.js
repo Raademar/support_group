@@ -35,6 +35,7 @@ const Member = props => {
                         width="90%"
                         paddingTop="46px"
                         color="black"
+                        marginTop="0"
                         // heroText={props.pageData.title.rendered}
                     />
                     <BodyText
@@ -43,6 +44,7 @@ const Member = props => {
                         textAlign="left"
                         width="96%"
                         lineHeight="140%"
+                        zIndex="3"
                     />
                     <Button 
                         color="#fff" 

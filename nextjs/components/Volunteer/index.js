@@ -35,6 +35,7 @@ const Volunteer = props => {
                         width="70%"
                         paddingTop="46px"
                         color="#fff"
+                        marginTop="0"
                         // heroText={props.pageData.title.rendered}
                     />
                     <BodyText
