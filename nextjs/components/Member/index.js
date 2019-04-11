@@ -69,7 +69,7 @@ const Member = props => {
                         fontSize="14px"
                         widthP="50%"
                         zIndex="3"
-                        marginBottom="44%"
+                        marginBottom="7.3em"
                         width="50%"
                         left="6%"
                         lineHeight="130%"

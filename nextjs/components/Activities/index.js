@@ -22,8 +22,8 @@ const ActivitiesList = styled.section`
   }
   & img {
     border-radius: 50%;
-    width: 60%;
-    height: 60%;
+    width: 100px;
+    height: 100px;
     margin-bottom: 12px;
   }
   & div {
@@ -48,8 +48,8 @@ const Activities = props => {
     if (props.activitiesData || props.activitisImage) {
       const activitiesData = props.activitiesData;
       const activitiesImage = props.activitiesImage;
-    //   console.log(activitiesData);
-      console.log(activitiesImage);
+      console.log(activitiesData);
+      // console.log(activitiesImage);
 
 
       //wordpress_3.test/wp-json/wp/v2/media?parent=88
@@ -62,7 +62,7 @@ const Activities = props => {
                 <ul>
                   {activitiesData.map((item, index) => (
                     <div>
-                      <img src={activitiesImage.media_details.sizes.thumbnail.source_url} />
+                      <img src={`${item.acf.Image}`} />
                       <li key={index}>{`${
                         item.title.rendered
                       }`}</li>

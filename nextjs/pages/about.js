@@ -7,65 +7,146 @@ import axios from "axios";
 import Volunteer from "../components/Volunteer";
 import Member from "../components/Member";
 import Activities from "../components/Activities";
+import Section from "../components/Section";
+import AboutPage from "../components/AboutPage";
+import BodyText from "../components/BodyText";
+import Heading from "../components/Heading";
+import styled from "styled-components";
+import Navigation from "../components/Navigation";
 
 export default class extends Component {
   // Resolve promise and get initial props
   static async getInitialProps({ req }) {
     // Make request for props
-    const pages = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
-    );
-    const branches = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
-    );
-    const activities = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/wp/v2/activities`
-    );
-    const activitiesImagePath = await axios.get(
-      `${activities.data[0]._links["wp:featuredmedia"][0].href}`
-    );
-    const about = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/wp/v2/pages/?slug=about&?_embed`
-    );
-    const aboutImage = await axios.get(
-      `${about.data[0]._links["wp:featuredmedia"][0].href}`
-    );
-    const news = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/wp/v2/posts?_embed`
-    );
-    const heroImagePath = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=home&?_embed`
-    );
-    const heroImage = await axios.get(
-      `${heroImagePath.data[0]._links["wp:featuredmedia"][0].href}`
-    );
 
-    const aboutUsCards = await axios.get(
-      `http://${process.env.HOSTNAME}/wp-json/sgn/v1/about_us`
+    const whatWeDo = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=what-we-do`
+    );
+    const background = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=background`
+    );
+    const ourVision = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=our-vision`
+    );
+		const pages = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
     );
 
     // Return the data
 
     return {
-      pages: pages.data,
-      branches: branches.data,
-      about: about.data,
-      aboutImage: aboutImage.data,
-      heroImage: heroImage.data,
-      posts: news.data,
-      aboutUsCards: aboutUsCards.data,
-      activities: activities.data,
-      activitiesImagePath: activitiesImagePath.data
+      whatWeDo: whatWeDo.data,
+      background: background.data,
+      ourVision: ourVision.data,
+      pages: pages.data
     };
-  }
-  render() {
-    console.log(this.props.aboutUsCards);
-    const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
-      .source_url;
-    return (
-      <Layout navigationMenu={this.props.pages}>
 
-      </Layout>
+  }
+  
+
+  render() {
+    console.log();
+    // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
+    //   .source_url;
+    return (
+      <div>
+        <Navigation />
+        <AboutPage
+          whatWeDo={this.props.whatWeDo}
+          background={this.props.background}
+          ourVision={this.props.ourVision}
+        />
+      </div>
     );
   }
 }
+
+
+
+//   render() {
+//     console.log();
+//     // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
+//     //   .source_url;
+//     return (
+//       <Layout navigationMenu={this.props.pages}>
+//         <Section>
+//           <Heading
+//             heroText={this.props.whatWeDo[0].title.rendered}
+//             left="0"
+//             position="relative"
+//             marginTop="1em"
+//           />
+//           <BodyText
+//             bodyText={this.props.whatWeDo[0].content.rendered}
+//             lineHeight="180%"
+//             marginLeft="5%"
+//             textAlign="left"
+//             fontSize="18"
+//             width="90%"
+//             paddingBottom="2em"
+//           />
+//         </Section>
+//         <Section
+//           backgroundColor="#F2F2F2"
+//           width="100%"
+//           left="0"
+//           marginLeft="0"
+//           marginRight="0"
+//         >
+//           <img src={this.props.background[0].acf.image} />
+//           <Heading
+//             heroText={this.props.background[0].title.rendered}
+//             left="0"
+//             position="relative"
+//             textAlign="left"
+//             marginLeft="5%"
+//             color="#1c1c1c"
+//             fontSize="24px"
+//             width="90%"
+//           />
+//           <BodyText
+//             bodyText={this.props.background[0].content.rendered}
+//             lineHeight="180%"
+//             marginLeft="5%"
+//             textAlign="left"
+//             fontSize="18"
+//             width="80%"
+//             paddingBottom="5em"
+//           />
+//         </Section>
+//         <Section
+//           backgroundColor="#fff"
+//           width="100%"
+//           left="0"
+//           marginLeft="0"
+//           marginRight="0"
+//         >
+//           <img src={this.props.ourVision[0].acf.image} 
+          
+          
+//           />
+//           <Heading
+//             heroText={this.props.ourVision[0].title.rendered}
+//             left="0"
+//             position="relative"
+//             textAlign="left"
+//             marginLeft="5%"
+//             color="#1c1c1c"
+//             fontSize="24px"
+//             width="90%"
+//             marginTop="0"
+//           />
+//           <BodyText
+//             bodyText={this.props.ourVision[0].content.rendered}
+//             lineHeight="180%"
+//             marginLeft="5%"
+//             textAlign="left"
+//             fontSize="18"
+//             width="90%"
+//             paddingBottom="5em"
+//           />
+//         </Section>
+//       </Layout>
+//     );
+//   }
+// }
