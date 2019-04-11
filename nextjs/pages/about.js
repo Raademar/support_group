@@ -55,9 +55,10 @@ export default class extends Component {
           whatWeDo={this.props.whatWeDo}
           background={this.props.background}
           ourVision={this.props.ourVision}
+          pages={this.props.pages}
         />
       </div>
-    );
+    );  
   }
 }
 

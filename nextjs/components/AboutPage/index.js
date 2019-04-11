@@ -9,18 +9,31 @@ import Layout from '../Layout'
 
 const AboutStyle = styled.div`
 	/* margin: 0 auto;
-	background-color: ${props => props.backgroundColor || 'white'};
+	background-color: ${props => props.backgroundColor || "white"};
 	margin-top: 3em; */
-`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      & .image{
+            margin-top: 1.6em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+      }
+`;
 
 const AboutPage = props => {
 	if ( props.whatWeDo ||  props.background ||  props.ourVision ) {
     // console.log(props.pageData)
-    // console.log(props.whatWeDo);
+    console.log(props.navigationMenu);
 
     return (
       <AboutStyle>
-        <Layout navigationMenu={props.navigationMenu}>
+        <Layout navigationMenu={props.pages}>
           <Section>
             <Heading
               heroText={props.whatWeDo[0].title.rendered}
@@ -31,10 +44,11 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.whatWeDo[0].content.rendered}
               lineHeight="180%"
-              marginLeft="5%"
+                marginLeft="5%"
+              //   marginRight="5%"
               textAlign="left"
               fontSize="18"
-              width="90%"
+              width="100%"
               paddingBottom="2em"
             />
           </Section>
@@ -45,7 +59,9 @@ const AboutPage = props => {
             marginLeft="0"
             marginRight="0"
           >
-            <img src={props.background[0].acf.image} />
+            <div className="image">
+              <img src={props.background[0].acf.image} />
+            </div>
             <Heading
               heroText={props.background[0].title.rendered}
               left="0"
@@ -59,10 +75,10 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.background[0].content.rendered}
               lineHeight="180%"
-              marginLeft="5%"
+                marginLeft="5%"
               textAlign="left"
               fontSize="18"
-              width="80%"
+              width="90%"
               paddingBottom="5em"
             />
           </Section>
@@ -73,7 +89,9 @@ const AboutPage = props => {
             marginLeft="0"
             marginRight="0"
           >
-            <img src={props.ourVision[0].acf.image} />
+            <div className="image">
+              <img src={props.ourVision[0].acf.image} />
+            </div>
             <Heading
               heroText={props.ourVision[0].title.rendered}
               left="0"
@@ -88,7 +106,7 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.ourVision[0].content.rendered}
               lineHeight="180%"
-              marginLeft="5%"
+                marginLeft="5%"
               textAlign="left"
               fontSize="18"
               width="90%"
