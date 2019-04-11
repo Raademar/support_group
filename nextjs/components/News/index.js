@@ -13,7 +13,11 @@ const NewsStyled = styled.div`
   }
   & .news-item-container {
     display: flex;
-    flex-direction: ${props => props.isDesktop ? 'row' : 'column'};
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    /* height: 460px; */
     & div {
       /* width: 100%; */
       background-color: #fff;
@@ -23,6 +27,7 @@ const NewsStyled = styled.div`
       justify-content: center;
       padding: 24px;
       margin: 8px;
+
     }
     & img {
       /* height: 286px; */
@@ -31,6 +36,9 @@ const NewsStyled = styled.div`
   & object {
     margin: 2rem 0;
   }
+  .news-item-container::-webkit-scrollbar {
+      display: none;
+    }
   `
 
 class News extends Component {
