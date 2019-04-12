@@ -44,7 +44,6 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.whatWeDo[0].content.rendered}
               lineHeight="180%"
-                marginLeft="5%"
               //   marginRight="5%"
               textAlign="left"
               fontSize="18"
@@ -67,7 +66,7 @@ const AboutPage = props => {
               left="0"
               position="relative"
               textAlign="left"
-              marginLeft="5%"
+              marginLeft="24px"
               color="#1c1c1c"
               fontSize="24px"
               width="90%"
@@ -75,7 +74,7 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.background[0].content.rendered}
               lineHeight="180%"
-                marginLeft="5%"
+                marginLeft="24px"
               textAlign="left"
               fontSize="18"
               width="90%"
@@ -84,10 +83,7 @@ const AboutPage = props => {
           </Section>
           <Section
             backgroundColor="#fff"
-            width="100%"
             left="0"
-            marginLeft="0"
-            marginRight="0"
           >
             <div className="image">
               <img src={props.ourVision[0].acf.image} />
@@ -97,7 +93,6 @@ const AboutPage = props => {
               left="0"
               position="relative"
               textAlign="left"
-              marginLeft="5%"
               color="#1c1c1c"
               fontSize="24px"
               width="90%"
@@ -106,7 +101,6 @@ const AboutPage = props => {
             <BodyText
               bodyText={props.ourVision[0].content.rendered}
               lineHeight="180%"
-                marginLeft="5%"
               textAlign="left"
               fontSize="18"
               width="90%"

@@ -21,9 +21,6 @@ export default class extends Component {
 		const activities = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/activities`
 		)
-		const activitiesImagePath = await axios.get(
-			`${activities.data[0]._links['wp:featuredmedia'][0].href}`
-		)
 		const about = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages/?slug=about&?_embed`
 		)
@@ -31,7 +28,7 @@ export default class extends Component {
 			`${about.data[0]._links['wp:featuredmedia'][0].href}`
 		)
 		const news = await axios.get(
-			`http://${process.env.HOSTNAME}/wp-json/wp/v2/posts?_embed`
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/posts`
 		)
 		const heroImagePath = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=home&?_embed`
@@ -52,8 +49,7 @@ export default class extends Component {
 			heroImage: heroImage.data,
 			posts: news.data,
 			aboutUsCards: aboutUsCards.data,
-			activities: activities.data,
-			activitiesImagePath: activitiesImagePath.data
+			activities: activities.data
 		}
 	}
 	render() {
@@ -71,7 +67,7 @@ export default class extends Component {
 				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
-				<Activities activitiesData={this.props.activities} activitiesImage={this.props.activitiesImagePath} />
+				<Activities activitiesData={this.props.activities} />
 			</Layout>
 		)
 	}

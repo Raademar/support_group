@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Button from '../Button'
 import Heading from '../Heading'
+import React, { useEffect } from "react";
 
 const ActivitiesList = styled.section`
   padding: 0;
@@ -35,42 +36,38 @@ const ActivitiesList = styled.section`
   }
 `;
 
-const getBeer = async () => {
-  await fetch(
-    `http://${process.env.HOSTNAME}wp-json/wp/v2/media?parent=${index}`
-  )
-    .then(res => res.json())
-    .then(data => data);
-    return data
-};
+
+const makeThumb = () => {
+  console.log('hej')
+}
+
 
 const Activities = props => {
-    if (props.activitiesData || props.activitisImage) {
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    makeThumb()
+  })
+
+    if (props.activitiesData) {
       const activitiesData = props.activitiesData;
-      const activitiesImage = props.activitiesImage;
       console.log(activitiesData);
       // console.log(activitiesImage);
 
 
-      //wordpress_3.test/wp-json/wp/v2/media?parent=88
-      http: return (
-              <ActivitiesList {...props}>
-                <Heading
-                  heroText="ACTIVITIES"
-                  position="relative"
-                />
-                <ul>
-                  {activitiesData.map((item, index) => (
-                    <div>
-                      <img src={`${item.acf.Image}`} />
-                      <li key={index}>{`${
-                        item.title.rendered
-                      }`}</li>
-                    </div>
-                  ))}
-                </ul>
-              </ActivitiesList>
-            );
+ return (
+   <ActivitiesList {...props}>
+     <Heading heroText="ACTIVITIES" position="relative" />
+     <ul>
+       {activitiesData.map((item, index) => (
+         <div>
+           <img src={`${item.acf.image.sizes.thumbnail}`} />
+           <li key={index}>{`${item.title.rendered}`}</li>
+         </div>
+       ))}
+     </ul>
+   </ActivitiesList>
+ );
     } else {
       return null;
     }
