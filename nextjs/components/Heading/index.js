@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Button from '../Button'
 
 const HeadingStyle = styled.h1`
-	font-size: ${props => props.isDesktop ? '64px' : '24px'};
+	font-size: ${props => (props.isDesktop ? '64px' : '24px')};
 	font-weight: ${props => props.fontWeight || 'bold'};
 	color: ${props => props.color || '#558FF0'};
 	background-color: ${props => props.backgroundColor};
@@ -15,9 +15,9 @@ const HeadingStyle = styled.h1`
 	letter-spacing: ${props => props.letterSpacing || 'initial'};
 	width: ${props => props.width || '100%'};
 	margin-top: ${props => props.marginTop || '0'};
-	margin-left: ${props => props.marginLeft };
-	margin-bottom: ${props => props.marginBottom };
-	left: ${props => props.left || '0'}
+	margin-left: ${props => props.marginLeft};
+	margin-bottom: ${props => props.marginBottom};
+	left: ${props => props.left || '0'};
 `
 
 const Heading = props => {
