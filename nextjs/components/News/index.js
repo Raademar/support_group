@@ -42,59 +42,6 @@ const NewsStyled = styled.div`
 `
 
 class News extends Component {
-<<<<<<< HEAD
-
-  getExcerpted = (str, limit) => {
-    let fullText = str;
-    let shortText = str;
-    shortText = shortText.substr(0, shortText.lastIndexOf(' ', limit)) + '...';
-    let returnString = {
-      fullText: fullText,
-      shortText: shortText
-    };
-    return returnString;
-  }
-
-  render() {
-
-    const arrowInCircle = '/static/images/arrow_in_circle.svg'
-    
-    if (this.props.posts) { 
-      return (
-        <NewsStyled {...this.props}>
-          <Section>
-            <Heading
-              position="relative"
-              heroText="NEWS"
-              letterSpacing="4px"
-            />
-            <div className="news-item-container">
-              {this.props.posts.map((item, index) => (
-                <div key={index}>
-                  <img
-                    src={item.acf.image.sizes.thumbnail || ""}
-                    alt=""
-                  />
-                  <h3>{item.title.rendered}</h3>
-                  {/* <Image position="relative" image={props.aboutImage} /> */}
-                  <BodyText
-                    position="relative"
-                    bodyText={ this.getExcerpted(item.acf.text, 40).shortText }
-                    textAlign={"left"}
-                  />
-                  <span>{item.date}</span>
-                </div>
-              ))}
-            </div>
-            <object data={arrowInCircle} type="image/svg+xml" />
-          </Section>
-        </NewsStyled>
-      );
-    } else {
-      return null
-    }
-  }
-=======
 	getExcerpted = (str, limit) => {
 		let fullText = str
 		let shortText = str
@@ -137,7 +84,6 @@ class News extends Component {
 			return null
 		}
 	}
->>>>>>> 441a1c18d825a164295babcbae81821774be4caf
 }
 
 export default News

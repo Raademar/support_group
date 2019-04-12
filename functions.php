@@ -378,3 +378,14 @@ if (function_exists('acf_add_local_field_group')) {
 		return 10;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+	function my_acf_google_map_api( $api ){
+	
+	$api['key'] = '123';
+	
+	return $api;
+	
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

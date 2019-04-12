@@ -19,6 +19,9 @@ export default class extends Component {
   static async getInitialProps({ req }) {
     // Make request for props
 
+    const aboutData = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/wp/v2/about`
+    );
     const whatWeDo = await axios.get(
       `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=what-we-do`
     );
@@ -35,6 +38,7 @@ export default class extends Component {
     // Return the data
 
     return {
+      aboutData: aboutData.data,
       whatWeDo: whatWeDo.data,
       background: background.data,
       ourVision: ourVision.data,
@@ -45,13 +49,17 @@ export default class extends Component {
   
 
   render() {
-    console.log();
+    const members = this.props.aboutData;
+
+    const missionData = members.filter(member => member.acf.is_of_type_mission);
+    
     // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
     //   .source_url;
     return (
       <div>
         <Navigation />
         <AboutPage
+          missionData={missionData}
           whatWeDo={this.props.whatWeDo}
           background={this.props.background}
           ourVision={this.props.ourVision}
