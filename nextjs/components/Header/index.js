@@ -28,6 +28,17 @@ const Header = props => {
 					href="https://fonts.googleapis.com/css?family=Paytone+One"
 					rel="stylesheet"
 				/>
+				<link
+					rel="stylesheet"
+					type="text/css"
+					charset="UTF-8"
+					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+				/>
+				<link
+					rel="stylesheet"
+					type="text/css"
+					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+				/>
 			</Head>
 			<style jsx global>{`
 				body {
@@ -35,10 +46,18 @@ const Header = props => {
 					margin: 0;
 					font-family: 'Lato', sans-serif;
 				}
+				.slider-image-container {
+					display: flex;
+					flex-direction: column;
+					margin: 0 24px;
+					width: unset;
+				}
+				.slider-image-container img {
+				}
 			`}</style>
 			<Logo images={props.images} />
 			{props.isDesktop ? (
-				<Navigation 
+				<Navigation
 					navigationMenu={props.navigationMenu}
 					gridCol="2/6"
 					flexDir="row"

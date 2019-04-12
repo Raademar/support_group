@@ -15,13 +15,8 @@ const HeadingStyle = styled.h1`
 	letter-spacing: ${props => props.letterSpacing || 'initial'};
 	width: ${props => props.width || '100%'};
 	margin-top: ${props => props.marginTop || '0'};
-<<<<<<< HEAD
-	margin-left: ${props => props.marginLeft };
-	margin-bottom: ${props => props.marginBottom };
-=======
 	margin-left: ${props => props.marginLeft};
 	margin-bottom: ${props => props.marginBottom};
->>>>>>> 441a1c18d825a164295babcbae81821774be4caf
 	left: ${props => props.left || '0'};
 `
 

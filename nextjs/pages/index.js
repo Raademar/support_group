@@ -69,10 +69,6 @@ export default class extends Component {
 					aboutImage={this.props.aboutImage.source_url}
 				/>
 				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
-<<<<<<< HEAD
-				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
-				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
-=======
 				<Volunteer
 					pageData={this.props.about[0]}
 					aboutImage={this.props.aboutImage.source_url}
@@ -81,7 +77,6 @@ export default class extends Component {
 					pageData={this.props.about[0]}
 					aboutImage={this.props.aboutImage.source_url}
 				/>
->>>>>>> 441a1c18d825a164295babcbae81821774be4caf
 				<Activities activitiesData={this.props.activities} />
 			</Layout>
 		)
