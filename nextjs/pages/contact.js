@@ -13,52 +13,38 @@ import Navigation from "../components/Navigation";
 
 export default class extends Component {
     // Resolve promise and get initial props
-    static async getInitialProps({ req }) {
+
+    static async getInitialProps() {
         // Make request for props
 
-        // const aboutData = await axios.get(
-        //     `http://${process.env.HOSTNAME}/wp-json/wp/v2/about`
-        // );
-        // const whatWeDo = await axios.get(
-        //     `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=what-we-do`
-        // );
-        // const background = await axios.get(
-        //     `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=background`
-        // );
-        // const ourVision = await axios.get(
-        //     `http://${process.env.HOSTNAME}/wp-json/wp/v2/about?slug=our-vision`
-        // );
-        const pages = await axios.get(
-            `http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
+        const branches = await axios.get(
+          `http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
         );
+
 
         // Return the data
 
         return {
-            // aboutData: aboutData.data,
-            // whatWeDo: whatWeDo.data,
-            // background: background.data,
-            // ourVision: ourVision.data,
-            pages: pages.data
-        };
-
+            branches: branches.data
+        }
     }
 
 
     render() {
 
-
+        console.log()
         // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
         //   .source_url;
         return (
           <div>
             <Navigation />
             <Contact
-              // missionData={missionData}
-              // whatWeDo={this.props.whatWeDo}
-              // background={this.props.background}
-              // ourVision={this.props.ourVision}
-            //   pages={this.props.pages}
+                branchesData={this.props.branches}
+                // missionData={missionData}
+                // whatWeDo={this.props.whatWeDo}
+                // background={this.props.background}
+                // ourVision={this.props.ourVision}
+                pages={this.props.pages}
             />
           </div>
         );

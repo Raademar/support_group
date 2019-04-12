@@ -45,14 +45,14 @@ const ContactStyle = styled.div`
             font-weight: bold;
       }
 
-      & .image img{
+      /* & .image img{
             margin-top: 1.6em;
             width: 100%;
             /* display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center; */
-      }
+      } */
 
       
 
@@ -64,10 +64,6 @@ const ContactStyle = styled.div`
         margin-left: 24px;
         margin-right: 24px;
         width: 90%;
-
-        & img{
-          grid-column: 1;
-        }
 
         p{
             margin-right: 24px;
@@ -88,39 +84,46 @@ const Contact = props => {
                 <Heading
                   heroText="CONTACT"
                   position="relativ"
-                  marginTop="2em"
+                    marginTop="2em"
+                    color="#1C1C1C"
                 />
                 <BodyText
-                  bodyText="Do you have any questions about our work? Give us a message!"
-                  textAlign="left"
+                    bodyText="Do you have any questions about our work? Give us a message!"
+                    textAlign="left"
+                    lineHeight="180%"
                 />
                 <form action="" method="get" id="contact">
-                    <p>Name</p>
-                    <input type="text" name="Name" value="" />
-                    <p>E-mail</p>
-                    <input type="mail" name="mail" value="" />
-                    <p>Subject</p>
-                    <input type="subject" name="subject" value="" />
-                    <p>Message</p>
-                    <input type="textarea" name="subject" value="" />
+                  <p>Name</p>
+                  <input type="text" name="Name" value="" />
+                  <p>E-mail</p>
+                  <input type="mail" name="mail" value="" />
+                  <p>Subject</p>
+                  <input type="subject" name="subject" value="" />
+                  <p>Message</p>
+                  <input type="textarea" name="subject" value="" />
                 </form>
-                        <button type="submit" form="contact" value="Submit">Submit</button>
+                <button type="submit" form="contact" value="Submit">
+                  Submit
+                </button>
               </Section>
               <Section>
-                {/* <Heading
-                  heroText={props.whatWeDo[0].title.rendered}
-                  left="0"
-                  position="relative"
-                  marginTop="1em"
+                <Heading
+                  heroText="OUR PLACES AND CITIES"
+                  position="relativ"
+                  marginTop="2em"
+                  color="#1C1C1C"
                 />
-                <BodyText
-                  bodyText={props.whatWeDo[0].content.rendered}
-                  lineHeight="180%"
-                  textAlign="left"
-                  fontSize="18"
-                  width="100%"
-                  paddingBottom="2em"
-                /> */}
+                {props.branchesData.map((item, index) => (
+                  <div className="branches">
+                    <img src={`${item.acf.image}`} />
+                    <h2 key={index}>{`${item.title.rendered}`}</h2>
+                    <p key={index}>{`${item.acf.adress}`}</p>
+                    <p key={index}>{`${
+                      item.acf.postal_nr_and_city
+                    }`}</p>
+                    <p key={index}>{`${item.acf.phone}`}</p>
+                  </div>
+                ))}
               </Section>
             </Layout>
           </ContactStyle>
