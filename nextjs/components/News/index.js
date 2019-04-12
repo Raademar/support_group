@@ -15,9 +15,6 @@ const SliderImageContainer = styled.div`
 	margin: 8px;
 `
 
-<<<<<<< HEAD
-class News extends Component {
-=======
 // class News extends Component {
 // 	getExcerpted = (str, limit) => {
 // 		let fullText = str
@@ -54,7 +51,6 @@ class News extends Component {
 // export default News
 
 class SimpleSlider extends Component {
->>>>>>> 7f1b64a72317f28c310b79d84053d091b64c3147
 	getExcerpted = (str, limit) => {
 		let fullText = str
 		let shortText = str
