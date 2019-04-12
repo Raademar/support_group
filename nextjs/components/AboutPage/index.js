@@ -50,6 +50,7 @@ const AboutPage = props => {
 		console.log(props.navigationMenu)
 
 		return (
+<<<<<<< HEAD
       <AboutStyle>
         <Layout navigationMenu={props.pages}>
           <Section>
@@ -150,6 +151,82 @@ const AboutPage = props => {
         </Layout>
       </AboutStyle>
     );
+=======
+			<AboutStyle>
+				<Layout navigationMenu={props.pages}>
+					<Section>
+						<Heading
+							heroText={props.whatWeDo[0].title.rendered}
+							left="0"
+							position="relative"
+							marginTop="1em"
+						/>
+						<BodyText
+							bodyText={props.whatWeDo[0].content.rendered}
+							lineHeight="180%"
+							textAlign="left"
+							fontSize="18"
+							width="100%"
+							paddingBottom="2em"
+						/>
+					</Section>
+					<Section
+						backgroundColor="#F2F2F2"
+						width="100%"
+						left="0"
+						marginLeft="0"
+						marginRight="0"
+					>
+						<div className="image">
+							<img src={props.background[0].acf.image} />
+						</div>
+						<Heading
+							heroText={props.background[0].title.rendered}
+							left="0"
+							position="relative"
+							textAlign="left"
+							marginLeft="24px"
+							color="#1c1c1c"
+							fontSize="24px"
+							width="90%"
+						/>
+						<BodyText
+							bodyText={props.background[0].content.rendered}
+							lineHeight="180%"
+							marginLeft="24px"
+							textAlign="left"
+							fontSize="18"
+							width="90%"
+							paddingBottom="5em"
+						/>
+					</Section>
+					<Section backgroundColor="#fff">
+						<div className="image">
+							<img src={props.ourVision[0].acf.image} />
+						</div>
+						<Heading
+							heroText={props.ourVision[0].title.rendered}
+							left="0"
+							position="relative"
+							textAlign="left"
+							color="#1c1c1c"
+							fontSize="24px"
+							width="90%"
+							marginTop="0"
+						/>
+						<BodyText
+							bodyText={props.ourVision[0].content.rendered}
+							lineHeight="180%"
+							textAlign="left"
+							fontSize="18"
+							width="90%"
+							paddingBottom="5em"
+						/>
+					</Section>
+				</Layout>
+			</AboutStyle>
+		)
+>>>>>>> 7f1b64a72317f28c310b79d84053d091b64c3147
 	} else {
 		return null
 	}
