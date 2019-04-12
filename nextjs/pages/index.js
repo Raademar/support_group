@@ -4,9 +4,9 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import React, { Component } from 'react'
 import axios from 'axios'
-import Volunteer from '../components/Volunteer';
-import Member from '../components/Member';
-import Activities from '../components/Activities';
+import Volunteer from '../components/Volunteer'
+import Member from '../components/Member'
+import Activities from '../components/Activities'
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -36,8 +36,9 @@ export default class extends Component {
 		const heroImage = await axios.get(
 			`${heroImagePath.data[0]._links['wp:featuredmedia'][0].href}`
 		)
-
-		const aboutUsCards = await axios.get(`http://${process.env.HOSTNAME}/wp-json/sgn/v1/about_us`)
+		const aboutUsCards = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/about_us`
+		)
 
 		// Return the data
 
@@ -57,16 +58,30 @@ export default class extends Component {
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-			<Layout navigationMenu={this.props.pages} >
+			<Layout navigationMenu={this.props.pages}>
 				<Hero
 					heroText="Together for a bright future"
 					heroSmallText="We believe in and work for a bright future together"
 					heroImage={correctHeroImagePath}
 				/>
-				<About pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}  />
+				<About
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+				/>
 				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
+<<<<<<< HEAD
 				<Volunteer pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
 				<Member pageData={this.props.about[0]} aboutImage={this.props.aboutImage.source_url}/>
+=======
+				<Volunteer
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+				/>
+				<Member
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+				/>
+>>>>>>> 441a1c18d825a164295babcbae81821774be4caf
 				<Activities activitiesData={this.props.activities} />
 			</Layout>
 		)
