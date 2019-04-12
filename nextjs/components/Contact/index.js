@@ -44,6 +44,9 @@ const ContactStyle = styled.div`
              margin-bottom: 6px;
             font-weight: bold;
       }
+      p {
+          font-weight: lighter;
+      }
 
       /* & .image img{
             margin-top: 1.6em;
@@ -52,7 +55,7 @@ const ContactStyle = styled.div`
             flex-direction: column;
             align-items: center;
             justify-content: center; */
-      } */
+      /* } */ */
 
       
 
@@ -116,7 +119,7 @@ const Contact = props => {
                 {props.branchesData.map((item, index) => (
                   <div className="branches">
                     <img src={`${item.acf.image}`} />
-                    <h2 key={index}>{`${item.title.rendered}`}</h2>
+                    <h3 key={index}>{`${item.title.rendered}`}</h3>
                     <p key={index}>{`${item.acf.adress}`}</p>
                     <p key={index}>{`${
                       item.acf.postal_nr_and_city

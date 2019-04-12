@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Button from '../Button'
 import Heading from '../Heading'
+import ActivitiesPopup from '../ActivitiesPopup'
 import React, { useEffect } from 'react'
 
 const ActivitiesList = styled.section`
@@ -58,20 +59,22 @@ const Activities = props => {
 
 	if (props.activitiesData) {
 		const activitiesData = props.activitiesData
-
+    console.log(activitiesData);
+    
 		return (
-			<ActivitiesList {...props}>
-				<Heading heroText="ACTIVITIES" position="relative" />
-				<ul>
-					{activitiesData.map((item, index) => (
-						<div>
-							<img src={`${item.acf.image.sizes.thumbnail}`} />
-							<li key={index}>{`${item.title.rendered}`}</li>
-						</div>
-					))}
-				</ul>
-			</ActivitiesList>
-		)
+      <ActivitiesList {...props}>
+        <Heading heroText="ACTIVITIES" position="relative" />
+        <ul>
+          {activitiesData.map((item, index) => (
+            <div>
+             <ActivitiesPopup item={item} index={index} />
+            	{/* <img src={`${item.acf.image.sizes.thumbnail}`} />
+            	<li key={index}>{`${item.title.rendered}`}</li> */}
+            </div>
+          ))}
+        </ul>
+      </ActivitiesList>
+    );
 	} else {
 		return null
 	}
