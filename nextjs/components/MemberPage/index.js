@@ -15,6 +15,15 @@ const StyledMemberPage = styled.div`
 	}
 	.member-bullet-points {
 		background: #fff;
+		& .members {
+			margin-top: 1em;
+			grid-template-columns: 1fr 3fr;
+			display: grid;
+			align-items: center;
+			margin-left: 24px;
+			margin-right: 24px;
+			width: 90%;
+		}
 	}
 	svg {
 		position: absolute;
@@ -25,7 +34,7 @@ const StyledMemberPage = styled.div`
 
 const MemberPage = props => {
 	{
-		console.log(props.aboutData)
+		console.log(props.memberPercs)
 	}
 	if (props.aboutData) {
 		return (
@@ -74,11 +83,12 @@ const MemberPage = props => {
 						</svg>
 					</div>
 					<div className="member-bullet-points">
-						<ul>
-							<li>asd</li>
-							<li>asd</li>
-							<li>asd</li>
-						</ul>
+						{props.memberPercs.map((item, index) => (
+							<div className="members">
+								<img src={`${item.acf.image.sizes.thumbnail}`} />
+								<p key={index}>{`${item.content.rendered}`}</p>
+							</div>
+						))}
 					</div>
 				</Section>
 			</StyledMemberPage>

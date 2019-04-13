@@ -13,18 +13,25 @@ export default class extends Component {
 		const about = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages/?slug=about&?_embed`
 		)
+		const memberPercs = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/member`
+		)
 
 		// Return the data
 
 		return {
 			pages: pages.data,
-			about: about.data
+			about: about.data,
+			memberPercs: memberPercs.data
 		}
 	}
 	render() {
 		return (
 			<Layout navigationMenu={this.props.pages}>
-				<MemberPage aboutData={this.props.about} />
+				<MemberPage
+					aboutData={this.props.about}
+					memberPercs={this.props.memberPercs}
+				/>
 			</Layout>
 		)
 	}
