@@ -68,14 +68,16 @@ class SimpleSlider extends Component {
 			speed: 500,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			centerMode: true
+			arrows: false
+			// variableWidth: true
+			// centerMode: true
 		}
 		return (
 			<div>
 				<Heading position="relative" heroText="NEWS" letterSpacing="4px" />
 				<Slider {...settings}>
 					{this.props.posts.map((item, index) => (
-						<div key={index}>
+						<div key={index} className="slide-container">
 							<img src={item.acf.image.sizes.large || ''} alt="" />
 							<h3>{item.title.rendered}</h3>
 							{/* <Image position="relative" image={props.aboutImage} /> */}

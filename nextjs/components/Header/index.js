@@ -46,13 +46,16 @@ const Header = props => {
 					margin: 0;
 					font-family: 'Lato', sans-serif;
 				}
-				.slider-image-container {
-					display: flex;
-					flex-direction: column;
-					margin: 0 24px;
-					width: unset;
+				.slide-container {
+					background: #fff;
 				}
-				.slider-image-container img {
+				.slick-slide h3,
+				.slick-slide p,
+				.slick-slide span {
+					padding: 0 24px;
+				}
+				.slick-slide img {
+					width: 100%;
 				}
 			`}</style>
 			<Logo images={props.images} />
