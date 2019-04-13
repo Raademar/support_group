@@ -1,8 +1,9 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Button from "../Button";
+import ActivitiesPopupBox from "../ActivitiesPopupBox";
 import React, { Component } from "react";
-  
+
 
 class ActivitiesPopup extends React.Component {
   constructor(props) {
@@ -24,17 +25,20 @@ class ActivitiesPopup extends React.Component {
                 <button onClick={this.togglePopup}>
                     <img src={`${this.props.item.acf.image.sizes.thumbnail}`} />
                 </button>
-                <li>{`${this.props.item.title.rendered}`}</li>
+                <li key={`${this.index}`}>{`${this.props.item.title.rendered}`}</li>
                 </div>
-                <button
-                onClick={() => {
-                    alert("woooooooot?");
-                }}
-                >
-                </button>
 
                 {this.state.showPopup ? 
-                (<h1>HEJ</h1>
+          (     <ActivitiesPopupBox 
+                    item={this.props.item}
+                    width="97vw"
+                    height="97vh"
+                    top="4.5vh"
+                    left="4.5vw"
+                    zIndex="4"
+                    backgroundColor="blue"
+                    position="fixed"
+                />
                 ) : null}
             </div>
     );
