@@ -1,16 +1,16 @@
 <?php 
 declare(strict_types=1);
 add_action('init', function () {
-    register_post_type('about', [
+    register_post_type('member', [
         'has_archive' => true,
         'labels' => [
-            'add_new_item' => __('Add New About page'),
-            'edit_item' => __('Edit About'),
-            'name' => __('about'),
-            'search_items' => __('Search about'),
-            'singular_name' => __('About'),
+            'add_new_item' => __('Add New Member Perc'),
+            'edit_item' => __('Edit Member Perc'),
+            'name' => __('Member'),
+            'search_items' => __('Search Member Perc'),
+            'singular_name' => __('MemberPerc'),
         ],
-        'supports' => [
+				'supports' => [
             'title',
             'editor',
             'thumbnail',
@@ -19,6 +19,6 @@ add_action('init', function () {
         'menu_position' => 20,
         'public' => true,
         'show_in_rest' => true,
-        'label' => 'about'
+        'label' => 'Member'
     ]);
 });

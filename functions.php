@@ -13,6 +13,7 @@ add_action('after_setup_theme', function () {
 require get_template_directory().'/post-types/branches.php';
 require get_template_directory().'/post-types/activities.php';
 require get_template_directory().'/post-types/about.php';
+require get_template_directory().'/post-types/member.php';
 
 // // register custom fields for Student post type
 if (function_exists('acf_add_local_field_group')) {
