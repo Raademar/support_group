@@ -28,17 +28,13 @@ const ActivitiesPopupBoxStyle = styled.section`
 
 
 const ActivitiesPopupBox = props => {
-    console.log('hej', props.item)
-
-
-
+    // console.log('hej', props.item)
+    
     return (
       <ActivitiesPopupBoxStyle {...props}>
         <h1>{`${props.item.title.rendered}`}</h1>
 
-        <ActivitiesPopup 
-                    item={props.item}
-                />
+        <button onClick={props.closePopup}>STÄNG</button>
       </ActivitiesPopupBoxStyle>
     );
 }

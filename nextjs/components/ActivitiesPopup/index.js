@@ -33,13 +33,15 @@ class ActivitiesPopup extends React.Component {
                     item={this.props.item}
                     width="97vw"
                     height="97vh"
-                    top="4.5vh"
-                    left="4.5vw"
+                    top="1.5vh"
+                    left="1.5vw"
                     zIndex="4"
                     backgroundColor="blue"
                     position="fixed"
+                    closePopup={this.togglePopup.bind(this)}
                 />
                 ) : null}
+
             </div>
     );
   }
