@@ -17,6 +17,7 @@ const HeadingStyle = styled.h1`
   width: ${props => props.width || "100%"};
   margin-top: ${props => props.marginTop || "0"};
   margin-left: ${props => props.marginLeft};
+  margin-right: ${props => props.marginRight};
   margin-bottom: ${props => props.marginBottom};
   left: ${props => props.left || "0"};
 `;

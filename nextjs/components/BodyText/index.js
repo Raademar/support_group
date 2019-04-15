@@ -9,6 +9,7 @@ const BodyTextStyle = styled.div`
         font-weight: ${props => props.fontWeight || 400};
         margin-top: ${props => props.marginTop || '22px;'};
         margin-left: ${props => props.marginLeft };
+        margin-right: ${props => props.marginRight };
         margin-bottom: ${props => props.marginBottom};
         padding-bottom: ${props => props.paddingBottom};
         background-color: ${props => props.backgroundColor};

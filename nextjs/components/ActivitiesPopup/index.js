@@ -31,12 +31,12 @@ class ActivitiesPopup extends React.Component {
                 {this.state.showPopup ? 
           (     <ActivitiesPopupBox 
                     item={this.props.item}
-                    width="97vw"
-                    height="97vh"
-                    top="1.5vh"
-                    left="1.5vw"
+                    width="95vw"
+                    height="80vh"
+                    top="12.5vh"
+                    left="2vw"
                     zIndex="4"
-                    backgroundColor="blue"
+                    backgroundColor="white"
                     position="fixed"
                     closePopup={this.togglePopup.bind(this)}
                 />

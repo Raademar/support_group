@@ -10,6 +10,7 @@ const SectionStyle = styled.section`
   background-color: ${props => props.backgroundColor};
   width: ${props => props.width};
   left: ${props => props.left || "0"};
+  display: ${props => props.display};
 `;
 
 const Section = props => {

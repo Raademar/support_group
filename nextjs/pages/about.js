@@ -56,16 +56,17 @@ export default class extends Component {
     // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
     //   .source_url;
     return (
-      <div>
-        <Navigation />
-        <AboutPage
-          missionData={missionData}
-          whatWeDo={this.props.whatWeDo}
-          background={this.props.background}
-          ourVision={this.props.ourVision}
-          pages={this.props.pages}
-        />
-      </div>
+
+        <Layout navigationMenu={this.props.pages}>
+          <AboutPage
+            missionData={missionData}
+            whatWeDo={this.props.whatWeDo}
+            background={this.props.background}
+            ourVision={this.props.ourVision}
+            pages={this.props.pages}
+            isDesktop={this.props.isDesktop}
+          />
+      </ Layout>
     );  
   }
 }
