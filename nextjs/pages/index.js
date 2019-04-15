@@ -54,7 +54,6 @@ export default class extends Component {
 		}
 	}
 	render() {
-		console.log(this.props.aboutUsCards)
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
