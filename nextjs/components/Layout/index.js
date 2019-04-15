@@ -3,7 +3,6 @@ import Header from '../Header'
 import HamburgerMenu from '../HamburgerMenu'
 import Footer from '../Footer'
 
-
 class Layout extends Component {
 	constructor(props) {
 		super(props)
@@ -13,24 +12,38 @@ class Layout extends Component {
 		}
 	}
 	handleClick = () => {
-		console.log('clicked hamburger')
 		this.setState({
 			menuOpen: !this.state.menuOpen
 		})
 	}
 
 	componentDidMount = () => {
-		if(window.innerWidth > 900) {
+		if (window.innerWidth > 900) {
 			this.setState({
 				isDesktop: true
-			})			
+			})
 		}
+		window.addEventListener('resize', () => {
+			this.checkIfWindowDidResize()
+		})
+	}
+
+	checkIfWindowDidResize = () => {
+		if (window.innerWidth > 900) {
+			this.setState({
+				isDesktop: true
+			})
+			return
+		}
+		this.setState({
+			isDesktop: false
+		})
 	}
 
 	render() {
 		// Extract children and map over to assign new props before we render child components.
-		const childrenWithProps = React.Children.map(this.props.children, (child) => {
-			return React.cloneElement(child, {isDesktop: this.state.isDesktop})
+		const childrenWithProps = React.Children.map(this.props.children, child => {
+			return React.cloneElement(child, { isDesktop: this.state.isDesktop })
 		})
 		return (
 			<div>

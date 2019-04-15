@@ -16,7 +16,7 @@ const StyledMenu = styled.div`
 	transition: 3s ease;
 	color: #fff;
 	display: grid;
-	grid-template-columns: repeat(2, 50%);
+	grid-template-columns: 60% 40%;
 	grid-template-rows: 10% 50% 40%;
 	& div {
 		grid-row: 1;
@@ -32,6 +32,7 @@ const StyledMenu = styled.div`
 	}
 	& ul {
 		grid-row: 2;
+		align-items: flex-start;
 	}
 `
 
