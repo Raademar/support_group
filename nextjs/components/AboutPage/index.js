@@ -48,8 +48,8 @@ const AboutStyle = styled.div`
           props.isDesktop ? "1fr 3fr" : "1fr 3fr"};
         display: grid;
         align-items: center;
-        margin-left: 24px;
-        margin-right: 24px;
+        margin-left: ${props => (props.isDesktop ? "24px" : "")};
+        margin-right: ${props => (props.isDesktop ? "24px" : "")};
 
         & img{
 
@@ -58,7 +58,7 @@ const AboutStyle = styled.div`
 
         p{
           margin-right: 24px;
-          line-height: 28px;
+          line-height: 28px;	
           color: #1c1c1c;
         }
       }
@@ -182,7 +182,7 @@ const AboutPage = props => {
             color="#1c1c1c"
             fontSize="24px"
             marginLeft="14.8vw"
-            width="90%"
+            width="auto"
           />
           <div className="membersBox">
             {props.missionData.map((item, index) => (
