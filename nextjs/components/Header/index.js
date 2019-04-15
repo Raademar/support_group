@@ -45,6 +45,7 @@ const Header = props => {
 					padding: 0;
 					margin: 0;
 					font-family: 'Lato', sans-serif;
+					overflow-x: hidden;
 				}
 				.slide-container {
 					background: #fff;

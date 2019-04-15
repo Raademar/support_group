@@ -31,6 +31,7 @@ export default class extends Component {
 				<MemberPage
 					aboutData={this.props.about}
 					memberPercs={this.props.memberPercs}
+					isDesktop={this.props.isDesktop}
 				/>
 			</Layout>
 		)
