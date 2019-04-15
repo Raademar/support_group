@@ -15,24 +15,25 @@ const StyledMemberPage = styled.div`
 		min-height: 523px;
 		position: relative;
 		& .member-person-quote {
-			width: ${props => (props.isDesktop ? '176px' : '162px')};
+			width: ${props => (props.isDesktop ? '340px' : '162px')};
 			line-height: 130%;
 			letter-spacing: 0.4px;
 			font-weight: 200;
 			position: absolute;
-			left: 6%;
-			top: 18%;
+			left: ${props => (props.isDesktop ? '26%' : '6%')};
+			top: ${props => (props.isDesktop ? '18%' : '18%')};
 		}
 		& .member-person-quote-name {
 			font-weight: 600;
 			position: absolute;
-			left: 6%;
-			top: 42%;
+			left: ${props => (props.isDesktop ? '26%' : '6%')};
+			top: ${props => (props.isDesktop ? '34%' : '42%')};
 		}
 		& img {
 			position: absolute;
-			right: 10%;
-			bottom: 10%;
+			right: ${props => (props.isDesktop ? '5%' : '1%')};
+			bottom: ${props => (props.isDesktop ? '0' : '30%')};
+			width: ${props => props.isDesktop && '500px'};
 		}
 	}
 	.member-hero-colored-bg:not(h1, div, p, button) {
@@ -108,13 +109,26 @@ const StyledMemberPage = styled.div`
 		position: absolute;
 		top: 17%;
 		left: 7%;
+		.members-desktop-quote {
+			width: 340px;
+			left: 26%;
+		}
+		.members-desktop-quote-name {
+			left: 26%;
+			top: 42%;
+		}
+		img {
+			height: 500px;
+			right: 12%;
+			bottom: 0;
+		}
 	}
 `
 
 const MemberPage = props => {
 	if (props.aboutData) {
 		return (
-			<StyledMemberPage>
+			<StyledMemberPage {...props}>
 				<div className="member-hero-colored-bg">
 					<Section>
 						<div className={props.isDesktop ? 'member-if-is-desktop' : ''}>
@@ -200,7 +214,14 @@ const MemberPage = props => {
 						with all fun activities makes my membership a great thing.”
 					</p>
 					<p className="member-person-quote-name">Kasim Pontiga </p>
-					<img src="/static/images/member_in_scope.png" alt="" />
+					<img
+						src={
+							props.isDesktop
+								? '/static/images/member_in_scope_desktop.png'
+								: '/static/images/member_in_scope.png'
+						}
+						alt=""
+					/>
 				</div>
 			</StyledMemberPage>
 		)
