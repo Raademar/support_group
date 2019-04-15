@@ -2,8 +2,16 @@ import { Component } from 'react'
 import axios from 'axios'
 import Layout from '../components/Layout'
 import MemberPage from '../components/MemberPage'
+import MemberModal from '../components/MemberModal'
 
-export default class extends Component {
+class Member extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			memberModalOpen: false
+		}
+	}
 	// Resolve promise and get initial props
 	static async getInitialProps() {
 		// Make request for props
@@ -25,6 +33,13 @@ export default class extends Component {
 			memberPercs: memberPercs.data
 		}
 	}
+
+	handleClick = () => {
+		this.setState({
+			memberModalOpen: !this.state.memberModalOpen
+		})
+	}
+
 	render() {
 		return (
 			<Layout navigationMenu={this.props.pages}>
@@ -32,8 +47,12 @@ export default class extends Component {
 					aboutData={this.props.about}
 					memberPercs={this.props.memberPercs}
 					isDesktop={this.props.isDesktop}
+					toggleModal={this.handleClick}
 				/>
+				{this.state.memberModalOpen && <MemberModal />}
 			</Layout>
 		)
 	}
 }
+
+export default Member

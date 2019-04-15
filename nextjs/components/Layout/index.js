@@ -42,9 +42,11 @@ class Layout extends Component {
 
 	render() {
 		// Extract children and map over to assign new props before we render child components.
-		const childrenWithProps = React.Children.map(this.props.children, child => {
-			return React.cloneElement(child, { isDesktop: this.state.isDesktop })
-		})
+		const childrenWithProps = this.props.children
+			.filter(child => React.isValidElement(child))
+			.map((child, index) => {
+				return React.cloneElement(child, { isDesktop: this.state.isDesktop })
+			})
 		return (
 			<div>
 				<Header

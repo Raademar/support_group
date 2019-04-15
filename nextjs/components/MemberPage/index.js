@@ -71,7 +71,7 @@ const StyledMemberPage = styled.div`
 		justify-content: center;
 		margin-left: 24px;
 		margin-right: 24px;
-		padding: 4em;
+		padding: 5em;
 		& p {
 			grid-column: 2;
 			margin: 0;
@@ -90,8 +90,8 @@ const StyledMemberPage = styled.div`
 			& p {
 				text-align: center;
 				font-weight: 200;
-				width: 286px;
-				line-height: 140%;
+				width: 215px;
+				line-height: 150%;
 				letter-spacing: 0.05em;
 			}
 		}
@@ -159,6 +159,7 @@ const MemberPage = props => {
 								marginBottom="80px"
 								zIndex="2"
 								primary
+								onClick={props.toggleModal}
 							/>
 						</div>
 						{!props.isDesktop && (
@@ -201,6 +202,7 @@ const MemberPage = props => {
 					{props.memberPercs.map((item, index) => (
 						<div
 							className={props.isDesktop ? 'members-desktop' : 'members-mobile'}
+							key={index}
 						>
 							<img src={`${item.acf.image.sizes.thumbnail}`} />
 							<h3>{item.title.rendered}</h3>
