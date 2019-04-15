@@ -50,14 +50,10 @@ export default class extends Component {
 		const members = this.props.aboutData
 
 		const missionData = members.filter(member => member.acf.is_of_type_mission)
-
-<<<<<<< HEAD
-    const missionData = members.filter(member => member.acf.is_of_type_mission);
     
     // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
     //   .source_url;
     return (
-
         <Layout navigationMenu={this.props.pages}>
           <AboutPage
             missionData={missionData}
@@ -70,23 +66,6 @@ export default class extends Component {
       </ Layout>
     );  
   }
-=======
-		// const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
-		//   .source_url;
-		return (
-			<div>
-				<Navigation />
-				<AboutPage
-					missionData={missionData}
-					whatWeDo={this.props.whatWeDo}
-					background={this.props.background}
-					ourVision={this.props.ourVision}
-					pages={this.props.pages}
-				/>
-			</div>
-		)
-	}
->>>>>>> 3dbb6ff82c625a641a28b786c78c772f997a7def
 }
 
 //   render() {

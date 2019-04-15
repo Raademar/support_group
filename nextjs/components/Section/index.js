@@ -11,6 +11,7 @@ const SectionStyle = styled.section`
   width: ${props => props.width};
   left: ${props => props.left || "0"};
   display: ${props => props.display};
+  height: ${props => props.height};
 `;
 
 const Section = props => {
