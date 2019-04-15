@@ -30,13 +30,14 @@ const ActivitiesList = styled.section`
 	& img {
 		border-radius: 50%;
 		margin-bottom: 12px;
+		width: 80%
 	}
 	& div {
 		grid-template-columns: 3fr 1fr;
 		left: 0;
 		margin-left: 0px;
 		margin-right: 0px;
-		margin-bottom: 40px;
+		margin-bottom: 5%;
 	}
 `
 

@@ -32,8 +32,10 @@ const ActivitiesPopupBoxStyle = styled.section`
   }
   .closeImgPopup {
     position: fixed;
+    border-radius: 0%;
     top: 16.5vh;
     left: 83vw;
+    width: auto;
   }
 `;
 
@@ -63,7 +65,7 @@ const ActivitiesPopupBox = props => {
           marginRight="8.6vw"
 
         />
-        
+
             <img className="closeImgPopup" onClick={props.closePopup} src="/static/images/kryss.png" alt="" />
       </ActivitiesPopupBoxStyle>
     );

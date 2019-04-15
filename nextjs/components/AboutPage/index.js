@@ -86,13 +86,14 @@ const AboutPage = props => {
             marginTop={props.isDesktop ? "9em" : "1em"}
             marginBottom={props.isDesktop ? "40px" : "1em"}
             left="0"
-            position="relative"
+			position="relative"
+			fontSize="36px"
           />
           <BodyText
             bodyText={props.whatWeDo[0].content.rendered}
             lineHeight={props.isDesktop ? "220%" : "180%"}
             textAlign={props.isDesktop ? "center" : "left"}
-            fontSize="18"
+            fontSize="24px"
             width={props.isDesktop ? "auto" : "100%"}
             paddingBottom={props.isDesktop ? "7em" : "1em"}
             marginRight={props.isDesktop ? "12em" : ""}
@@ -120,7 +121,7 @@ const AboutPage = props => {
               left="0"
               position="relative"
               textAlign="left"
-              marginLeft="24px"
+              marginLeft="32px"
               color="#1c1c1c"
               fontSize="24px"
             />
@@ -130,7 +131,7 @@ const AboutPage = props => {
               lineHeight="180%"
               marginLeft="24px"
               textAlign="left"
-              fontSize="18"
+              fontSize="20px"
               paddingBottom={props.isDesktop ? "0em" : "4em"}
             />
           </div>
@@ -151,7 +152,7 @@ const AboutPage = props => {
               position="relative"
               textAlign="left"
               color="#1c1c1c"
-              fontSize="24px"
+              fontSize="32px"
               marginTop={props.isDesktop ? "0" : "1em"}
             />
             <BodyText
@@ -159,7 +160,7 @@ const AboutPage = props => {
               lineHeight="180%"
               width={props.isDesktop ? "90%" : ""}
               textAlign="left"
-              fontSize="18"
+              fontSize="20px"
               paddingBottom={props.isDesktop ? "5%" : "4em"}
             />
           </div>
@@ -180,7 +181,7 @@ const AboutPage = props => {
             position="relative"
             textAlign="left"
             color="#1c1c1c"
-            fontSize="24px"
+            fontSize="32px"
             marginLeft="14.8vw"
             width="auto"
           />

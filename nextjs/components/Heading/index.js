@@ -4,6 +4,7 @@ import Button from '../Button'
 
 const HeadingStyle = styled.h1`
   font-size: ${props => (props.isDesktop ? "64px" : "24px")};
+  font-size: ${props => (props.fontSize)};
   font-weight: ${props => props.fontWeight || "bold"};
   color: ${props => props.color || "#558FF0"};
   background-color: ${props => props.backgroundColor};
