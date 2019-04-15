@@ -9,7 +9,7 @@ import Layout from '../Layout'
 
 const ContactStyle = styled.div`
 	/* margin: 0 auto;
-	background-color: ${props => props.backgroundColor || "white"};
+	background-color: ${props => props.backgroundColor || 'white'};
 	margin-top: 3em; */
       display: flex;
       flex-direction: column;
@@ -73,67 +73,62 @@ const ContactStyle = styled.div`
             font-weight: bold;
         }
       }
-`;
+`
 
 const Contact = props => {
-    if (true) {
-        // console.log(props.pageData)
-        console.log(props.navigationMenu)
-
-        return (
-          <ContactStyle>
-            <Layout navigationMenu={props.pages}>
-              <Section>
-                <Heading
-                  heroText="CONTACT"
-                  position="relativ"
-                    marginTop="2em"
-                    color="#1C1C1C"
-                />
-                <BodyText
-                    bodyText="Do you have any questions about our work? Give us a message!"
-                    textAlign="left"
-                    lineHeight="180%"
-                />
-                <form action="" method="get" id="contact">
-                  <p>Name</p>
-                  <input type="text" name="Name" value="" />
-                  <p>E-mail</p>
-                  <input type="mail" name="mail" value="" />
-                  <p>Subject</p>
-                  <input type="subject" name="subject" value="" />
-                  <p>Message</p>
-                  <input type="textarea" name="subject" value="" />
-                </form>
-                <button type="submit" form="contact" value="Submit">
-                  Submit
-                </button>
-              </Section>
-              <Section>
-                <Heading
-                  heroText="OUR PLACES AND CITIES"
-                  position="relativ"
-                  marginTop="2em"
-                  color="#1C1C1C"
-                />
-                {props.branchesData.map((item, index) => (
-                  <div className="branches">
-                    <img src={`${item.acf.image}`} />
-                    <h3 key={index}>{`${item.title.rendered}`}</h3>
-                    <p key={index}>{`${item.acf.adress}`}</p>
-                    <p key={index}>{`${
-                      item.acf.postal_nr_and_city
-                    }`}</p>
-                    <p key={index}>{`${item.acf.phone}`}</p>
-                  </div>
-                ))}
-              </Section>
-            </Layout>
-          </ContactStyle>
-        );
-    } else {
-        return null
-    }
+	if (true) {
+		return (
+			<ContactStyle>
+				<Layout navigationMenu={props.pages}>
+					<Section>
+						<Heading
+							heroText="CONTACT"
+							position="relativ"
+							marginTop="2em"
+							color="#1C1C1C"
+						/>
+						<BodyText
+							bodyText="Do you have any questions about our work? Give us a message!"
+							textAlign="left"
+							lineHeight="180%"
+						/>
+						<form action="" method="get" id="contact">
+							<p>Name</p>
+							<input type="text" name="Name" value="" />
+							<p>E-mail</p>
+							<input type="mail" name="mail" value="" />
+							<p>Subject</p>
+							<input type="subject" name="subject" value="" />
+							<p>Message</p>
+							<input type="textarea" name="subject" value="" />
+						</form>
+						<button type="submit" form="contact" value="Submit">
+							Submit
+						</button>
+					</Section>
+					<Section>
+						<Heading
+							heroText="OUR PLACES AND CITIES"
+							position="relativ"
+							marginTop="2em"
+							color="#1C1C1C"
+						/>
+						{props.branchesData.map((item, index) => (
+							<div className="branches">
+								<img src={`${item.acf.image}`} />
+								<h3 key={index}>{`${item.title.rendered}`}</h3>
+								<p key={index}>{`${item.acf.adress}`}</p>
+								<p key={index}>{`${item.acf.postal_nr_and_city}`}</p>
+								<p key={index}>{`${item.acf.phone}`}</p>
+							</div>
+						))}
+					</Section>
+				</Layout>
+			</ContactStyle>
+		)
+	} else {
+		return null
+	}
 }
 
 export default Contact
