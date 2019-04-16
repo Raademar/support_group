@@ -50,7 +50,7 @@ const AboutStyle = styled.div`
 	& .divBox {
 		width: ${props => (props.isDesktop ? '50%' : '90%')};
 		display: ${props => (props.isDesktop ? 'relativ' : 'flex')};
-		margin-top: ${props => (props.isDesktop ? '12em' : '1.6em')};
+		margin-top: ${props => (props.isDesktop ? '16vh' : '1.6em')};
 		flex-direction: column;
 		align-content: center;
 		justify-items: center;
@@ -64,7 +64,7 @@ const AboutPage = props => {
 		props.ourVision ||
 		props.isDesktop
 	) {
-		console.log(props.isDesktop)
+		// console.log(props.isDesktop)
 
 		return (
 			<AboutStyle {...props}>

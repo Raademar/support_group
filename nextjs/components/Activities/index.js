@@ -19,7 +19,7 @@ const ActivitiesList = styled.section`
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: ${props => props.isDesktop ? '1fr 1fr 1fr' : '1fr 1fr'};
 		grid-gap: 10px;
 		margin-top: 4em;
 	}
@@ -30,7 +30,7 @@ const ActivitiesList = styled.section`
 	& img {
 		border-radius: 50%;
 		margin-bottom: 12px;
-		width: 80%
+		width: 60%
 	}
 	& div {
 		grid-template-columns: 3fr 1fr;
@@ -50,7 +50,7 @@ const makeThumb = () => {
 			? img.classList.add('image-portrait')
 			: img.classList.add('landscape')
 	})
-	console.log(portraitThumbnailImage)
+	// console.log(portraitThumbnailImage)
 }
 
 const Activities = props => {

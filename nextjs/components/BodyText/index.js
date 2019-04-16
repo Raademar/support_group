@@ -21,6 +21,8 @@ const BodyTextStyle = styled.div`
         width: ${props => props.width};
         left: ${props => props.left};
         bottom : ${props => props.bottom};
+        width : ${props => props.width};
+        display : ${props => props.display};
         /* margin-right: 10em;
         margin-left: 10em; */
     }

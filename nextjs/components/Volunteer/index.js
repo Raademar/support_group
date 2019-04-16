@@ -7,26 +7,27 @@ import Heading from '../Heading'
 import Section from '../Section'
 
 const VolunteerStyle = styled.div`
-    position: relative;
-	margin: 0 auto;
-	height: 100vh;
-	background-color: ${props => props.backGroundColor || '#3D73CF'};
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: ${props => props.backGroundColor || "#3D73CF"};
 
-    svg{
-        position: absolute;
-        z-index: 1;
-        margin-top: -109px;
-        left: 0;
-        bottom: 0;
-    }
-`
+  svg {
+    position: absolute;
+    z-index: 1;
+    margin-top: -109px;
+    left: 0;
+    bottom: 0;
+    display: ${props => (props.isDesktop ? "none" : "")};
+  }
+`;
 
 const Volunteer = props => {
     if (props.pageData) {
         // console.log(props.pageData)
 
         return (
-            <VolunteerStyle>
+            <VolunteerStyle {...props}>
                 <Section backgroundColor="#3D73CF">
                     <Heading
                         textAlign="left"
