@@ -50,107 +50,18 @@ export default class extends Component {
 		const members = this.props.aboutData
 
 		const missionData = members.filter(member => member.acf.is_of_type_mission)
-    
-    // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
-    //   .source_url;
-    return (
-        <Layout navigationMenu={this.props.pages}>
-          <AboutPage
-            missionData={missionData}
-            whatWeDo={this.props.whatWeDo}
-            background={this.props.background}
-            ourVision={this.props.ourVision}
-            pages={this.props.pages}
-            isDesktop={this.props.isDesktop}
-          />
-      </ Layout>
-    );  
-  }
+
+		return (
+			<Layout navigationMenu={this.props.pages}>
+				<AboutPage
+					missionData={missionData}
+					whatWeDo={this.props.whatWeDo}
+					background={this.props.background}
+					ourVision={this.props.ourVision}
+					pages={this.props.pages}
+					isDesktop={this.props.isDesktop}
+				/>
+			</Layout>
+		)
+	}
 }
-
-//   render() {
-//     console.log();
-//     // const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
-//     //   .source_url;
-//     return (
-//       <Layout navigationMenu={this.props.pages}>
-//         <Section>
-//           <Heading
-//             heroText={this.props.whatWeDo[0].title.rendered}
-//             left="0"
-//             position="relative"
-//             marginTop="1em"
-//           />
-//           <BodyText
-//             bodyText={this.props.whatWeDo[0].content.rendered}
-//             lineHeight="180%"
-//             marginLeft="5%"
-//             textAlign="left"
-//             fontSize="18"
-//             width="90%"
-//             paddingBottom="2em"
-//           />
-//         </Section>
-//         <Section
-//           backgroundColor="#F2F2F2"
-//           width="100%"
-//           left="0"
-//           marginLeft="0"
-//           marginRight="0"
-//         >
-//           <img src={this.props.background[0].acf.image} />
-//           <Heading
-//             heroText={this.props.background[0].title.rendered}
-//             left="0"
-//             position="relative"
-//             textAlign="left"
-//             marginLeft="5%"
-//             color="#1c1c1c"
-//             fontSize="24px"
-//             width="90%"
-//           />
-//           <BodyText
-//             bodyText={this.props.background[0].content.rendered}
-//             lineHeight="180%"
-//             marginLeft="5%"
-//             textAlign="left"
-//             fontSize="18"
-//             width="80%"
-//             paddingBottom="5em"
-//           />
-//         </Section>
-//         <Section
-//           backgroundColor="#fff"
-//           width="100%"
-//           left="0"
-//           marginLeft="0"
-//           marginRight="0"
-//         >
-//           <img src={this.props.ourVision[0].acf.image}
-
-//           />
-//           <Heading
-//             heroText={this.props.ourVision[0].title.rendered}
-//             left="0"
-//             position="relative"
-//             textAlign="left"
-//             marginLeft="5%"
-//             color="#1c1c1c"
-//             fontSize="24px"
-//             width="90%"
-//             marginTop="0"
-//           />
-//           <BodyText
-//             bodyText={this.props.ourVision[0].content.rendered}
-//             lineHeight="180%"
-//             marginLeft="5%"
-//             textAlign="left"
-//             fontSize="18"
-//             width="90%"
-//             paddingBottom="5em"
-//           />
-//         </Section>
-//       </Layout>
-//     );
-//   }
-// }

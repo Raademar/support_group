@@ -55,11 +55,13 @@ const ActivitiesPopupBox = props => {
 				marginLeft="8.6vw "
 				marginRight="8.6vw"
 			/>
-
-        />
-
-            <img className="closeImgPopup" onClick={props.closePopup} src="/static/images/kryss.png" alt="" />
-      </ActivitiesPopupBoxStyle>
-    );
+			<img
+				className="closeImgPopup"
+				onClick={props.closePopup}
+				src="/static/images/kryss.png"
+				alt=""
+			/>
+		</ActivitiesPopupBoxStyle>
+	)
 }
 export default ActivitiesPopupBox
