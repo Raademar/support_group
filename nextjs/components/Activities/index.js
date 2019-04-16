@@ -19,7 +19,8 @@ const ActivitiesList = styled.section`
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: ${props => props.isDesktop ? '1fr 1fr 1fr' : '1fr 1fr'};
+		grid-template-columns: ${props =>
+			props.isDesktop ? '1fr 1fr 1fr' : '1fr 1fr'};
 		grid-gap: 10px;
 		margin-top: 4em;
 	}
@@ -30,7 +31,7 @@ const ActivitiesList = styled.section`
 	& img {
 		border-radius: 50%;
 		margin-bottom: 12px;
-		width: 60%
+		width: 60%;
 	}
 	& div {
 		grid-template-columns: 3fr 1fr;
@@ -59,7 +60,7 @@ const Activities = props => {
 	})
 
 	if (props.activitiesData) {
-		const { activitiesData } = props
+		const { activitiesData, isDesktop } = props
 
 		return (
 			<ActivitiesList {...props}>
@@ -67,7 +68,11 @@ const Activities = props => {
 				<ul>
 					{activitiesData.map((item, index) => (
 						<div key={index}>
-							<ActivitiesPopup item={item} index={index} />
+							<ActivitiesPopup
+								item={item}
+								index={index}
+								isDesktop={props.isDesktop}
+							/>
 							{/* <img src={`${item.acf.image.sizes.thumbnail}`} />
             	<li key={index}>{`${item.title.rendered}`}</li> */}
 						</div>

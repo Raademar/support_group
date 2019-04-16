@@ -70,7 +70,6 @@ class Layout extends Component {
 						navigationMenu={this.props.navigationMenu}
 					/>
 				)}
-
 				{childrenWithProps}
 				<Footer navigationMenu={this.props.navigationMenu} />
 			</div>
