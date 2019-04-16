@@ -1,7 +1,4 @@
-import Link from 'next/link'
 import styled from 'styled-components'
-import Button from '../Button'
-import ActivitiesPopup from '../ActivitiesPopup'
 import BodyText from '../BodyText'
 import Heading from '../Heading'
 

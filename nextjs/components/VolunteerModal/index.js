@@ -3,28 +3,24 @@ import styled from 'styled-components'
 import Heading from '../Heading'
 import Section from '../Section'
 
-const StyledModal = styled.div`
-	height: 100%;
+const StyledVolunteer = styled.div`
+	height: ${props => (props.isDesktop ? '50vh' : '87vh')};
 	width: 100%;
 	background: #ffdd7e;
 	color: #1c1c1c;
 	position: fixed;
-	top: 0%;
+	top: 15%;
 	left: 0;
 	z-index: 99;
-
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	span {
-		font-size: 52px;
-		/* position: absolute;
+		font-size: 42px;
+		position: absolute;
 		right: 24px;
-		top: 8px; */
-		align-self: flex-end;
+		top: 8px;
 	}
 	input {
 		height: 40px;
@@ -47,8 +43,7 @@ const StyledModal = styled.div`
 		color: #1c1c1c;
 	}
 	button {
-		background-color: ${props =>
-			props.memberMessageSent ? '#1b1b1b' : '#2f86ed'};
+		background-color: #2f86ed;
 		border-radius: 8px;
 		left: 0%;
 		right: 0%;
@@ -67,37 +62,31 @@ const StyledModal = styled.div`
 	}
 `
 
-const MemberModal = props => {
+const VolunteerModal = props => {
 	return (
-		<StyledModal {...props}>
+		<StyledVolunteer {...props}>
 			<Section>
-				<span onClick={props.toggleModal}>&times;</span>
+				<span onClick={props.toggleVolunteer}>&times;</span>
 				<Heading
-					heroText={
-						props.memberMessageSent
-							? 'THANK YOU FOR YOUR MESSAGE'
-							: 'BECOME A MEMBER'
-					}
+					heroText="BECOME A MEMBER"
 					color="#1c1c1c"
 					position="initial"
-					textAlign="left"
 				/>
 				<p>
 					Do you have any questions about our work? Do you want to work with us?
 					Give us a message!
 				</p>
-				<form action="" method="post" id="contact">
+				<form action="" method="get" id="contact">
 					<input type="text" name="name" placeholder="Name" />
 					<input type="mail" name="mail" placeholder="Email" />
-					<input type="telephone" name="tel" placeholder="Telephone" />
 					<textarea type="" name="message" placeholder="Message" rows="8" />
 				</form>
-				<button form="contact" onClick={props.submitMemberMessage}>
-					{props.memberMessageSent ? 'MESSAGE SENT' : 'SEND REQUEST'}
+				<button type="submit" form="contact" value="Submit">
+					Send Request
 				</button>
 			</Section>
-		</StyledModal>
+		</StyledVolunteer>
 	)
 }
 
-export default MemberModal
+export default VolunteerModal

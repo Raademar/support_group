@@ -23,7 +23,7 @@ import Heading from "../Heading";
     render() {
       console.log(this.props.isDesktop);
       return (
-        <div {...this.props}>
+        <div {...this.props} isDesktop={this.props.isDesktop}>
           <div>
             <img
               onClick={this.togglePopup}
@@ -40,7 +40,7 @@ import Heading from "../Heading";
               fontSize={this.props.isDesktop ? "24px" : "20px"}
               fontWeight={this.props.isDesktop ? "bold" : "bold"}
               width={this.props.isDesktop ? "50%" : ""}
-              display={this.props.isDesktop ? "" : "none"}
+              display={this.props.isDesktop ? "flex" : "none"}
             />
           </div>
 
@@ -55,6 +55,7 @@ import Heading from "../Heading";
               backgroundColor="white"
               position="fixed"
               closePopup={this.togglePopup.bind(this)}
+              isDesktop={this.props.isDesktop}
             />
           ) : null}
         </div>
