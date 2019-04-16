@@ -4,21 +4,21 @@ import Heading from '../Heading'
 import BodyText from '../BodyText'
 import Button from '../Button'
 import styled from 'styled-components'
-const StyledMemberPage = styled.div`
+const StyledVolunteerPage = styled.div`
 	overflow: ${props => (props.bodyScrollLocked ? 'hidden' : 'unset')};
 	body {
 		overflow: ${props => (props.bodyScrollLocked ? 'hidden' : 'unset')};
 	}
-	.member-hero-colored-bg {
+	.volunteer-hero-colored-bg {
 		min-height: ${props => (props.isDesktop ? '636px' : '583px')};
 		position: relative;
 		background: #ffdd7e;
 	}
-	.member-person-inscope {
+	.volunteer-person-inscope {
 		background: #f2f2f2;
 		min-height: 523px;
 		position: relative;
-		& .member-person-quote {
+		& .volunteer-person-quote {
 			width: ${props => (props.isDesktop ? '340px' : '162px')};
 			line-height: 130%;
 			letter-spacing: 0.4px;
@@ -27,7 +27,7 @@ const StyledMemberPage = styled.div`
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
 			top: ${props => (props.isDesktop ? '18%' : '18%')};
 		}
-		& .member-person-quote-name {
+		& .volunteer-person-quote-name {
 			font-weight: 600;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
@@ -40,14 +40,14 @@ const StyledMemberPage = styled.div`
 			width: ${props => props.isDesktop && '500px'};
 		}
 	}
-	.member-hero-colored-bg:not(h1, div, p, button) {
+	.volunteer-hero-colored-bg:not(h1, div, p, button) {
 		margin: 0;
 	}
-	.member-bullet-points-mobile {
+	.volunteer-bullet-points-mobile {
 		background: #fff;
 		/* display: flex;
 		justify-content: center; */
-		.members-mobile {
+		.volunteers-mobile {
 			margin-top: 1em;
 			grid-template-columns: 1fr 3fr;
 			grid-template-rows: 1fr 1fr 1fr;
@@ -67,7 +67,7 @@ const StyledMemberPage = styled.div`
 			}
 		}
 	}
-	.member-bullet-points-desktop {
+	.volunteer-bullet-points-desktop {
 		margin-top: 1em;
 		display: flex;
 		flex-direction: row;
@@ -86,7 +86,7 @@ const StyledMemberPage = styled.div`
 		& img {
 			grid-row: 1/3;
 		}
-		& .members-desktop {
+		& .volunteers-desktop {
 			width: 50%;
 			display: flex;
 			flex-direction: column;
@@ -99,7 +99,7 @@ const StyledMemberPage = styled.div`
 				letter-spacing: 0.05em;
 			}
 		}
-		.members-desktop > * {
+		.volunteers-desktop > * {
 			padding: 0.5em 0;
 		}
 	}
@@ -108,16 +108,16 @@ const StyledMemberPage = styled.div`
 		bottom: 0;
 		right: 0;
 	}
-	.member-if-is-desktop {
+	.volunteer-if-is-desktop {
 		width: 100%;
 		position: absolute;
 		top: 17%;
 		left: 7%;
-		.members-desktop-quote {
+		.volunteers-desktop-quote {
 			width: 340px;
 			left: 26%;
 		}
-		.members-desktop-quote-name {
+		.volunteers-desktop-quote-name {
 			left: 26%;
 			top: 42%;
 		}
@@ -129,17 +129,17 @@ const StyledMemberPage = styled.div`
 	}
 `
 
-const MemberPage = props => {
+const VolunteerPage = props => {
 	if (props.aboutData) {
 		return (
-			<StyledMemberPage {...props}>
-				<div className="member-hero-colored-bg">
+			<StyledVolunteerPage {...props}>
+				<div className="volunteer-hero-colored-bg">
 					<Section>
-						<div className={props.isDesktop ? 'member-if-is-desktop' : ''}>
+						<div className={props.isDesktop ? 'volunteer-if-is-desktop' : ''}>
 							<Heading
 								textAlign="left"
 								position="relative"
-								heroText="BECOME A MEMBER"
+								heroText="BECOME A volunteer"
 								width="90%"
 								paddingTop="32px"
 								color="black"
@@ -158,7 +158,7 @@ const MemberPage = props => {
 								fontSize="16px"
 								width="198px"
 								height="52px"
-								text="Become a member"
+								text="Become a volunteer"
 								marginTop="45px"
 								marginBottom="80px"
 								zIndex="2"
@@ -199,13 +199,15 @@ const MemberPage = props => {
 				<div
 					className={
 						props.isDesktop
-							? 'member-bullet-points-desktop'
-							: 'member-bullet-points-mobile'
+							? 'volunteer-bullet-points-desktop'
+							: 'volunteer-bullet-points-mobile'
 					}
 				>
-					{props.memberPercs.map((item, index) => (
+					{props.volunteerPercs.map((item, index) => (
 						<div
-							className={props.isDesktop ? 'members-desktop' : 'members-mobile'}
+							className={
+								props.isDesktop ? 'volunteers-desktop' : 'volunteers-mobile'
+							}
 							key={index}
 						>
 							<img src={`${item.acf.image.sizes.thumbnail}`} />
@@ -214,26 +216,20 @@ const MemberPage = props => {
 						</div>
 					))}
 				</div>
-				<div className="member-person-inscope">
-					<p className="member-person-quote">
-						“As a member i get a democratic possibility to vote. That together
-						with all fun activities makes my membership a great thing.”
+				<div className="volunteer-person-inscope">
+					<p className="volunteer-person-quote">
+						“As a volunteer i get a democratic possibility to vote. That
+						together with all fun activities makes my volunteership a great
+						thing.”
 					</p>
-					<p className="member-person-quote-name">Kasim Pontiga </p>
-					<img
-						src={
-							props.isDesktop
-								? '/static/images/member_in_scope_desktop.png'
-								: '/static/images/member_in_scope.png'
-						}
-						alt=""
-					/>
+					<p className="volunteer-person-quote-name">Kasim Pontiga </p>
+					<img src="/static/images/volunteer_woman_in_scope.png" alt="" />
 				</div>
-			</StyledMemberPage>
+			</StyledVolunteerPage>
 		)
 	} else {
 		return null
 	}
 }
 
-export default MemberPage
+export default VolunteerPage

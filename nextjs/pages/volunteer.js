@@ -1,16 +1,15 @@
 import { Component } from 'react'
 import axios from 'axios'
 import Layout from '../components/Layout'
-import MemberPage from '../components/MemberPage'
-import MemberModal from '../components/MemberModal'
+import VolunteerPage from '../components/VolunteerPage'
+import VolunteerModal from '../components/VolunteerModal'
 
-class Member extends Component {
+class Volunteer extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
-			memberModalOpen: true,
-			memberMessageSent: false
+			volunteerModalOpen: false
 		}
 	}
 	// Resolve promise and get initial props
@@ -22,8 +21,8 @@ class Member extends Component {
 		const about = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages/?slug=about&?_embed`
 		)
-		const memberPercs = await axios.get(
-			`http://${process.env.HOSTNAME}/wp-json/wp/v2/member`
+		const volunteerPercs = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/volunteer`
 		)
 
 		// Return the data
@@ -31,20 +30,13 @@ class Member extends Component {
 		return {
 			pages: pages.data,
 			about: about.data,
-			memberPercs: memberPercs.data
+			volunteerPercs: volunteerPercs.data
 		}
 	}
 
 	handleClick = () => {
 		this.setState({
-			memberModalOpen: !this.state.memberModalOpen
-		})
-	}
-
-	submitMemberMessage = () => {
-		console.log('Member request message sent.')
-		this.setState({
-			memberMessageSent: !this.state.memberMessageSent
+			volunteerModalOpen: !this.state.volunteerModalOpen
 		})
 	}
 
@@ -53,23 +45,19 @@ class Member extends Component {
 	render() {
 		return (
 			<Layout navigationMenu={this.props.pages}>
-				<MemberPage
+				<VolunteerPage
 					aboutData={this.props.about}
-					memberPercs={this.props.memberPercs}
+					volunteerPercs={this.props.volunteerPercs}
 					isDesktop={this.props.isDesktop}
 					toggleModal={this.handleClick}
-					bodyScrollLocked={this.state.memberModalOpen}
+					bodyScrollLocked={this.state.volunteerModalOpen}
 				/>
-				{this.state.memberModalOpen && (
-					<MemberModal
-						toggleModal={this.handleClick}
-						memberMessageSent={this.state.memberMessageSent}
-						submitMemberMessage={this.submitMemberMessage}
-					/>
+				{this.state.volunteerModalOpen && (
+					<VolunteerModal toggleModal={this.handleClick} />
 				)}
 			</Layout>
 		)
 	}
 }
 
-export default Member
+export default Volunteer
