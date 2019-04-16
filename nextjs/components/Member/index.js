@@ -10,6 +10,7 @@ const MemberStyle = styled.div`
   margin: 0 auto;
   height: 100vh;
   background-color: ${props => props.backGroundColor || "#FFDD7E"};
+  width: ${props => props.isDesktop ? "50vw" : "100vw"};
   position: relative;
 
   svg {
@@ -18,7 +19,7 @@ const MemberStyle = styled.div`
     margin-top: -109px;
     left: 0;
     bottom: 0;
-    display: ${props => props.isDesktop ? "none" : ""};
+    display: ${props => (props.isDesktop ? "none" : "")};
   }
 `;
 
@@ -28,22 +29,27 @@ const Member = props => {
 
 		return (
       <MemberStyle {...props}>
-        <Section backgroundColor="#FFDD7E">
+        <Section
+          backgroundColor="#FFDD7E"
+          marginLeft={props.isDesktop ? "16%" : ""}
+        >
           <Heading
             textAlign="left"
             position="relative"
             heroText="BECOME A MEMBER"
-            width="90%"
-            paddingTop="46px"
+            width={props.isDesktop ? "60%" : "70%"}
+            paddingTop={props.isDesktop ? "16%" : "46px"}
             color="black"
             marginTop="0"
+            fontSize={props.isDesktop ? "36px" : ""}
             // heroText={props.pageData.title.rendered}
           />
           <BodyText
             position="relative"
             bodyText={props.pageData.content.rendered}
             textAlign="left"
-            width="96%"
+            width={props.isDesktop ? "80%" : "96%"}
+            lineHeight={props.isDesktop ? "180%" : "140%"}
             lineHeight="140%"
             zIndex="3"
           />
@@ -64,12 +70,12 @@ const Member = props => {
             bodyText="“As a member i get a democratic possibility to vote. That together with all fun activities makes my membership a great thing.”
                         Kajsa Nilsson"
             textAlign="left"
-            fontSize="14px"
+            fontSize={props.isDesktop ? "20px" : "14px"}
             widthP="50%"
             zIndex="3"
             marginBottom="7.3em"
             width="50%"
-            left="6%"
+            left="16%"
             lineHeight="130%"
             bottom="0"
           />

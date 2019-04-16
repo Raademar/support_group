@@ -12,6 +12,7 @@ const BodyTextStyle = styled.div`
         margin-right: ${props => props.marginRight };
         margin-bottom: ${props => props.marginBottom};
         padding-bottom: ${props => props.paddingBottom};
+        padding-left: ${props => props.paddingLeft};
         background-color: ${props => props.backgroundColor};
         position: ${props => props.position || 'relative'};
         color: ${props => props.color || '#393939'};

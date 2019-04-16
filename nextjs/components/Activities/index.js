@@ -6,41 +6,42 @@ import ActivitiesPopup from '../ActivitiesPopup'
 import React, { useEffect } from 'react'
 
 const ActivitiesList = styled.section`
-	padding: 0;
-	margin: 0;
-	height: auto;
-	text-align: center;
-	position: relative;
-	height: 100vh;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  text-align: center;
+  position: relative;
+  background-color: #dfeafa;
 
-	& ul {
-		list-style-type: none;
-		width: 100vw;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-columns: ${props =>
-			props.isDesktop ? '1fr 1fr 1fr' : '1fr 1fr'};
-		grid-gap: 10px;
-		margin-top: 4em;
-	}
-	& div {
-		position: relative;
-		overflow: hidden;
-	}
-	& img {
-		border-radius: 50%;
-		margin-bottom: 12px;
-		width: 60%;
-	}
-	& div {
-		grid-template-columns: 3fr 1fr;
-		left: 0;
-		margin-left: 0px;
-		margin-right: 0px;
-		margin-bottom: 5%;
-	}
-`
+  & ul {
+    list-style-type: none;
+    width: ${props => (props.isDesktop ? "90vw" : "100vw")};
+    margin: 0;
+    padding: 0;
+	padding-bottom:  ${props => props.isDesktop ? "5%" : "0"};
+    display: grid;
+    grid-template-columns: ${props =>
+    props.isDesktop ? "1fr 1fr 1fr" : "1fr 1fr"};
+    grid-gap: ${props => props.isDesktop ? "40px" : "0"};
+    margin-top: 4em;
+    margin-left: ${props => (props.isDesktop ? "" : "0")};
+    margin-right: ${props => (props.isDesktop ? "" : "0")};
+  }
+  & img {
+    border-radius: 50%;
+    margin-bottom: 16px;
+    width: ${props => (props.isDesktop ? "30%" : "45%")};
+  }
+  & div {
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 3fr 1fr;
+    left: 0;
+    /* margin-left: ${props => (props.isDesktop ? "10%" : "0")}; */
+    margin-right: 0px;
+    margin-bottom: ${props => props.isDektop ? "5%" : "0"};
+  }
+`;
 
 const makeThumb = () => {
 	const portraitThumbnailImage = [
@@ -64,7 +65,11 @@ const Activities = props => {
 
 		return (
 			<ActivitiesList {...props}>
-				<Heading heroText="ACTIVITIES" position="relative" />
+				<Heading heroText="ACTIVITIES" position="relative"
+					fontSize={props.isDesktop ? "36px" : "24px"}
+					paddingTop={props.isDesktop ? "6%" : "14%"}
+					marginBottom={props.isDesktop ? "10%" : ""}
+				/>
 				<ul>
 					{activitiesData.map((item, index) => (
 						<div key={index}>
