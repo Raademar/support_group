@@ -35,26 +35,26 @@ const ActivitiesPopupBoxStyle = styled.section`
   .imgPopupBox {
     position: relative;
     width: 50%;
-    margin-left: ${props => (props.isDesktop ? "" : "-30%")};
+    margin-left: ${props => (props.isDesktop ? "" : "26%")};
     top: ${props => (props.isDesktop ? "-258px" : "")};
     left: ${props => (props.isDesktop ? "5%" : "")};
     width: ${props => (props.isDesktop ? "%" : "")};
   }
   .infoPopupBox {
     width: ${props => (props.isDesktop ? "50%" : "")};
-    left:${props => (props.isDesktop ? "50%" : "")}; 
+    left: ${props => (props.isDesktop ? "50%" : "")};
   }
   .closeImgPopup {
     position: fixed;
     top: 16.5vh;
-    left:${props => (props.isDesktop ? "78vw" : "83wv")};
+    left: ${props => (props.isDesktop ? "78vw" : "83vw")};
     width: auto;
   }
   .symbol {
     position: fixed;
     top: ${props => (props.isDesktop ? "22vh" : "16.5vh")};
-    left: ${props => (props.isDesktop ? "20vw%" : "7vw")};	
-    width: ${props => (props.isDesktop ? "7%" : "20vw")};
+    left: ${props => (props.isDesktop ? "" : "7vw")};
+    width: ${props => (props.isDesktop ? "100px" : "20vw")};
   }
 `;
 

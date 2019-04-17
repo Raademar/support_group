@@ -9,10 +9,10 @@ import Section from '../Section'
 const VolunteerStyle = styled.div`
   margin: 0 auto;
   height: 100vh;
-  background-color: ${props => props.backGroundColor || "#3D73CF"};
+  background-color: ${props => props.backgroundColor || "#3D73CF"};
   width: ${props => (props.isDesktop ? "50vw" : "100vw")};
   left: ${props => (props.isDesktop ? "0" : "")};
-  position: relative;
+  position: relative; 
 
   svg {
     position: absolute;

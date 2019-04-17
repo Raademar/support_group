@@ -8,6 +8,7 @@ import Volunteer from '../components/Volunteer'
 import Member from '../components/Member'
 import Activities from '../components/Activities'
 import Section from '../components/Section'
+import VolunteerMember from '../components/VolunteerMember'
 import AboutPage from '../components/AboutPage'
 import BodyText from '../components/BodyText'
 import Heading from '../components/Heading'
@@ -34,16 +35,20 @@ export default class extends Component {
 		const pages = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
 		)
+		const activities = await axios.get(
+      `http://${process.env.HOSTNAME}/wp-json/wp/v2/activities`
+    );
 
 		// Return the data
 
 		return {
-			aboutData: aboutData.data,
-			whatWeDo: whatWeDo.data,
-			background: background.data,
-			ourVision: ourVision.data,
-			pages: pages.data
-		}
+      aboutData: aboutData.data,
+      whatWeDo: whatWeDo.data,
+      background: background.data,
+      ourVision: ourVision.data,
+      pages: pages.data,
+      activities: activities.data
+    };
 	}
 
 	render() {
@@ -52,16 +57,17 @@ export default class extends Component {
 		const missionData = members.filter(member => member.acf.is_of_type_mission)
 
 		return (
-			<Layout navigationMenu={this.props.pages}>
-				<AboutPage
-					missionData={missionData}
-					whatWeDo={this.props.whatWeDo}
-					background={this.props.background}
-					ourVision={this.props.ourVision}
-					pages={this.props.pages}
-					isDesktop={this.props.isDesktop}
-				/>
-			</Layout>
-		)
+      <Layout navigationMenu={this.props.pages}>
+        <AboutPage
+          missionData={missionData}
+          whatWeDo={this.props.whatWeDo}
+          background={this.props.background}
+          ourVision={this.props.ourVision}
+          pages={this.props.pages}
+          isDesktop={this.props.isDesktop}
+        />
+        <Activities activitiesData={this.props.activities} />
+      </Layout>
+    );
 	}
 }

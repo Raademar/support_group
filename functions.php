@@ -15,6 +15,7 @@ require get_template_directory().'/post-types/activities.php';
 require get_template_directory().'/post-types/about.php';
 require get_template_directory().'/post-types/member.php';
 require get_template_directory().'/post-types/volunteer.php';
+require get_template_directory().'/post-types/projects.php';
 
 // // register custom fields for Student post type
 if (function_exists('acf_add_local_field_group')) {
@@ -373,6 +374,17 @@ if (function_exists('acf_add_local_field_group')) {
 				'label'        => 'activities'
 			);
 			register_post_type( 'activities', $args );
+	}
+
+	add_action( 'init', 'my_projects_cpt' );
+
+	function my_projects_cpt() {
+			$args = array(
+				'public'       => true,
+				'show_in_rest' => true,
+				'label'        => 'projects'
+			);
+			register_post_type( 'projects', $args );
 	}
 
 

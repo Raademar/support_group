@@ -25,7 +25,7 @@ const HeadingStyle = styled.h1`
 `
 
 const Heading = props => {
-	console.log(props.heroText)
+	// console.log(props.heroText)
 
 	return <HeadingStyle {...props}>{props.heroText}</HeadingStyle>
 }

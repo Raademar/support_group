@@ -7,6 +7,7 @@ import React, { useEffect } from 'react'
 
 const ActivitiesList = styled.section`
   padding: 0;
+	padding-left:${props => props.isDesktop ? '5%' : ''};
   margin: 0;
   height: auto;
   text-align: center;
@@ -68,6 +69,7 @@ const Activities = props => {
 				<Heading heroText="ACTIVITIES" position="relative"
 					fontSize={props.isDesktop ? "36px" : "24px"}
 					paddingTop={props.isDesktop ? "6%" : "14%"}
+					marginLeft={props.isDesktop ? '-2.5%' : ''}
 					marginBottom={props.isDesktop ? "10%" : ""}
 				/>
 				<ul>

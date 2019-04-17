@@ -6,7 +6,15 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Volunteer from '../components/Volunteer'
 import Member from '../components/Member'
+import Projects from '../components/Projects'
+import Donate from '../components/Donate'
 import Activities from '../components/Activities'
+import VolunteerMember from '../components/VolunteerMember'
+import styled from "styled-components";
+
+const StyledVolunteerMember = styled.div`
+  display:${props => props.isDesktop ? 'flex' : 'block'};
+`;
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -30,6 +38,9 @@ export default class extends Component {
 		const news = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/posts`
 		)
+		const projects = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/projects`
+		)
 		const heroImagePath = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=home&?_embed`
 		)
@@ -50,34 +61,34 @@ export default class extends Component {
 			heroImage: heroImage.data,
 			posts: news.data,
 			aboutUsCards: aboutUsCards.data,
-			activities: activities.data
+			activities: activities.data,
+			projectsData: projects.data
 		}
 	}
 	render() {
+		// console.log();
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-			<Layout navigationMenu={this.props.pages}>
-				<Hero
-					heroText="Together for a bright future"
-					heroSmallText="We believe in and work for a bright future together"
-					heroImage={correctHeroImagePath}
-				/>
-				<About
-					pageData={this.props.about[0]}
-					aboutImage={this.props.aboutImage.source_url}
-				/>
-				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
-				<Volunteer
-					pageData={this.props.about[0]}
-					aboutImage={this.props.aboutImage.source_url}
-				/>
-				<Member
-					pageData={this.props.about[0]}
-					aboutImage={this.props.aboutImage.source_url}
-				/>
-				<Activities activitiesData={this.props.activities} />
-			</Layout>
-		)
+      <Layout navigationMenu={this.props.pages}>
+        <Hero
+          heroText="Together for a bright future"
+          heroSmallText="We believe in and work for a bright future together"
+          heroImage={correctHeroImagePath}
+        />
+        <About
+          pageData={this.props.about[0]}
+          aboutImage={this.props.aboutImage.source_url}
+        />
+        <News posts={this.props.posts} backgroundColor="#F2F2F2" />
+        <VolunteerMember
+          pageData={this.props.about[0]}
+          aboutImage={this.props.aboutImage.source_url}
+          isDesktop={this.props.isDesktop}
+        />
+        <Projects projectsData={this.props.projectsData} />
+		<Donate />
+      </Layout>
+    );
 	}
 }

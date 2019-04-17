@@ -12,44 +12,50 @@ const AboutStyle = styled.div`
   margin-top: 3em;
 
   button {
-    width: 319px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 165px;
     height: 50px;
-    left: 28px;
-    top: 1156px;
-    border: 4px solid #3d73cf;
-    background-color: white;
-    color: #3d73cf;
+    left: 106px;
+    top: 6224px;
+    /* Donation green */
+    background: #12e7b4;
+    color: #fff;
     font-weight: 900;
     font-size: 16px;
     font-family: Lato;
     border-radius: 8px;
-    margin-top: 16%;
-    margin-bottom: 16%;
+    border: none;
+    margin-top: 14%;
+    margin-bottom: 18%;
+  }
+  .donateButtonDiv {
+      padding-bottom:18%
   }
 `;
 
 const About = props => {
-  if (props.pageData) {
-    // console.log(props.pageData)
 
     return (
       <AboutStyle>
         <Section>
           <Heading
+            marginTop="5%"
             position="relative"
-            heroText={props.pageData.title.rendered.toUpperCase()}
+            heroText="DONATE TO US"
             letterSpacing="4px"
-            marginTop="26%"
+            marginBottom="10%"
           />
           {/* <Image position="relative" image={props.aboutImage} /> */}
-          <BodyText bodyText={props.pageData.content.rendered} />
-          <button>READ MORE ABOUT OUR WORK</button>
+          <BodyText bodyText="Support our work. We appreciate all donations. Your donation helps us make a better future for everyone. " />
+          <div className="donateButtonDiv">
+            <button>DONATE TO US</button>
+          </div>
         </Section>
       </AboutStyle>
     );
-  } else {
-    return null;
-  }
 };
 
 export default About;

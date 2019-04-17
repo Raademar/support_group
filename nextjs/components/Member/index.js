@@ -50,7 +50,6 @@ const Member = props => {
             textAlign="left"
             width={props.isDesktop ? "80%" : "96%"}
             lineHeight={props.isDesktop ? "180%" : "140%"}
-            lineHeight="140%"
             zIndex="3"
           />
           <Button
@@ -59,7 +58,7 @@ const Member = props => {
             width="198px"
             height="52px"
             text="BECOME A MEMBER"
-            marginTop="50px"
+            marginTop="19%"
             marginBottom="80px"
             zIndex="2"
             primary
