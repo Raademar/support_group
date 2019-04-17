@@ -12,6 +12,7 @@ const HeadingStyle = styled.h1`
 	position: ${props => props.position || 'absolute'};
 	top: ${props => props.top};
 	padding-top: ${props => props.paddingTop};
+	padding-bottom: ${props => props.paddingBottom};
 	text-align: ${props => props.textAlign || 'center'};
 	letter-spacing: ${props => props.letterSpacing || 'initial'};
 	line-height: ${props => props.lineHeigt || '140%'};
@@ -19,7 +20,7 @@ const HeadingStyle = styled.h1`
 	margin-top: ${props => props.marginTop || '0'};
 	margin-left: ${props => props.marginLeft};
 	margin-right: ${props => props.marginRight};
-	margin-bottom: ${props => props.marginBottom};
+	margin-bottom: ${props => props.marginBottom || '0'};
 	left: ${props => props.left || '0'};
 	display: ${props => props.display};
 `
