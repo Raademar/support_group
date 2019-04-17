@@ -10,7 +10,6 @@ const StyledNewsPosts = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 24 0px;
 	.news-container {
 		background-color: #fff;
 		width: 100vw;
@@ -100,10 +99,16 @@ export default class extends Component {
 
 		return (
 			<Layout navigationMenu={this.props.pages}>
-				<Heading heroText="NEWS" position="initial" />
+				<Heading
+					heroText="NEWS"
+					position="initial"
+					paddingTop="24px"
+					paddingBottom="42px"
+					backgroundColor="#DFEAFA"
+				/>
 				<StyledNewsPosts>
 					{posts.map((item, index) => (
-						<div className="news-container">
+						<div className="news-container" key={index}>
 							<div className="news-image-container">
 								<img src={item.acf.image.sizes.large} alt="" />
 							</div>

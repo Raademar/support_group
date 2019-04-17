@@ -9,8 +9,7 @@ const StyledHeader = styled.div`
 	background-color: #3d73cf;
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
-	/* position: absolute;
-	top: 0; */
+	height: 76px;
 	transition: top 0.2s ease-in-out;
 	width: 100%;
 `
@@ -51,17 +50,6 @@ class Header extends Component {
 						margin: 0;
 						font-family: 'Lato', sans-serif;
 						overflow-x: hidden;
-					}
-					.slide-container {
-						background: #fff;
-					}
-					.slick-slide h3,
-					.slick-slide p,
-					.slick-slide span {
-						padding: 0 24px;
-					}
-					.slick-slide img {
-						width: 100%;
 					}
 				`}</style>
 				<Logo images={this.props.images} />
