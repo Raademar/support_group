@@ -31,7 +31,7 @@ const StyledMenu = styled.div`
 		padding: 0 24px;
 	}
 	& ul {
-		margin-top: 10%;
+		margin-top: 20%;
 		grid-row: 2;
 		align-items: flex-start;
 	}

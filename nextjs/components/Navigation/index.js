@@ -14,7 +14,7 @@ const MenuItemsList = styled.ul`
   grid-column: ${props => props.gridCol || ""};
   & li {
     color: #fff;
-    margin-top: 10%;
+    margin-top: 18%;
     & a {
       text-decoration: none;
       color: #fff;
@@ -31,11 +31,11 @@ const MenuItemsList = styled.ul`
       font-weight: 900;
       font-size: 18px;
       list-style: none;
-      margin-top: 14%;
+      margin-top: 18%;
     }
   }
   .topMenu{
-	  margin-top: 28%;
+	  margin-top: 50%;
   }
 `;
 
@@ -57,10 +57,10 @@ const Navigation = props => {
             </li>
           ))}
         </div>
-        <ul>
+        <ul className="top">
           <li>BECOME A MEMBER</li>
           <li>BECOME A VOLUNTEER</li>
-          <li>DONATE TO US</li>
+          <li style={{ color: "#12E7B4" }}>DONATE TO US</li>
         </ul>
       </MenuItemsList>
     );

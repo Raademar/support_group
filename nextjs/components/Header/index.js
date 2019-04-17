@@ -9,7 +9,7 @@ const StyledHeader = styled.div`
 	background-color: #3d73cf;
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
-	height: 76px;
+	height: 80px;
 	transition: top 0.2s ease-in-out;
 	width: 100%;
 `
