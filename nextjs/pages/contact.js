@@ -20,10 +20,14 @@ export default class extends Component {
 		const branches = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/branches`
 		)
+		const pages = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
+		)
 
 		// Return the data
 
 		return {
+			pages: pages.data,
 			branches: branches.data
 		}
 	}
@@ -33,7 +37,7 @@ export default class extends Component {
 		// const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 		//   .source_url;
 		return (
-			<div>
+			<Layout navigationMenu={this.props.pages}>
 				<Navigation />
 				<Contact
 					branchesData={this.props.branches}
@@ -43,7 +47,7 @@ export default class extends Component {
 					// ourVision={this.props.ourVision}
 					pages={this.props.pages}
 				/>
-			</div>
+			</Layout>
 		)
 	}
 }
