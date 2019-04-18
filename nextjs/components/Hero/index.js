@@ -16,18 +16,18 @@ const HeroStyle = styled.section`
 		align-items: center;
 		position: relative;
 		& h1 {
-			width: ${props => props.isDesktop ? '50%' : null};
+			width: ${props => (props.isDesktop ? '50%' : null)};
 		}
 		& h4 {
 			position: absolute;
-			top: ${props => props.isDesktop ? '19rem' : '12rem'};
+			top: ${props => (props.isDesktop ? '19rem' : '12rem')};
 			margin: 0;
 			color: #fff;
-			width: ${props => props.isDesktop ? '25%' : '60%'};
+			width: ${props => (props.isDesktop ? '25%' : '60%')};
 			text-align: center;
 		}
 		& img {
-			width: ${props => props.isDesktop ? null : '100%'};
+			width: ${props => (props.isDesktop ? null : '100%')};
 			height: auto;
 			left: 0px;
 			top: 0px;
@@ -36,22 +36,25 @@ const HeroStyle = styled.section`
 		& div {
 			position: absolute;
 			bottom: 3rem;
-			display: ${props => props.isDesktop ? 'flex': null};
-			flex-direction: ${props => props.isDesktop ? 'row': null};
+			display: ${props => (props.isDesktop ? 'flex' : null)};
+			flex-direction: ${props => (props.isDesktop ? 'row' : null)};
 			& button {
 				margin-left: 8px;
-    		margin-right: 8px;
+				margin-right: 8px;
 			}
 		}
 	}
 `
 
 const Hero = props => {
-	console.log(props.heroText)
 	return (
 		<HeroStyle {...props}>
 			<div>
-				<Heading heroText={props.heroText} top="3rem" isDesktop={props.isDesktop} />
+				<Heading
+					heroText={props.heroText}
+					top="3rem"
+					isDesktop={props.isDesktop}
+				/>
 				<h4>{props.heroSmallText}</h4>
 				<img src={props.heroImage} />
 				<div>

@@ -8,13 +8,15 @@ class Layout extends Component {
 		super(props)
 		this.state = {
 			menuOpen: false,
-			isDesktop: false
+			isDesktop: false,
+			overrideMenu: false
 		}
 	}
 	handleClick = () => {
 		this.setState({
 			menuOpen: !this.state.menuOpen
 		})
+		document.addEventListener('scroll', this.trackScrolling)
 	}
 
 	componentDidMount = () => {
@@ -26,6 +28,37 @@ class Layout extends Component {
 		window.addEventListener('resize', () => {
 			this.checkIfWindowDidResize()
 		})
+
+		document.addEventListener('scroll', this.trackScrolling)
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener('scroll', this.trackScrolling)
+	}
+
+	isBottom = el => {
+		return el.getBoundingClientRect().bottom <= window.innerHeight
+	}
+
+	trackScrolling = () => {
+		const wrappedElement = document.querySelector('.footer')
+		const body = document.querySelector('body')
+		if (this.isBottom(wrappedElement)) {
+			this.setState(
+				{
+					menuOpen: true
+				},
+				() => {
+					window.scroll({
+						top: 3200,
+						behavior: 'smooth'
+					})
+				}
+			)
+			// console.log(window.scrollHeight)
+
+			// document.removeEventListener('scroll', this.trackScrolling)
+		}
 	}
 
 	checkIfWindowDidResize = () => {
@@ -68,6 +101,7 @@ class Layout extends Component {
 					<HamburgerMenu
 						toggleMenu={this.handleClick}
 						navigationMenu={this.props.navigationMenu}
+						menuOpen={this.state.menuOpen}
 					/>
 				)}
 				{childrenWithProps}

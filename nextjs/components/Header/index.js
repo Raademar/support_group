@@ -10,17 +10,34 @@ const StyledHeader = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
 	height: 80px;
-	transition: top 0.2s ease-in-out;
+	transition: top 0.3s;
 	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
 `
 class Header extends Component {
 	constructor(props) {
 		super(props)
 	}
 
+	componentDidMount() {
+		var prevScrollpos = window.pageYOffset
+		window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById('navbar').style.top = '0'
+			} else {
+				document.getElementById('navbar').style.top = '-80px'
+			}
+			prevScrollpos = currentScrollPos
+		}
+	}
+
 	render() {
 		return (
-			<StyledHeader>
+			<StyledHeader id="navbar">
 				<Head>
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<meta charSet="utf-8" />
@@ -42,6 +59,11 @@ class Header extends Component {
 						rel="stylesheet"
 						type="text/css"
 						href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+					/>
+					<link
+						rel="stylesheet"
+						type="text/css"
+						href="/static/styles/styles.css"
 					/>
 				</Head>
 				<style jsx global>{`

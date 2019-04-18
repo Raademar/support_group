@@ -10,11 +10,11 @@ import Projects from '../components/Projects'
 import Donate from '../components/Donate'
 import Activities from '../components/Activities'
 import VolunteerMember from '../components/VolunteerMember'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const StyledVolunteerMember = styled.div`
-  display:${props => props.isDesktop ? 'flex' : 'block'};
-`;
+	display: ${props => (props.isDesktop ? 'flex' : 'block')};
+`
 
 export default class extends Component {
 	// Resolve promise and get initial props
@@ -70,25 +70,25 @@ export default class extends Component {
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-      <Layout navigationMenu={this.props.pages}>
-        <Hero
-          heroText="Together for a bright future"
-          heroSmallText="We believe in and work for a bright future together"
-          heroImage={correctHeroImagePath}
-        />
-        <About
-          pageData={this.props.about[0]}
-          aboutImage={this.props.aboutImage.source_url}
-        />
-        <News posts={this.props.posts} backgroundColor="#F2F2F2" />
-        <VolunteerMember
-          pageData={this.props.about[0]}
-          aboutImage={this.props.aboutImage.source_url}
-          isDesktop={this.props.isDesktop}
-        />
-        <Projects projectsData={this.props.projectsData} />
-		<Donate />
-      </Layout>
-    );
+			<Layout navigationMenu={this.props.pages}>
+				<Hero
+					heroText="Together for a bright future"
+					heroSmallText="We believe in and work for a bright future together"
+					heroImage={correctHeroImagePath}
+				/>
+				<About
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+				/>
+				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
+				<VolunteerMember
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+					isDesktop={this.props.isDesktop}
+				/>
+				<Projects projectsData={this.props.projectsData} />
+				<Donate />
+			</Layout>
+		)
 	}
 }
