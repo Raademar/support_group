@@ -5,6 +5,7 @@ import Button from '../Button'
 const SectionStyle = styled.section`
   margin-left: ${props => props.marginLeft || "24px"};
   margin-right: ${props => props.marginRight || "24px"};
+  padding-top: ${props => props.paddingTop || "24px"};
   padding-bottom: ${props => props.paddingBottom || "24px"};
   margin-top: 0px;
   background-color: ${props => props.backgroundColor};

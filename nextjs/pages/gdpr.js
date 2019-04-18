@@ -1,12 +1,8 @@
-import About from '../components/About'
-import News from '../components/News'
-import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import Navigation from '../components/Navigation'
-import DonatePage from '../components/DonatePage';
+import GdprPage from '../components/GdprPage'
 
 export default class extends Component {
     // Resolve promise and get initial props
@@ -19,22 +15,22 @@ export default class extends Component {
         const pages = await axios.get(
             `http://${process.env.HOSTNAME}/wp-json/menus/v2/header`
         )
+        const gdprData = await axios.get(
+            `http://${process.env.HOSTNAME}/wp-json/wp/v2/gdpr`
+        );
         // Return the data
         return {
-          aboutData: aboutData.data,
-          pages: pages.data
+            aboutData: aboutData.data,
+            gdprData: gdprData.data,
+            pages: pages.data
         };
     }
 
     render() {
-        const members = this.props.aboutData
-
-        const missionData = members.filter(member => member.acf.is_of_type_mission)
-
         return (
-            <Layout navigationMenu={this.props.pages}>
-                <DonatePage />
-            </Layout>
+          <Layout navigationMenu={this.props.pages}>
+                <GdprPage gdprData={this.props.gdprData}/>
+          </Layout>
         );
     }
 }

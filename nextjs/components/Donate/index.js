@@ -6,7 +6,7 @@ import Image from "../Image";
 import Heading from "../Heading";
 import Section from "../Section";
 
-const AboutStyle = styled.div`
+const DonateStyle = styled.div`
   margin: 0 auto;
   background-color: ${props => props.backgroundColor || "white"};
   margin-top: 3em;
@@ -34,12 +34,15 @@ const AboutStyle = styled.div`
   .donateButtonDiv {
       padding-bottom:18%
   }
+  a{
+    text-decoration: none;
+  }
 `;
 
-const About = props => {
+const Donate = props => {
 
     return (
-      <AboutStyle>
+      <DonateStyle {...props}>
         <Section>
           <Heading
             marginTop="5%"
@@ -48,14 +51,16 @@ const About = props => {
             letterSpacing="4px"
             marginBottom="10%"
           />
-          {/* <Image position="relative" image={props.aboutImage} /> */}
+          {/* <Image position="relative" image={props.donateImage} /> */}
           <BodyText bodyText="Support our work. We appreciate all donations. Your donation helps us make a better future for everyone. " />
           <div className="donateButtonDiv">
-            <button>DONATE TO US</button>
+            <a href="/donate">
+              <button>DONATE TO US</button>
+            </a>
           </div>
         </Section>
-      </AboutStyle>
+      </DonateStyle>
     );
 };
 
-export default About;
+export default Donate;

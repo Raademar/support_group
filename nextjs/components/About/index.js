@@ -39,7 +39,7 @@ const About = props => {
             position="relative"
             heroText={props.pageData.title.rendered.toUpperCase()}
             letterSpacing="4px"
-            marginTop="26%"
+            marginTop="2%"
           />
           {/* <Image position="relative" image={props.aboutImage} /> */}
           <BodyText bodyText={props.pageData.content.rendered} />

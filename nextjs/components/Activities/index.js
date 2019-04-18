@@ -65,28 +65,30 @@ const Activities = props => {
 		const { activitiesData, isDesktop } = props
 
 		return (
-			<ActivitiesList {...props}>
-				<Heading heroText="ACTIVITIES" position="relative"
-					fontSize={props.isDesktop ? "36px" : "24px"}
-					paddingTop={props.isDesktop ? "6%" : "14%"}
-					marginLeft={props.isDesktop ? '-2.5%' : ''}
-					marginBottom={props.isDesktop ? "10%" : ""}
-				/>
-				<ul>
-					{activitiesData.map((item, index) => (
-						<div key={index}>
-							<ActivitiesPopup
-								item={item}
-								index={index}
-								isDesktop={props.isDesktop}
-							/>
-							{/* <img src={`${item.acf.image.sizes.thumbnail}`} />
+      <ActivitiesList {...props}>
+        <Heading
+          heroText="CLUBS AND ACTIVITIES"
+          position="relative"
+          fontSize={props.isDesktop ? "36px" : "24px"}
+          paddingTop={props.isDesktop ? "6%" : "14%"}
+          marginLeft={props.isDesktop ? "-2.5%" : ""}
+          marginBottom={props.isDesktop ? "10%" : ""}
+        />
+        <ul>
+          {activitiesData.map((item, index) => (
+            <div key={index}>
+              <ActivitiesPopup
+                item={item}
+                index={index}
+                isDesktop={props.isDesktop}
+              />
+              {/* <img src={`${item.acf.image.sizes.thumbnail}`} />
             	<li key={index}>{`${item.title.rendered}`}</li> */}
-						</div>
-					))}
-				</ul>
-			</ActivitiesList>
-		)
+            </div>
+          ))}
+        </ul>
+      </ActivitiesList>
+    );
 	} else {
 		return null
 	}
