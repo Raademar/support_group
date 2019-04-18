@@ -7,6 +7,9 @@ import { CSSTransition } from 'react-transition-group'
 // import './styles.css'
 
 const StyledMenu = styled.div`
+	body {
+		overflow: ${props => props.menuOpen ? 'hidden' : 'initial'}
+	}
 	position: fixed;
 	left: 0;
 	background: #3d73cf;

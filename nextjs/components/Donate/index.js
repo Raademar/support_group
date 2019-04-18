@@ -43,7 +43,9 @@ const Donate = props => {
 
     return (
       <DonateStyle {...props}>
-        <Section>
+        <Section
+          paddingTop="24px"
+        >
           <Heading
             marginTop="5%"
             position="relative"
@@ -54,9 +56,11 @@ const Donate = props => {
           {/* <Image position="relative" image={props.donateImage} /> */}
           <BodyText bodyText="Support our work. We appreciate all donations. Your donation helps us make a better future for everyone. " />
           <div className="donateButtonDiv">
+            <Link href="/donate">
             <a href="/donate">
               <button>DONATE TO US</button>
             </a>
+          </Link>
           </div>
         </Section>
       </DonateStyle>

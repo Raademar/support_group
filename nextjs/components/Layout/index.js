@@ -49,10 +49,9 @@ class Layout extends Component {
 					menuOpen: true
 				},
 				() => {
-					const scrollValue = body.scrollHeight - window.innerHeight * 1.5
+					const scrollValue = body.scrollHeight - window.innerHeight * 1.8	
 					window.scroll({
 						top: scrollValue,
-						behavior: 'smooth'
 					})
 				}
 			)
@@ -94,6 +93,7 @@ class Layout extends Component {
 					toggleMenu={this.handleClick}
 					images={this.props.images}
 					isDesktop={this.state.isDesktop}
+					menuOpen={this.state.menuOpen}
 				/>
 				{this.state.menuOpen && (
 					<HamburgerMenu
