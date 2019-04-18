@@ -54,7 +54,8 @@ const Projects = props => {
           heroText="OUR PROJECTS"
           position={props.isDesktop ? "relative" : "relative"}
           fontSize={props.isDesktop ? "36px" : "24px"}
-          marginTop={props.isDesktop ? "2vh" : "2vh"}
+          marginTop={props.isDesktop ? "4vh" : "2vh"}
+          paddingTop="8vh"
           marginBottom={props.isDesktop ? "2vh" : "2vh"}
           fontWeight="normal"
         />

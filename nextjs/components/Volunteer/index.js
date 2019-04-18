@@ -33,6 +33,7 @@ const Volunteer = props => {
             <Section
               backgroundColor="#3D73CF"
               marginLeft={props.isDesktop ? "16%" : ""}
+              paddingTop="24px"
             >
               <Heading
                 textAlign="left"
