@@ -109,15 +109,15 @@ class SimpleSlider extends Component {
 			<div
 				style={{
 					background: '#dfeafa',
-					paddingBottom: '84px',
-					paddingTop: '54px'
+					paddingBottom: '56px',
+					paddingTop: '56px'
 				}}
 			>
 				<Heading
 					position="relative"
 					heroText="NEWS"
 					letterSpacing="4px"
-					marginBottom="30px"
+					marginBottom="50px"
 				/>
 				<StyledNewsPosts {...this.props}>
 					<Slider {...settings}>

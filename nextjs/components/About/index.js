@@ -23,8 +23,8 @@ const StyledButton = styled.a`
   font-family: Lato;
   border-radius: 8px;
   margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 44px;
+  margin-bottom: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,9 +41,7 @@ const About = props => {
 
 		return (
       <AboutStyle>
-        <Section
-          paddingTop="24px"
-        >
+        <Section paddingTop="24px">
           <Heading
             position="relative"
             heroText={props.pageData.title.rendered.toUpperCase()}
@@ -53,7 +51,9 @@ const About = props => {
           {/* <Image position="relative" image={props.aboutImage} /> */}
           <BodyText bodyText={props.pageData.content.rendered} />
           <StyledButton>
-            <a href="/about">READ MORE ABOUT OUR WORK</a>
+            <Link href="/about">
+              <a href="/about">READ MORE ABOUT OUR WORK</a>
+            </Link>
           </StyledButton>
         </Section>
       </AboutStyle>

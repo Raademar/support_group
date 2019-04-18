@@ -70,25 +70,25 @@ export default class extends Component {
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-			<Layout navigationMenu={this.props.pages}>
-				<Hero
-					heroText="Together for a bright future"
-					heroSmallText="We believe in and work for a bright future together"
-					heroImage={correctHeroImagePath}
-				/>
-				<About
-					pageData={this.props.about[0]}
-					aboutImage={this.props.aboutImage.source_url}
-				/>
-				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
-				<VolunteerMember
-					pageData={this.props.about[0]}
-					aboutImage={this.props.aboutImage.source_url}
-					isDesktop={this.props.isDesktop}
-				/>
-				<Projects projectsData={this.props.projectsData} />
-				<Donate />
-			</Layout>
-		)
+      <Layout navigationMenu={this.props.pages}>
+        <Hero
+          heroText="Together for a bright future"
+          heroSmallText="We are a non-profit organization working hard to give refugees a better future"
+          heroImage={correctHeroImagePath}
+        />
+        <About
+          pageData={this.props.about[0]}
+          aboutImage={this.props.aboutImage.source_url}
+        />
+        <News posts={this.props.posts} backgroundColor="#F2F2F2" />
+        <VolunteerMember
+          pageData={this.props.about[0]}
+          aboutImage={this.props.aboutImage.source_url}
+          isDesktop={this.props.isDesktop}
+        />
+        <Projects projectsData={this.props.projectsData} />
+        <Donate />
+      </Layout>
+    );
 	}
 }
