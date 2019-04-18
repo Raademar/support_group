@@ -49,15 +49,13 @@ class Layout extends Component {
 					menuOpen: true
 				},
 				() => {
+					const scrollValue = body.scrollHeight - window.innerHeight * 1.5
 					window.scroll({
-						top: 3200,
+						top: scrollValue,
 						behavior: 'smooth'
 					})
 				}
 			)
-			// console.log(window.scrollHeight)
-
-			// document.removeEventListener('scroll', this.trackScrolling)
 		}
 	}
 
