@@ -32,6 +32,7 @@ const Member = props => {
         <Section
           backgroundColor="#FFDD7E"
           marginLeft={props.isDesktop ? "16%" : ""}
+          paddingTop="24px"
         >
           <Heading
             textAlign="left"

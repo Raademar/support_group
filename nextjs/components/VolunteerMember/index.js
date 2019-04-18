@@ -17,12 +17,12 @@ const VolunteerMember = props => {
 
     return (
       <StyledVolunteerMember {...props}>
-        <Volunteer
+        <Member
           pageData={props.pageData}
           aboutImage={props.aboutImage}
           isDesktop={props.isDesktop}
         />
-        <Member
+        <Volunteer
           pageData={props.pageData}
           aboutImage={props.aboutImage}
           isDesktop={props.isDesktop}
