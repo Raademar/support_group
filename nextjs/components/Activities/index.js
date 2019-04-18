@@ -12,14 +12,14 @@ const ActivitiesList = styled.section`
   height: auto;
   text-align: center;
   position: relative;
-  background-color: #dfeafa;
+  background-color: #fff;
 
   & ul {
     list-style-type: none;
     width: ${props => (props.isDesktop ? "90vw" : "100vw")};
     margin: 0;
     padding: 0;
-	padding-bottom:  ${props => props.isDesktop ? "5%" : "0"};
+		padding-bottom:  ${props => props.isDesktop ? "5%" : "0"};
     display: grid;
     grid-template-columns: ${props =>
     props.isDesktop ? "1fr 1fr 1fr" : "1fr 1fr"};

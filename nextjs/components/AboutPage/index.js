@@ -67,123 +67,125 @@ const AboutPage = props => {
 		// console.log(props.isDesktop)
 
 		return (
-			<AboutStyle {...props}>
-				<Section>
-					<Heading
-						heroText={props.whatWeDo[0].title.rendered}
-						marginTop={props.isDesktop ? '9em' : '1em'}
-						marginBottom={props.isDesktop ? '40px' : '1em'}
-						left="0"
-						position="relative"
-						fontSize="36px"
-					/>
-					<BodyText
-						bodyText={props.whatWeDo[0].content.rendered}
-						lineHeight={props.isDesktop ? '220%' : '180%'}
-						textAlign={props.isDesktop ? 'center' : 'left'}
-						fontSize="24px"
-						width={props.isDesktop ? 'auto' : '100%'}
-						paddingBottom={props.isDesktop ? '7em' : '1em'}
-						marginRight={props.isDesktop ? '12em' : ''}
-						marginLeft={props.isDesktop ? '12em' : ''}
-						marginBottom={props.isDesktop ? '80px' : ''}
-					/>
-				</Section>
-				<Section
-					display={props.isDesktop ? 'flex' : 'block'}
-					justifyContent={props.isDesktop ? 'center' : ''}
-					backgroundColor="#F2F2F2"
-					height={props.isDesktop ? '50vh' : ''}
-					width="100%"
-					left="0"
-					marginLeft="0"
-					marginRight="0"
-				>
-					<div className="image">
-						<img src={props.background[0].acf.image} alt="bild" />
-					</div>
-					<div className="divBox">
-						<Heading
-							heroText={props.background[0].title.rendered}
-							width={props.isDesktop ? '50%' : '90%'}
-							left="0"
-							position="relative"
+      <AboutStyle {...props}>
+        <Section>
+          <Heading
+            heroText={props.whatWeDo[0].title.rendered}
+            marginTop={props.isDesktop ? "9em" : "1em"}
+            marginBottom={props.isDesktop ? "40px" : "1em"}
+            left="0"
+            position="relative"
+            fontSize="36px"
+          />
+          <BodyText
+            bodyText={props.whatWeDo[0].content.rendered}
+            lineHeight={props.isDesktop ? "220%" : "180%"}
+            textAlign={props.isDesktop ? "center" : "left"}
+            fontSize="24px"
+            width={props.isDesktop ? "auto" : "100%"}
+            paddingBottom={props.isDesktop ? "7em" : "1em"}
+            marginRight={props.isDesktop ? "12em" : ""}
+            marginLeft={props.isDesktop ? "12em" : ""}
+            marginBottom={props.isDesktop ? "80px" : ""}
+          />
+        </Section>
+        <Section
+          display={props.isDesktop ? "flex" : "block"}
+          justifyContent={props.isDesktop ? "center" : ""}
+          backgroundColor="#F2F2F2"
+          height={props.isDesktop ? "50vh" : ""}
+          width="100%"
+          left="0"
+          marginLeft="0"
+          marginRight="0"
+        >
+          <div className="image">
+            <img src={props.background[0].acf.image} alt="bild" />
+          </div>
+          <div className="divBox">
+            <Heading
+              heroText={props.background[0].title.rendered}
+              width={props.isDesktop ? "50%" : "90%"}
+              left="0"
+              position="relative"
+              textAlign="left"
+              marginLeft="24px"
+              color="#1c1c1c"
+              fontSize="24px"
+            />
+            <BodyText
+              bodyText={props.background[0].content.rendered}
+              width={props.isDesktop ? "90%" : ""}
+              lineHeight="180%"
+              marginLeft="24px"
+              textAlign="left"
+              fontSize="20px"
+              paddingBottom={props.isDesktop ? "0em" : "4em"}
+            />
+          </div>
+        </Section>
+        <Section
+          backgroundColor="#fff"
+          display={props.isDesktop ? "flex" : "block"}
+          justifyContent={props.isDesktop ? "center" : ""}
+        >
+          <div className="image">
+            <img src={props.ourVision[0].acf.image} alt="alt" />
+          </div>
+          <div className="divBox">
+            <Heading
+              heroText={props.ourVision[0].title.rendered}
+              width={props.isDesktop ? "50%" : ""}
+              left="0"
+              position="relative"
+              textAlign="left"
+              marginLeft="24px"
+              color="#1c1c1c"
+              fontSize="24px"
+              marginTop={props.isDesktop ? "0" : "1em"}
+            />
+            <BodyText
+              bodyText={props.ourVision[0].content.rendered}
+              lineHeight="180%"
+              width={props.isDesktop ? "90%" : ""}
 							textAlign="left"
-							marginLeft="32px"
-							color="#1c1c1c"
-							fontSize="24px"
-						/>
-						<BodyText
-							bodyText={props.background[0].content.rendered}
-							width={props.isDesktop ? '90%' : ''}
-							lineHeight="180%"
 							marginLeft="24px"
-							textAlign="left"
-							fontSize="20px"
-							paddingBottom={props.isDesktop ? '0em' : '4em'}
-						/>
-					</div>
-				</Section>
-				<Section
-					backgroundColor="#fff"
-					display={props.isDesktop ? 'flex' : 'block'}
-					justifyContent={props.isDesktop ? 'center' : ''}
-				>
-					<div className="image">
-						<img src={props.ourVision[0].acf.image} alt="alt" />
-					</div>
-					<div className="divBox">
-						<Heading
-							heroText={props.ourVision[0].title.rendered}
-							width={props.isDesktop ? '50%' : ''}
-							left="0"
-							position="relative"
-							textAlign="left"
-							color="#1c1c1c"
-							fontSize="32px"
-							marginTop={props.isDesktop ? '0' : '1em'}
-						/>
-						<BodyText
-							bodyText={props.ourVision[0].content.rendered}
-							lineHeight="180%"
-							width={props.isDesktop ? '90%' : ''}
-							textAlign="left"
-							fontSize="20px"
-							paddingBottom={props.isDesktop ? '5%' : '4em'}
-						/>
-					</div>
-				</Section>
-				<Section
-					backgroundColor="#DFEAFA"
-					width="100%"
-					left="0"
-					marginLeft="0"
-					marginRight="0"
-					paddingBottom="4em"
-				>
-					<Heading
-						paddingTop="2em"
-						paddingBottom="3em"
-						heroText="MISSION"
-						left="0"
-						position="relative"
-						textAlign="left"
-						color="#1c1c1c"
-						fontSize="32px"
-						marginLeft="14.8vw"
-						width="auto"
-					/>
-					<div className="membersBox">
-						{props.missionData.map((item, index) => (
-							<div className="members">
-								<img src={`${item.acf.image}`} />
-								<p key={index}>{`${item.content.rendered}`}</p>
-							</div>
-						))}
-					</div>
-				</Section>
-			</AboutStyle>
-		)
+              fontSize="20px"
+              paddingBottom={props.isDesktop ? "5%" : "4em"}
+            />
+          </div>
+        </Section>
+        <Section
+          backgroundColor="#DFEAFA"
+          width="100%"
+          left="0"
+          marginLeft="0"
+          marginRight="0"
+          paddingBottom="4em"
+        >
+          <Heading
+            paddingTop="2em"
+            paddingBottom="1em"
+            heroText="MISSION"
+            left="0"
+            position="relative"
+            textAlign="left"
+            color="#1c1c1c"
+            fontSize="32px"
+            marginLeft="14.8vw"
+            width="auto"
+          />
+          <div className="membersBox">
+            {props.missionData.map((item, index) => (
+              <div className="members">
+                <img src={`${item.acf.image}`} />
+                <p key={index}>{`${item.content.rendered}`}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </AboutStyle>
+    );
 	} else {
 		return null
 	}
