@@ -16,6 +16,7 @@ require get_template_directory().'/post-types/about.php';
 require get_template_directory().'/post-types/member.php';
 require get_template_directory().'/post-types/volunteer.php';
 require get_template_directory().'/post-types/projects.php';
+require get_template_directory().'/post-types/gdpr.php';
 
 // // register custom fields for Student post type
 if (function_exists('acf_add_local_field_group')) {
@@ -385,6 +386,15 @@ if (function_exists('acf_add_local_field_group')) {
 				'label'        => 'projects'
 			);
 			register_post_type( 'projects', $args );
+	}
+
+	function my_gdpr_cpt() {
+			$args = array(
+				'public'       => true,
+				'show_in_rest' => true,
+				'label'        => 'GDPR'
+			);
+			register_post_type( 'gdpr', $args );
 	}
 
 

@@ -9,6 +9,8 @@ const HeroStyle = styled.section`
 	height: auto;
 	text-align: center;
 	position: relative;
+	padding-top: 80px;
+	background: #dfeafa;
 	& div {
 		display: flex;
 		flex-direction: column;
@@ -20,6 +22,7 @@ const HeroStyle = styled.section`
 		}
 		& h4 {
 			position: absolute;
+			font-size: ${props => (props.isdesktop ? '64px' : '16px')};
 			top: ${props => (props.isDesktop ? '19rem' : '12rem')};
 			margin: 0;
 			color: #fff;
@@ -51,6 +54,8 @@ const Hero = props => {
 		<HeroStyle {...props}>
 			<div>
 				<Heading
+					fontSize={props.isDesktop ? '64px' : '36px'}
+					className="firstWord"
 					heroText={props.heroText}
 					top="3rem"
 					isDesktop={props.isDesktop}

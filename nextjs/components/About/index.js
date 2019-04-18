@@ -36,21 +36,19 @@ const About = props => {
 		// console.log(props.pageData)
 
 		return (
-			<div>
-				<AboutStyle>
-					<Section>
-						<Heading
-							position="relative"
-							heroText={props.pageData.title.rendered.toUpperCase()}
-							letterSpacing="4px"
-							marginTop="26%"
-						/>
-						{/* <Image position="relative" image={props.aboutImage} /> */}
-						<BodyText bodyText={props.pageData.content.rendered} />
-					</Section>
-				</AboutStyle>
-				<StyledButton href="/about">READ MORE ABOUT OUR WORK</StyledButton>
-			</div>
+			<AboutStyle>
+				<Section>
+					<Heading
+						position="relative"
+						heroText={props.pageData.title.rendered.toUpperCase()}
+						letterSpacing="4px"
+						marginTop="2%"
+					/>
+					{/* <Image position="relative" image={props.aboutImage} /> */}
+					<BodyText bodyText={props.pageData.content.rendered} />
+					<button>READ MORE ABOUT OUR WORK</button>
+				</Section>
+			</AboutStyle>
 		)
 	} else {
 		return null

@@ -14,16 +14,16 @@ const MenuItemsList = styled.ul`
   grid-column: ${props => props.gridCol || ""};
   & li {
     color: #fff;
-    margin-top: 18%;
+    margin-top: ${props => (props.isDesktop ? "" : "18%")};
     & a {
       text-decoration: none;
       color: #fff;
       font-weight: 900;
-      font-size: 18px;
+      font-size: ${props => (props.isDesktop ? "" : "18px")};
     }
   }
   ul {
-    padding-inline-start: 24px;
+    padding-inline-start: ${props => (props.isDesktop ? "" : "24px")};
 
     & li {
       text-decoration: none;
@@ -34,8 +34,11 @@ const MenuItemsList = styled.ul`
       margin-top: 18%;
     }
   }
-  .topMenu{
-	  margin-top: 50%;
+  .topMenu {
+    margin-top: ${props => (props.isDesktop ? "10px" : "50%")};
+  }
+  .bottomMenu{
+    display: ${props => props.isDesktop ? 'none' : 'block'};
   }
 `;
 
@@ -57,7 +60,7 @@ const Navigation = props => {
             </li>
           ))}
         </div>
-        <ul className="top">
+        <ul className="bottomMenu">
           <li>BECOME A MEMBER</li>
           <li>BECOME A VOLUNTEER</li>
           <li style={{ color: "#12E7B4" }}>DONATE TO US</li>

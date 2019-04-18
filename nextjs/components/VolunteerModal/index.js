@@ -64,29 +64,29 @@ const StyledVolunteer = styled.div`
 
 const VolunteerModal = props => {
 	return (
-		<StyledVolunteer {...props}>
-			<Section>
-				<span onClick={props.toggleVolunteer}>&times;</span>
-				<Heading
-					heroText="BECOME A MEMBER"
-					color="#1c1c1c"
-					position="initial"
-				/>
-				<p>
-					Do you have any questions about our work? Do you want to work with us?
-					Give us a message!
-				</p>
-				<form action="" method="get" id="contact">
-					<input type="text" name="name" placeholder="Name" />
-					<input type="mail" name="mail" placeholder="Email" />
-					<textarea type="" name="message" placeholder="Message" rows="8" />
-				</form>
-				<button type="submit" form="contact" value="Submit">
-					Send Request
-				</button>
-			</Section>
-		</StyledVolunteer>
-	)
+    <StyledVolunteer {...props}>
+      <Section>
+        <span onClick={props.toggleModal}>&times;</span>
+        <Heading
+          heroText="BECOME A MEMBER"
+          color="#1c1c1c"
+          position="initial"
+        />
+        <p>
+          Do you have any questions about our work? Do you want to work with
+          us? Give us a message!
+        </p>
+        <form action="" method="get" id="contact">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="mail" name="mail" placeholder="Email" />
+          <textarea type="" name="message" placeholder="Message" rows="8" />
+        </form>
+        <button type="submit" form="contact" value="Submit">
+          Send Request
+        </button>
+      </Section>
+    </StyledVolunteer>
+  );
 }
 
 export default VolunteerModal

@@ -12,14 +12,14 @@ const ActivitiesList = styled.section`
   height: auto;
   text-align: center;
   position: relative;
-  background-color: #dfeafa;
+  background-color: #fff;
 
   & ul {
     list-style-type: none;
     width: ${props => (props.isDesktop ? "90vw" : "100vw")};
     margin: 0;
     padding: 0;
-	padding-bottom:  ${props => props.isDesktop ? "5%" : "0"};
+		padding-bottom:  ${props => props.isDesktop ? "5%" : "0"};
     display: grid;
     grid-template-columns: ${props =>
     props.isDesktop ? "1fr 1fr 1fr" : "1fr 1fr"};
@@ -65,28 +65,30 @@ const Activities = props => {
 		const { activitiesData, isDesktop } = props
 
 		return (
-			<ActivitiesList {...props}>
-				<Heading heroText="ACTIVITIES" position="relative"
-					fontSize={props.isDesktop ? "36px" : "24px"}
-					paddingTop={props.isDesktop ? "6%" : "14%"}
-					marginLeft={props.isDesktop ? '-2.5%' : ''}
-					marginBottom={props.isDesktop ? "10%" : ""}
-				/>
-				<ul>
-					{activitiesData.map((item, index) => (
-						<div key={index}>
-							<ActivitiesPopup
-								item={item}
-								index={index}
-								isDesktop={props.isDesktop}
-							/>
-							{/* <img src={`${item.acf.image.sizes.thumbnail}`} />
+      <ActivitiesList {...props}>
+        <Heading
+          heroText="CLUBS AND ACTIVITIES"
+          position="relative"
+          fontSize={props.isDesktop ? "36px" : "24px"}
+          paddingTop={props.isDesktop ? "6%" : "14%"}
+          marginLeft={props.isDesktop ? "-2.5%" : ""}
+          marginBottom={props.isDesktop ? "10%" : ""}
+        />
+        <ul>
+          {activitiesData.map((item, index) => (
+            <div key={index}>
+              <ActivitiesPopup
+                item={item}
+                index={index}
+                isDesktop={props.isDesktop}
+              />
+              {/* <img src={`${item.acf.image.sizes.thumbnail}`} />
             	<li key={index}>{`${item.title.rendered}`}</li> */}
-						</div>
-					))}
-				</ul>
-			</ActivitiesList>
-		)
+            </div>
+          ))}
+        </ul>
+      </ActivitiesList>
+    );
 	} else {
 		return null
 	}
