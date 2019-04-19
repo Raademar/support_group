@@ -10,12 +10,12 @@ const StyledButton = styled.button`
 	width: ${props => props.width};
 	height: ${props => props.height};
 	background-color: ${props => (props.primary ? '#3D73CF' : '#FFDD7E')};
-	color:${props => props.color || '#fff'};
-	font-size: ${props => props.fontSize || '1.3rem' };;
-	margin-bottom: ${props => props.marginBottom || '12px' };
-	margin-top: ${props => props.marginTop || '12px' };
+	color: ${props => props.color || '#fff'};
+	font-size: ${props => props.fontSize || '1.3rem'};
+	margin-bottom: ${props => props.marginBottom || '12px'};
+	margin-top: ${props => props.marginTop || '12px'};
 	border-radius: 8px;
-    z-index: ${props => props.zIndex || ''}
+	z-index: ${props => props.zIndex || ''};
 `
 
 const Button = props => {

@@ -46,7 +46,6 @@ const Navigation = props => {
 	if (props.navigationMenu) {
 		const menuItem = props.navigationMenu
 		// console.log(menuItem)
-
 		return (
 			<MenuItemsList {...props}>
 				<div className="topMenu">
