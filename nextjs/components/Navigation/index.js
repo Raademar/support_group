@@ -4,14 +4,14 @@ import styled from 'styled-components'
 const MenuItemsList = styled.ul`
 	padding: 0;
 	margin: 0;
-	margin-top: 10%;
-	display: flex;
+	margin-top: ${props => (props.marginTop ? '10%' : '')};
 	flex-direction: ${props => props.flexDir || 'column'};
-	justify-content: space-evenly;
-	align-items: center;
+	display: ${props => (props.isDesktop ? 'grid' : 'flex')};
 	list-style: none;
-	/* padding: 0 24px; */
 	grid-column: ${props => props.gridCol || ''};
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(10, 10%);
+	/* grid-column: 2/6; */
 	& li {
 		color: #fff;
 		margin-top: ${props => (props.isDesktop ? '' : '18%')};
@@ -35,7 +35,13 @@ const MenuItemsList = styled.ul`
 		}
 	}
 	.topMenu {
-		margin-top: ${props => (props.isDesktop ? '10px' : '50%')};
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: flex-start;
+		grid-column: 5/11;
+		margin-left: ${props => props.isDesktop && '4%'};
 	}
 	.bottomMenu {
 		display: ${props => (props.isDesktop ? 'none' : 'block')};

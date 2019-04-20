@@ -12,6 +12,8 @@ const StyledHeader = styled.div`
 	display: grid;
 	grid-template-columns: ${props =>
 		props.isDesktop ? 'repeat(10, 10%)' : 'repeat(5, 20%)'};
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 5px;
 	height: 80px;
 	transition: top 0.3s;
 	width: 100%;
@@ -22,6 +24,9 @@ const StyledHeader = styled.div`
 	.desktop-menu-container {
 		grid-column: 5 / 10;
 		color: #fff;
+		div {
+			height: 100%;
+		}
 		.desktop-menu {
 			height: 100%;
 			list-style: none;
@@ -39,7 +44,7 @@ const StyledHeader = styled.div`
 			}
 			.desktop-menu-dropdown-trigger::after {
 				content: '';
-				background-image: url(/static/images/arrow_down.svg);
+				background-image: url('/static/images/arrow_down.svg');
 				display: block;
 				background-size: 10px 10px;
 				height: 10px;
@@ -57,6 +62,9 @@ const StyledHeader = styled.div`
 			}
 		}
 	}
+	/* .desktop-menu-dropdown {
+
+	} */
 `
 
 class Header extends Component {
@@ -153,15 +161,15 @@ class Header extends Component {
 								</Link>
 							</li>
 						</ul>
-						{this.state.menuDropdownOpen && (
-							<DesktopMenuDropdown
-								navigationMenu={this.props.navigationMenu}
-								isDesktop={this.props.isDesktop}
-							/>
-						)}
 					</div>
 				) : (
 					<HamburgerBar onClick={this.props.toggleMenu} />
+				)}
+				{this.state.menuDropdownOpen && this.props.isDesktop && (
+					<DesktopMenuDropdown
+						navigationMenu={this.props.navigationMenu}
+						isDesktop={this.props.isDesktop}
+					/>
 				)}
 			</StyledHeader>
 		)

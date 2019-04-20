@@ -4,11 +4,10 @@ import styled from 'styled-components'
 import Logo from '../Logo'
 import Section from '../Section'
 import { CSSTransition } from 'react-transition-group'
-// import './styles.css'
 
 const StyledMenu = styled.div`
 	body {
-		overflow: ${props => props.menuOpen ? 'hidden' : 'initial'}
+		overflow: ${props => (props.menuOpen ? 'hidden' : 'initial')};
 	}
 	position: fixed;
 	left: 0;
@@ -33,9 +32,9 @@ const StyledMenu = styled.div`
 		padding: 0 24px;
 	}
 	& ul {
-		margin-top: ${props => props.isDesktop ? '' : '20%'};
+		margin-top: ${props => (props.isDesktop ? '' : '20%')};
 		grid-row: 2;
-		align-items: ${props => props.isDesktop ? '' : 'flex-start'};
+		align-items: ${props => (props.isDesktop ? '' : 'flex-start')};
 	}
 `
 
@@ -60,7 +59,7 @@ class HamburgerMenu extends Component {
 				<CSSTransition
 					in={loaded}
 					classNames="menu"
-					timeout={400}
+					timeout={600}
 					unmountOnExit
 				>
 					<StyledMenu {...this.props}>
