@@ -9,7 +9,7 @@ class Member extends Component {
 		super(props)
 
 		this.state = {
-			memberModalOpen: true,
+			memberModalOpen: false,
 			memberMessageSent: false
 		}
 	}
@@ -25,13 +25,17 @@ class Member extends Component {
 		const memberPercs = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/member`
 		)
+		const memberData = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=member&?_embed`
+		)
 
 		// Return the data
 
 		return {
 			pages: pages.data,
 			about: about.data,
-			memberPercs: memberPercs.data
+			memberPercs: memberPercs.data,
+			memberData: memberData.data
 		}
 	}
 
@@ -59,6 +63,7 @@ class Member extends Component {
 					isDesktop={this.props.isDesktop}
 					toggleModal={this.handleClick}
 					bodyScrollLocked={this.state.memberModalOpen}
+					memberData={this.props.memberData}
 				/>
 				{this.state.memberModalOpen && (
 					<MemberModal

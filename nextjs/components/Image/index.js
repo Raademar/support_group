@@ -3,17 +3,15 @@ import styled from 'styled-components'
 import Button from '../Button'
 
 const ImageStyle = styled.div`
-	display: flex;
 	height: 100%;
-	align-content: center;
-	justify-content: center;
+	/* position: relative; */
+
 	img {
 		width: ${props => props.width || '80%'};
-		font-weight: ${props => props.fontWeight || 'bold'};
 		position: ${props => props.position || 'absolute'};
-		display: flex;
-		margin-left: auto;
-		margin-right: auto;
+		bottom: ${props => props.bottom};
+		right: ${props => props.right};
+		z-index: 999;
 	}
 `
 

@@ -12,7 +12,7 @@ const StyledVolunteerPage = styled.div`
 	.volunteer-hero-colored-bg {
 		min-height: ${props => (props.isDesktop ? '636px' : '583px')};
 		position: relative;
-		background: #ffdd7e;
+		background: #fff;
 	}
 	.volunteer-person-inscope {
 		background: #f2f2f2;
@@ -127,10 +127,15 @@ const StyledVolunteerPage = styled.div`
 			bottom: 0;
 		}
 	}
+	.hero-image-volunteer-page {
+		width: 100%;
+	}
 `
 
 const VolunteerPage = props => {
 	if (props.aboutData) {
+		const { acf } = props.volunteerData[0]
+		console.log(acf)
 		return (
 			<StyledVolunteerPage {...props}>
 				<div className="volunteer-hero-colored-bg">
@@ -139,7 +144,7 @@ const VolunteerPage = props => {
 							<Heading
 								textAlign="left"
 								position="relative"
-								heroText="BECOME A volunteer"
+								heroText="BECOME A VOLUNTEER"
 								width="90%"
 								paddingTop="32px"
 								color="black"
@@ -166,35 +171,12 @@ const VolunteerPage = props => {
 								onClick={props.toggleModal}
 							/>
 						</div>
-						{!props.isDesktop && (
-							<svg
-								width="339"
-								height="242"
-								viewBox="0 0 339 242"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M828.516 242H630.393H0C25.8033 237.425 80.0924 205.352 90.8225 113.655C104.235 -0.966751 218.051 -23.0777 289.712 21.3984C361.374 65.8745 429.587 90.2729 636.524 53.6754C802.074 24.3974 833.498 167.026 828.516 242Z"
-									fill="white"
-								/>
-							</svg>
-						)}
-						{props.isDesktop && (
-							<svg
-								width="884"
-								height="494"
-								viewBox="0 0 884 494"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1694.01 494H1288.92H0C52.7583 484.662 163.76 419.189 185.699 232.006C213.123 -1.97345 445.834 -47.1091 592.355 43.681C738.877 134.471 878.347 184.276 1301.46 109.569C1639.95 49.8029 1704.2 340.954 1694.01 494Z"
-									fill="white"
-								/>
-							</svg>
-						)}
 					</Section>
+					<img
+						className="hero-image-volunteer-page"
+						src={acf.hero_image_volunteer_page.sizes.medium}
+						alt={acf.hero_image_volunteer_page.filename}
+					/>
 				</div>
 				<div
 					className={

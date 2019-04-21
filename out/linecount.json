@@ -1,0 +1,1994 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/Projektarbeten/SGN/wordpress/wp-content/themes/sgn",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2019-04-21 18:51:22",
+            "filesum": 328,
+            "codesum": 24289,
+            "commentsum": 3994,
+            "blanksum": 3302,
+            "filelist": [
+                {
+                    "blank": 1,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 4,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "404.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "footer.php"
+                },
+                {
+                    "blank": 9,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "front-page.php"
+                },
+                {
+                    "blank": 78,
+                    "code": 315,
+                    "comment": 36,
+                    "filename": "functions.php"
+                },
+                {
+                    "blank": 3,
+                    "code": 14,
+                    "comment": 11,
+                    "filename": "header.php"
+                },
+                {
+                    "filename": "img/about_us_image_one.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/about_us_image_three.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/about_us_image_two.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "index.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "nextjs/.babelrc"
+                },
+                {
+                    "blank": 6,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "nextjs/.next/build-manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "nextjs/.next/react-loadable-manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/pages-manifest.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "nextjs/.next/server/ssr-module-cache.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 121,
+                    "comment": 99,
+                    "filename": "nextjs/.next/server/static/development/pages/_app.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/_app.js.map"
+                },
+                {
+                    "blank": 61,
+                    "code": 416,
+                    "comment": 109,
+                    "filename": "nextjs/.next/server/static/development/pages/_document.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/_document.js.map"
+                },
+                {
+                    "blank": 6,
+                    "code": 73,
+                    "comment": 95,
+                    "filename": "nextjs/.next/server/static/development/pages/_error.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/_error.js.map"
+                },
+                {
+                    "blank": 71,
+                    "code": 409,
+                    "comment": 127,
+                    "filename": "nextjs/.next/server/static/development/pages/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/index.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/member.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/next/dist/pages/_error.js.map"
+                },
+                {
+                    "blank": 58,
+                    "code": 382,
+                    "comment": 124,
+                    "filename": "nextjs/.next/server/static/development/pages/volunteer.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/server/static/development/pages/volunteer.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/chunks/0.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/chunks/0.js.map"
+                },
+                {
+                    "blank": 32,
+                    "code": 96,
+                    "comment": 127,
+                    "filename": "nextjs/.next/static/development/dll/dll_2011977376de5c4d4cfb.js"
+                },
+                {
+                    "blank": 185,
+                    "code": 1115,
+                    "comment": 174,
+                    "filename": "nextjs/.next/static/development/pages/_app.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/_app.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/development/pages/_error.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/_error.js.map"
+                },
+                {
+                    "blank": 645,
+                    "code": 3006,
+                    "comment": 563,
+                    "filename": "nextjs/.next/static/development/pages/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/index.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/member.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/next/dist/pages/_error.js.map"
+                },
+                {
+                    "blank": 571,
+                    "code": 2375,
+                    "comment": 547,
+                    "filename": "nextjs/.next/static/development/pages/volunteer.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/development/pages/volunteer.js.map"
+                },
+                {
+                    "blank": 915,
+                    "code": 4573,
+                    "comment": 1476,
+                    "filename": "nextjs/.next/static/runtime/main.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/runtime/main.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 116,
+                    "comment": 145,
+                    "filename": "nextjs/.next/static/runtime/webpack.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/runtime/webpack.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/04edb0f62e391474ee5a.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/05b12a8ec605ced7c43d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/09e89c0d352d7b45924d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/1ad8905233b147be7ad7.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/1cd8ced12398e981570b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/1fd4afcb7313c35b1f27.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/25ff63550444dcf6cb2f.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/279c167cbc961ffc5f30.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/2804a0ef156078a29ddf.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/2a4d63a7de614643c804.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/2caed4ca198fd14b7572.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/36fbdc0fd3aa67804f51.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/3798cd9a6f43f1c0972c.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/3a82959711866fc3494f.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/44f8b4a1b32da8b8f47e.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/479c54bd48633758253d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/4b07d92b511569ead06d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/4b6a64633f0756caa716.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/4e36ca1e666ce0608fd7.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/5120a7cb9ae25d5f2163.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/54e548a76e8b857c3890.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/5b736c8c993f1f847884.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/65905358510f5bef035e.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/6b4ecfe5202e6657fab9.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/6e8e62a8d192c5794486.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/71f16114be6d0c0c432d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/731e2c62603b66ae8999.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/7cafa7527a4b98c643c2.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/7cc554d43395b81cfa12.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/7d65f99c168b409ed1a3.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/80905962a72d9cd02daf.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/848184f168d5180b6c37.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/8bdddaf12e853a8de8ae.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/8c0fd2239d96f34b8261.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/8c8ecdf93d0dde6eb009.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/9146b83a68ad79cae853.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/92fdb5da5e488b531d40.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/93c79aa86eb583c05bda.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/9b00d3c187d689373258.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/9d7c0253d0474f97acca.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a1498358cf079c220023.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a33a65995e85af6b7d87.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a3d5a7a71e6f4455edab.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a597047f1ff319a13332.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a6d1c37235f415a268cb.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a7d8d67c488a6cd767f2.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a87b2cf84423cc3c1870.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/a97a6bb10d66156db8ad.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b014fb34e4d03151dcbd.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b1877353b0f6206a2968.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b1f5383ad60e44d4cfa8.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b3c23a26cff3f970b3f8.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b5d635dbf3210c5f2e1b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/b80137afdd8b0e1ba0b4.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/d00b78563e5babca9dcc.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/d0c7d6f70b58b1919c5b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/d27f02ba1a111268c846.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/d6920f3104def22ea01b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/d8043614e7f7bf94b8c4.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/dcfe8a63349117566a73.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/e01bcde074a11684e1ed.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/e3a2f08cebc6af743e31.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/e4bfd3aec2b2b99b039a.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/e8f4db9405e7e6d19fe6.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/ee86874448f4fb6eb602.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/f13ca9850e66e8c3b42e.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/f219123c1c07c81f4c8d.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/f4354b56ef7634f94dbb.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/f6e03d1770aea4bf042b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/f9449d3e67c6aeb0930c.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/fafc099f81bfd160e92b.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/fb22af80dada57df8897.hot-update.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/fd9f7fd9480a805f6ed8.hot-update.json"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.09e89c0d352d7b45924d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.09e89c0d352d7b45924d.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.1ad8905233b147be7ad7.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.1ad8905233b147be7ad7.hot-update.js.map"
+                },
+                {
+                    "blank": 20,
+                    "code": 73,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.1fd4afcb7313c35b1f27.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.1fd4afcb7313c35b1f27.hot-update.js.map"
+                },
+                {
+                    "blank": 20,
+                    "code": 73,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.2804a0ef156078a29ddf.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.2804a0ef156078a29ddf.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.2a4d63a7de614643c804.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.2a4d63a7de614643c804.hot-update.js.map"
+                },
+                {
+                    "blank": 20,
+                    "code": 73,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.4e36ca1e666ce0608fd7.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.4e36ca1e666ce0608fd7.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.54e548a76e8b857c3890.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.54e548a76e8b857c3890.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.65905358510f5bef035e.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.65905358510f5bef035e.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.6b4ecfe5202e6657fab9.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.6b4ecfe5202e6657fab9.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.71f16114be6d0c0c432d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.71f16114be6d0c0c432d.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.7cafa7527a4b98c643c2.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.7cafa7527a4b98c643c2.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.7cc554d43395b81cfa12.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.7cc554d43395b81cfa12.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.848184f168d5180b6c37.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.848184f168d5180b6c37.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.8c8ecdf93d0dde6eb009.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.8c8ecdf93d0dde6eb009.hot-update.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 68,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.92fdb5da5e488b531d40.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.92fdb5da5e488b531d40.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.93c79aa86eb583c05bda.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.93c79aa86eb583c05bda.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.9b00d3c187d689373258.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.9b00d3c187d689373258.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.9d7c0253d0474f97acca.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.9d7c0253d0474f97acca.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a1498358cf079c220023.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a1498358cf079c220023.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a33a65995e85af6b7d87.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a33a65995e85af6b7d87.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a3d5a7a71e6f4455edab.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a3d5a7a71e6f4455edab.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a7d8d67c488a6cd767f2.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.a7d8d67c488a6cd767f2.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b014fb34e4d03151dcbd.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b014fb34e4d03151dcbd.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b1f5383ad60e44d4cfa8.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b1f5383ad60e44d4cfa8.hot-update.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 68,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b5d635dbf3210c5f2e1b.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b5d635dbf3210c5f2e1b.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b80137afdd8b0e1ba0b4.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.b80137afdd8b0e1ba0b4.hot-update.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 68,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d00b78563e5babca9dcc.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d00b78563e5babca9dcc.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d0c7d6f70b58b1919c5b.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d0c7d6f70b58b1919c5b.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d6920f3104def22ea01b.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d6920f3104def22ea01b.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d8043614e7f7bf94b8c4.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.d8043614e7f7bf94b8c4.hot-update.js.map"
+                },
+                {
+                    "blank": 21,
+                    "code": 78,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.dcfe8a63349117566a73.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.dcfe8a63349117566a73.hot-update.js.map"
+                },
+                {
+                    "blank": 21,
+                    "code": 78,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e01bcde074a11684e1ed.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e01bcde074a11684e1ed.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e3a2f08cebc6af743e31.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e3a2f08cebc6af743e31.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e4bfd3aec2b2b99b039a.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e4bfd3aec2b2b99b039a.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e8f4db9405e7e6d19fe6.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.e8f4db9405e7e6d19fe6.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.ee86874448f4fb6eb602.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.ee86874448f4fb6eb602.hot-update.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 68,
+                    "comment": 4,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f13ca9850e66e8c3b42e.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f13ca9850e66e8c3b42e.hot-update.js.map"
+                },
+                {
+                    "blank": 19,
+                    "code": 102,
+                    "comment": 6,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f219123c1c07c81f4c8d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f219123c1c07c81f4c8d.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f9449d3e67c6aeb0930c.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.f9449d3e67c6aeb0930c.hot-update.js.map"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.fb22af80dada57df8897.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.fb22af80dada57df8897.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.fd9f7fd9480a805f6ed8.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/index.js.fd9f7fd9480a805f6ed8.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.04edb0f62e391474ee5a.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.04edb0f62e391474ee5a.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.05b12a8ec605ced7c43d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.05b12a8ec605ced7c43d.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.1cd8ced12398e981570b.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.1cd8ced12398e981570b.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.25ff63550444dcf6cb2f.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.25ff63550444dcf6cb2f.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.2caed4ca198fd14b7572.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.2caed4ca198fd14b7572.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.36fbdc0fd3aa67804f51.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.36fbdc0fd3aa67804f51.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.3798cd9a6f43f1c0972c.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.3798cd9a6f43f1c0972c.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.3a82959711866fc3494f.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.3a82959711866fc3494f.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.44f8b4a1b32da8b8f47e.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.44f8b4a1b32da8b8f47e.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.479c54bd48633758253d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.479c54bd48633758253d.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.4b07d92b511569ead06d.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.4b07d92b511569ead06d.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.4b6a64633f0756caa716.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.4b6a64633f0756caa716.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.5120a7cb9ae25d5f2163.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.5120a7cb9ae25d5f2163.hot-update.js.map"
+                },
+                {
+                    "blank": 11,
+                    "code": 35,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.731e2c62603b66ae8999.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.731e2c62603b66ae8999.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.80905962a72d9cd02daf.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.80905962a72d9cd02daf.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.8bdddaf12e853a8de8ae.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.8bdddaf12e853a8de8ae.hot-update.js.map"
+                },
+                {
+                    "blank": 12,
+                    "code": 40,
+                    "comment": 5,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.8c0fd2239d96f34b8261.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.8c0fd2239d96f34b8261.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.9146b83a68ad79cae853.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.9146b83a68ad79cae853.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a6d1c37235f415a268cb.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a6d1c37235f415a268cb.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a87b2cf84423cc3c1870.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a87b2cf84423cc3c1870.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a97a6bb10d66156db8ad.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.a97a6bb10d66156db8ad.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.b1877353b0f6206a2968.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.b1877353b0f6206a2968.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.d27f02ba1a111268c846.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.d27f02ba1a111268c846.hot-update.js.map"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 1,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.f4354b56ef7634f94dbb.hot-update.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/.next/static/webpack/static/development/pages/member.js.f4354b56ef7634f94dbb.hot-update.js.map"
+                },
+                {
+                    "blank": 5,
+                    "code": 60,
+                    "comment": 1,
+                    "filename": "nextjs/components/About/index.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 187,
+                    "comment": 2,
+                    "filename": "nextjs/components/AboutPage/index.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 86,
+                    "comment": 4,
+                    "filename": "nextjs/components/Activities/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 66,
+                    "comment": 0,
+                    "filename": "nextjs/components/ActivitiesPopup/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 95,
+                    "comment": 1,
+                    "filename": "nextjs/components/ActivitiesPopupBox/index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "nextjs/components/BodyText/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "nextjs/components/Button/index.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 107,
+                    "comment": 8,
+                    "filename": "nextjs/components/Contact/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 64,
+                    "comment": 1,
+                    "filename": "nextjs/components/Donate/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 41,
+                    "comment": 2,
+                    "filename": "nextjs/components/DonatePage/index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "nextjs/components/Footer/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 32,
+                    "comment": 1,
+                    "filename": "nextjs/components/GdprPage/index.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "nextjs/components/HamburgerBar/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 71,
+                    "comment": 0,
+                    "filename": "nextjs/components/HamburgerMenu/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 48,
+                    "comment": 0,
+                    "filename": "nextjs/components/Header/DesktopMenuDropdown/index.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 170,
+                    "comment": 3,
+                    "filename": "nextjs/components/Header/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 30,
+                    "comment": 1,
+                    "filename": "nextjs/components/Heading/index.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 94,
+                    "comment": 7,
+                    "filename": "nextjs/components/Hero/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "nextjs/components/Image/index.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 101,
+                    "comment": 1,
+                    "filename": "nextjs/components/Layout/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "nextjs/components/Logo/index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 96,
+                    "comment": 3,
+                    "filename": "nextjs/components/Member/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 96,
+                    "comment": 3,
+                    "filename": "nextjs/components/MemberModal/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 221,
+                    "comment": 1,
+                    "filename": "nextjs/components/MemberPage/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 88,
+                    "comment": 2,
+                    "filename": "nextjs/components/Navigation/index.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 136,
+                    "comment": 8,
+                    "filename": "nextjs/components/News/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "nextjs/components/NewsModal/index.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "nextjs/components/Projects/index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "nextjs/components/Section/index.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 104,
+                    "comment": 1,
+                    "filename": "nextjs/components/Volunteer/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 25,
+                    "comment": 1,
+                    "filename": "nextjs/components/VolunteerMember/index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 89,
+                    "comment": 0,
+                    "filename": "nextjs/components/VolunteerModal/index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 231,
+                    "comment": 2,
+                    "filename": "nextjs/components/VolunteerPage/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "nextjs/global.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "nextjs/next.config.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 6186,
+                    "comment": 0,
+                    "filename": "nextjs/package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "nextjs/package.json"
+                },
+                {
+                    "blank": 7,
+                    "code": 63,
+                    "comment": 9,
+                    "filename": "nextjs/pages/about.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 25,
+                    "comment": 5,
+                    "filename": "nextjs/pages/branches.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 38,
+                    "comment": 11,
+                    "filename": "nextjs/pages/contact.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 32,
+                    "comment": 5,
+                    "filename": "nextjs/pages/donate.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 29,
+                    "comment": 1,
+                    "filename": "nextjs/pages/fbDataExampel.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 30,
+                    "comment": 6,
+                    "filename": "nextjs/pages/gdpr.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 98,
+                    "comment": 14,
+                    "filename": "nextjs/pages/index.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 68,
+                    "comment": 7,
+                    "filename": "nextjs/pages/member.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 119,
+                    "comment": 6,
+                    "filename": "nextjs/pages/news.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 39,
+                    "comment": 3,
+                    "filename": "nextjs/pages/single.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 52,
+                    "comment": 6,
+                    "filename": "nextjs/pages/volunteer.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 1,
+                    "filename": "nextjs/routes.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 20,
+                    "comment": 8,
+                    "filename": "nextjs/server.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/arrow_down.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/arrow_in_circle.svg"
+                },
+                {
+                    "filename": "nextjs/static/images/bankgiro.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/burger_menu.svg"
+                },
+                {
+                    "filename": "nextjs/static/images/kryss.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/logo_sgn.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/memb_bg.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/member_desktop.svg"
+                },
+                {
+                    "filename": "nextjs/static/images/member_in_scope.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "nextjs/static/images/member_in_scope_desktop.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "nextjs/static/images/swish.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/Volunteer/member_volunteer_wave.svg"
+                },
+                {
+                    "filename": "nextjs/static/images/volunteer_woman_in_scope.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/voul_bg.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/voul_bg2.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "nextjs/static/images/vouluntere.svg"
+                },
+                {
+                    "blank": 8,
+                    "code": 52,
+                    "comment": 29,
+                    "filename": "nextjs/static/styles/styles.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 4,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "page-templates/branches.php"
+                },
+                {
+                    "blank": 9,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "page.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/about.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "post-types/activities.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/branches.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/gdpr.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/member.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/projects.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "post-types/volunteer.php"
+                },
+                {
+                    "blank": 13,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "single-activity.php"
+                },
+                {
+                    "blank": 12,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "single-branch.php"
+                },
+                {
+                    "blank": 13,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "single.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 13,
+                    "filename": "style.css"
+                }
+            ]
+        }
+    ]
+}

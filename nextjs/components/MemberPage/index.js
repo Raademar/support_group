@@ -4,6 +4,7 @@ import Heading from '../Heading'
 import BodyText from '../BodyText'
 import Button from '../Button'
 import styled from 'styled-components'
+
 const StyledMemberPage = styled.div`
 	overflow: ${props => (props.bodyScrollLocked ? 'hidden' : 'unset')};
 	body {
@@ -12,7 +13,7 @@ const StyledMemberPage = styled.div`
 	.member-hero-colored-bg {
 		min-height: ${props => (props.isDesktop ? '636px' : '583px')};
 		position: relative;
-		background: #ffdd7e;
+		background: #fff;
 	}
 	.member-person-inscope {
 		background: #f2f2f2;
@@ -25,7 +26,7 @@ const StyledMemberPage = styled.div`
 			font-weight: 200;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
-			top: ${props => (props.isDesktop ? '18%' : '18%')};
+			top: ${props => (props.isDesktop ? '18%' : '13%')};
 		}
 		& .member-person-quote-name {
 			font-weight: 600;
@@ -35,22 +36,21 @@ const StyledMemberPage = styled.div`
 		}
 		& img {
 			position: absolute;
-			right: ${props => (props.isDesktop ? '5%' : '1%')};
-			bottom: ${props => (props.isDesktop ? '0' : '30%')};
-			width: ${props => props.isDesktop && '500px'};
+			right: ${props => (props.isDesktop ? '5%' : '0')};
+			bottom: ${props => (props.isDesktop ? '0' : '0')};
+			width: 100%;
 		}
 	}
 	.member-hero-colored-bg:not(h1, div, p, button) {
 		margin: 0;
 	}
 	.member-bullet-points-mobile {
-		background: #fff;
-		/* display: flex;
-		justify-content: center; */
+		background: #dfeafa;
+		padding: 3em 0;
 		.members-mobile {
-			margin-top: 1em;
+			margin-bottom: 1em;
 			grid-template-columns: 1fr 3fr;
-			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-rows: 30px 1fr 1fr;
 			display: grid;
 			margin-left: 24px;
 			margin-right: 24px;
@@ -58,6 +58,10 @@ const StyledMemberPage = styled.div`
 			& p {
 				grid-column: 2;
 				margin: 0;
+				font-weight: 200;
+				max-width: 230px;
+				line-height: 140%;
+				letter-spacing: 0.04em;
 			}
 			& h3 {
 				margin: 0;
@@ -127,10 +131,15 @@ const StyledMemberPage = styled.div`
 			bottom: 0;
 		}
 	}
+	.hero-image-member-page {
+		width: 100%;
+	}
 `
 
 const MemberPage = props => {
 	if (props.aboutData) {
+		const { acf } = props.memberData[0]
+		// console.log(acf)
 		return (
 			<StyledMemberPage {...props}>
 				<div className="member-hero-colored-bg">
@@ -166,35 +175,12 @@ const MemberPage = props => {
 								onClick={props.toggleModal}
 							/>
 						</div>
-						{!props.isDesktop && (
-							<svg
-								width="339"
-								height="242"
-								viewBox="0 0 339 242"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M828.516 242H630.393H0C25.8033 237.425 80.0924 205.352 90.8225 113.655C104.235 -0.966751 218.051 -23.0777 289.712 21.3984C361.374 65.8745 429.587 90.2729 636.524 53.6754C802.074 24.3974 833.498 167.026 828.516 242Z"
-									fill="white"
-								/>
-							</svg>
-						)}
-						{props.isDesktop && (
-							<svg
-								width="884"
-								height="494"
-								viewBox="0 0 884 494"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1694.01 494H1288.92H0C52.7583 484.662 163.76 419.189 185.699 232.006C213.123 -1.97345 445.834 -47.1091 592.355 43.681C738.877 134.471 878.347 184.276 1301.46 109.569C1639.95 49.8029 1704.2 340.954 1694.01 494Z"
-									fill="white"
-								/>
-							</svg>
-						)}
 					</Section>
+					<img
+						className="hero-image-member-page"
+						src={acf.hero_image_member_page.sizes.medium}
+						alt={acf.hero_image_member_page.filename}
+					/>
 				</div>
 				<div
 					className={
@@ -224,7 +210,7 @@ const MemberPage = props => {
 						src={
 							props.isDesktop
 								? '/static/images/member_in_scope_desktop.png'
-								: '/static/images/member_in_scope.png'
+								: acf.member_page_bottom_image.sizes.large
 						}
 						alt=""
 					/>

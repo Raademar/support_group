@@ -1,34 +1,30 @@
-import Link from "next/link";
-import styled from "styled-components";
-import BodyText from "../BodyText";
-import Image from "../Image";
-import Heading from "../Heading";
-import Section from "../Section";
-import Volunteer from "../Volunteer";
-import Member from "../Member";
+import styled from 'styled-components'
+import Volunteer from '../Volunteer'
+import Member from '../Member'
 
 const StyledVolunteerMember = styled.div`
-    display:${props => props.isDesktop ? 'flex' : ''};
-`;
+	display: ${props => (props.isDesktop ? 'flex' : '')};
+`
 
 const VolunteerMember = props => {
-  
-    // console.log(props.isDesktop)
+	// console.log(props.isDesktop)
 
-    return (
-      <StyledVolunteerMember {...props}>
-        <Member
-          pageData={props.pageData}
-          aboutImage={props.aboutImage}
-          isDesktop={props.isDesktop}
-        />
-        <Volunteer
-          pageData={props.pageData}
-          aboutImage={props.aboutImage}
-          isDesktop={props.isDesktop}
-        />
-      </StyledVolunteerMember>
-    );
-};
+	return (
+		<StyledVolunteerMember {...props}>
+			<Member
+				pageData={props.pageData}
+				aboutImage={props.aboutImage}
+				isDesktop={props.isDesktop}
+				memberData={props.memberData}
+			/>
+			<Volunteer
+				pageData={props.pageData}
+				aboutImage={props.aboutImage}
+				isDesktop={props.isDesktop}
+				volunteerData={props.volunteerData}
+			/>
+		</StyledVolunteerMember>
+	)
+}
 
-export default VolunteerMember;
+export default VolunteerMember

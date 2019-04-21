@@ -24,13 +24,19 @@ class Volunteer extends Component {
 		const volunteerPercs = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/wp/v2/volunteer`
 		)
+		const volunteerData = await axios.get(
+			`http://${
+				process.env.HOSTNAME
+			}/wp-json/wp/v2/pages?slug=volunteer&?_embed`
+		)
 
 		// Return the data
 
 		return {
 			pages: pages.data,
 			about: about.data,
-			volunteerPercs: volunteerPercs.data
+			volunteerPercs: volunteerPercs.data,
+			volunteerData: volunteerData.data
 		}
 	}
 
@@ -51,6 +57,7 @@ class Volunteer extends Component {
 					isDesktop={this.props.isDesktop}
 					toggleModal={this.handleClick}
 					bodyScrollLocked={this.state.volunteerModalOpen}
+					volunteerData={this.props.volunteerData}
 				/>
 				{this.state.volunteerModalOpen && (
 					<VolunteerModal toggleModal={this.handleClick} />

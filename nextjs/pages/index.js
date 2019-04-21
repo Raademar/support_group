@@ -50,6 +50,14 @@ export default class extends Component {
 		const aboutUsCards = await axios.get(
 			`http://${process.env.HOSTNAME}/wp-json/sgn/v1/about_us`
 		)
+		const memberData = await axios.get(
+			`http://${process.env.HOSTNAME}/wp-json/wp/v2/pages?slug=member&?_embed`
+		)
+		const volunteerData = await axios.get(
+			`http://${
+				process.env.HOSTNAME
+			}/wp-json/wp/v2/pages?slug=volunteer&?_embed`
+		)
 
 		// Return the data
 
@@ -62,33 +70,37 @@ export default class extends Component {
 			posts: news.data,
 			aboutUsCards: aboutUsCards.data,
 			activities: activities.data,
-			projectsData: projects.data
+			projectsData: projects.data,
+			memberData: memberData.data,
+			volunteerData: volunteerData.data
 		}
 	}
 	render() {
-		// console.log();
+		// console.log(this.props.memberData)
 		const correctHeroImagePath = this.props.heroImage.media_details.sizes.full
 			.source_url
 		return (
-      <Layout navigationMenu={this.props.pages}>
-        <Hero
-          heroText="Together for a bright future"
-          heroSmallText="We are a non-profit organization working hard to give refugees a better future"
-          heroImage={correctHeroImagePath}
-        />
-        <About
-          pageData={this.props.about[0]}
-          aboutImage={this.props.aboutImage.source_url}
-        />
-        <News posts={this.props.posts} backgroundColor="#F2F2F2" />
-        <VolunteerMember
-          pageData={this.props.about[0]}
-          aboutImage={this.props.aboutImage.source_url}
-          isDesktop={this.props.isDesktop}
-        />
-        <Projects projectsData={this.props.projectsData} />
-        <Donate />
-      </Layout>
-    );
+			<Layout navigationMenu={this.props.pages}>
+				<Hero
+					heroText="Together for a bright future"
+					heroSmallText="We are a non-profit organization working hard to give refugees a better future"
+					heroImage={correctHeroImagePath}
+				/>
+				<About
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+				/>
+				<News posts={this.props.posts} backgroundColor="#F2F2F2" />
+				<VolunteerMember
+					pageData={this.props.about[0]}
+					aboutImage={this.props.aboutImage.source_url}
+					isDesktop={this.props.isDesktop}
+					memberData={this.props.memberData}
+					volunteerData={this.props.volunteerData}
+				/>
+				<Projects projectsData={this.props.projectsData} />
+				<Donate />
+			</Layout>
+		)
 	}
 }

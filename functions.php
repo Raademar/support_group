@@ -413,3 +413,18 @@ if (function_exists('acf_add_local_field_group')) {
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+function my_custom_mime_types( $mimes ) {
+ 
+	// New allowed mime types.
+	$mimes['svg'] = 'image/svg+xml';
+	$mimes['svgz'] = 'image/svg+xml';
+	$mimes['doc'] = 'application/msword';
+	 
+	// Optional. Remove a mime type.
+	unset( $mimes['exe'] );
+	 
+	return $mimes;
+	}
+	add_filter( 'upload_mimes', 'my_custom_mime_types' );
+	
