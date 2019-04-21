@@ -25,39 +25,43 @@ const StyledVolunteerPage = styled.div`
 			font-weight: 200;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
-			top: ${props => (props.isDesktop ? '18%' : '18%')};
+			top: ${props => (props.isDesktop ? '18%' : '10%')};
 		}
 		& .volunteer-person-quote-name {
 			font-weight: 600;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
-			top: ${props => (props.isDesktop ? '34%' : '42%')};
+			top: ${props => (props.isDesktop ? '34%' : '38%')};
 		}
 		& img {
 			position: absolute;
-			right: ${props => (props.isDesktop ? '5%' : '1%')};
-			bottom: ${props => (props.isDesktop ? '0' : '30%')};
-			width: ${props => props.isDesktop && '500px'};
+			right: ${props => (props.isDesktop ? '5%' : '0')};
+			bottom: ${props => (props.isDesktop ? '0' : '0')};
+			width: ${props => (props.isDesktop ? '500px' : '100%')};
 		}
 	}
 	.volunteer-hero-colored-bg:not(h1, div, p, button) {
 		margin: 0;
 	}
 	.volunteer-bullet-points-mobile {
-		background: #fff;
-		/* display: flex;
-		justify-content: center; */
+		background: #dfeafa;
+		padding: 3em 0;
 		.volunteers-mobile {
 			margin-top: 1em;
 			grid-template-columns: 1fr 3fr;
-			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-rows: 30px 1fr 1fr;
 			display: grid;
 			margin-left: 24px;
 			margin-right: 24px;
 			width: 90%;
+			font-weight: 200;
 			& p {
 				grid-column: 2;
 				margin: 0;
+				font-weight: 200;
+				max-width: 230px;
+				line-height: 140%;
+				letter-spacing: 0.04em;
 			}
 			& h3 {
 				margin: 0;
@@ -159,7 +163,7 @@ const VolunteerPage = props => {
 								zIndex="3"
 							/>
 							<Button
-								color="#fff"
+								color="#1b1b1b"
 								fontSize="16px"
 								width="198px"
 								height="52px"
@@ -167,7 +171,6 @@ const VolunteerPage = props => {
 								marginTop="45px"
 								marginBottom="80px"
 								zIndex="2"
-								primary
 								onClick={props.toggleModal}
 							/>
 						</div>
@@ -205,7 +208,10 @@ const VolunteerPage = props => {
 						thing.”
 					</p>
 					<p className="volunteer-person-quote-name">Kasim Pontiga </p>
-					<img src="/static/images/volunteer_woman_in_scope.png" alt="" />
+					<img
+						src={acf.bottom_image_volunteer_page.sizes.large}
+						alt={acf.bottom_image_volunteer_page.filename}
+					/>
 				</div>
 			</StyledVolunteerPage>
 		)

@@ -12,7 +12,7 @@ const StyledHeader = styled.div`
 	display: grid;
 	grid-template-columns: ${props =>
 		props.isDesktop ? 'repeat(10, 10%)' : 'repeat(5, 20%)'};
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: ${props => props.isDesktop && '1fr 1fr'};
 	grid-row-gap: 5px;
 	height: 80px;
 	transition: top 0.3s;
