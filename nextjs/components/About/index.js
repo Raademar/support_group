@@ -13,51 +13,49 @@ const AboutStyle = styled.div`
 `
 
 const StyledButton = styled.a`
-  width: 319px;
-  height: 50px;
-  border: 4px solid #3d73cf;
-  background-color: #fff;
-  color: #3d73cf;
-  font-weight: 900;
-  font-size: 16px;
-  font-family: Lato;
-  border-radius: 8px;
-  margin: 0 auto;
-  margin-top: 44px;
-  margin-bottom: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  a {
-    text-decoration: none;
-    color: #3d73cf;
-  }
-`;
+	width: 319px;
+	height: 50px;
+	border: 4px solid #3d73cf;
+	background-color: #fff;
+	color: #3d73cf;
+	font-weight: 900;
+	font-size: 16px;
+	font-family: Lato;
+	border-radius: 8px;
+	margin: 0 auto;
+	margin-top: 44px;
+	margin-bottom: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	a {
+		text-decoration: none;
+		color: #3d73cf;
+	}
+`
 
 const About = props => {
 	if (props.pageData) {
 		// console.log(props.pageData)
 
 		return (
-      <AboutStyle>
-        <Section paddingTop="24px">
-          <Heading
-            position="relative"
-            heroText={props.pageData.title.rendered.toUpperCase()}
-            letterSpacing="4px"
-            marginTop="2%"
-          />
-          {/* <Image position="relative" image={props.aboutImage} /> */}
-          <BodyText bodyText={props.pageData.content.rendered} />
-          <StyledButton>
-            <Link href="/about">
-              <a href="/about">READ MORE ABOUT OUR WORK</a>
-            </Link>
-          </StyledButton>
-        </Section>
-      </AboutStyle>
-    );
+			<AboutStyle>
+				<Section paddingTop="24px">
+					<Heading
+						position="relative"
+						heroText={props.pageData.title.rendered.toUpperCase()}
+						letterSpacing="4px"
+						marginTop="2%"
+					/>
+					{/* <Image position="relative" image={props.aboutImage} /> */}
+					<BodyText bodyText={props.pageData.content.rendered} />
+					<Link href="/about">
+						<StyledButton>READ MORE ABOUT OUR WORK</StyledButton>
+					</Link>
+				</Section>
+			</AboutStyle>
+		)
 	} else {
 		return null
 	}

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const StyledNewsModal = styled.div`
-	height: ${props => (props.isDesktop ? '50vh' : '100vh')};
+	height: ${props => (props.isDesktop ? '50vh' : '100%')};
 	width: 100%;
 	background: #fff;
 	color: #1b1b1b;
@@ -14,6 +14,7 @@ const StyledNewsModal = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	overflow-y: scroll;
 	img {
 		width: 100%;
 	}
