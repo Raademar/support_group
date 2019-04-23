@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import Navigation from '../Navigation'
 import styled from 'styled-components'
 import Logo from '../Logo'
-import Section from '../Section'
-import { CSSTransition } from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const StyledMenu = styled.div`
 	body {
@@ -55,7 +54,13 @@ class HamburgerMenu extends Component {
 	render() {
 		const { loaded } = this.state
 		return (
-			<CSSTransition in={loaded} classNames="menu" timeout={600} unmountOnExit>
+			<CSSTransition
+				in={loaded}
+				classNames="menu"
+				timeout={600}
+				unmountOnExit
+				key={1}
+			>
 				<StyledMenu {...this.props}>
 					<Logo />
 					<span onClick={this.props.toggleMenu}>&times;</span>

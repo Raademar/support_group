@@ -49,10 +49,12 @@ class Layout extends Component {
 					menuOpen: true
 				},
 				() => {
-					const scrollValue = body.scrollHeight - window.innerHeight * 1.8	
-					window.scroll({
-						top: scrollValue,
-					})
+					setTimeout(() => {
+						const scrollValue = body.scrollHeight - window.innerHeight * 1.8
+						window.scroll({
+							top: scrollValue
+						})
+					}, 1000)
 				}
 			)
 		}
