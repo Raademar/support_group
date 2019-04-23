@@ -170,7 +170,7 @@ const MemberPage = props => {
                 height="52px"
                 text="Become a member"
                 marginTop="45px"
-                marginBottom="80px"
+                marginBottom="20px"
                 zIndex="2"
                 primary
                 onClick={props.toggleModal}

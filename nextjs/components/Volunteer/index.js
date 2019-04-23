@@ -95,12 +95,7 @@ const Volunteer = props => {
 						alt={acf.landing_page_image.filename}
 					/>
 
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 317.7">
-						<path
-							d="M0 317l.9.6h345.8V198.3c3.1-64.8-16.5-188-119.8-162.7C97.8 67.2 55.2 46.1 10.5 7.7 7.1 4.8 3.6 2.2 0 0v317z"
-							fill="#fff"
-						/>
-					</svg>
+					<svg width="376" height="386" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 386h376V72.354C163.557 119.013 86.924 77.59 6.676 5.872A163.658 163.658 0 0 0 0 .217V386z" fill="#fff" /></svg>
 				</Section>
 			</VolunteerStyle>
 		)

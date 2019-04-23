@@ -169,7 +169,7 @@ const VolunteerPage = props => {
 								height="52px"
 								text="Become a volunteer"
 								marginTop="45px"
-								marginBottom="80px"
+								marginBottom="20px"
 								zIndex="2"
 								onClick={props.toggleModal}
 							/>

@@ -88,12 +88,7 @@ const Member = props => {
             bottom="0"
             letterSpacing="0.04em"
           />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 363">
-            <path
-              d="M375 104.2C246.4 117.7 188.3 84 127.8 32.1 90.1-.3 41.6-9.2 0 10.1V363h375V104.2z"
-              fill="#fff"
-            />
-          </svg>
+					<svg width="376" height="386" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 386h376V72.354C163.557 119.013 86.924 77.59 6.676 5.872A163.658 163.658 0 0 0 0 .217V386z" fill="#fff" /></svg>
         </Section>
       </MemberStyle>
     );
