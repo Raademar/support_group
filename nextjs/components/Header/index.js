@@ -71,7 +71,8 @@ class Header extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			menuDropdownOpen: false
+			menuDropdownOpen: false,
+			loaded: false
 		}
 	}
 
@@ -86,6 +87,9 @@ class Header extends Component {
 			}
 			prevScrollpos = currentScrollPos
 		}
+		this.setState({
+			loaded: !this.state.loaded
+		})
 	}
 
 	handleClick = () => {
@@ -95,6 +99,7 @@ class Header extends Component {
 	}
 
 	render() {
+		const { loaded } = this.state
 		return (
 			<StyledHeader id="navbar" {...this.props}>
 				<Head>

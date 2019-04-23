@@ -55,20 +55,13 @@ class HamburgerMenu extends Component {
 	render() {
 		const { loaded } = this.state
 		return (
-			<div>
-				<CSSTransition
-					in={loaded}
-					classNames="menu"
-					timeout={600}
-					unmountOnExit
-				>
-					<StyledMenu {...this.props}>
-						<Logo />
-						<span onClick={this.props.toggleMenu}>&times;</span>
-						<Navigation navigationMenu={this.props.navigationMenu} />
-					</StyledMenu>
-				</CSSTransition>
-			</div>
+			<CSSTransition in={loaded} classNames="menu" timeout={600} unmountOnExit>
+				<StyledMenu {...this.props}>
+					<Logo />
+					<span onClick={this.props.toggleMenu}>&times;</span>
+					<Navigation navigationMenu={this.props.navigationMenu} />
+				</StyledMenu>
+			</CSSTransition>
 		)
 	}
 }
