@@ -11,7 +11,7 @@ const StyledVolunteer = styled.div`
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 99;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +57,7 @@ const StyledVolunteer = styled.div`
     height: 51px;
     width: 100%;
     margin-top: 1.2em;
-    color: #1c1c1c;
+    color: #1c1c1c	;
     font-size: 18px;
     border: none;
     background-color: #ffd256;

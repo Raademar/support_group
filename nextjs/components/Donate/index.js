@@ -16,7 +16,7 @@ const DonateStyle = styled.div`
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 165px;
+    width: ${props => props.isDesktop ? "385px" : "165px"};
     height: 50px;
     left: 106px;
     top: 6224px;
@@ -30,11 +30,16 @@ const DonateStyle = styled.div`
     border: none;
     margin-top: 14%;
     margin-bottom: 18%;
+    &:hover {
+      background-color: white;
+      color: #12e7b4;
+      border: 4px solid #12e7b4;
+    }
   }
   .donateButtonDiv {
-      padding-bottom:18%
+    padding-bottom: 18%;
   }
-  a{
+  a {
     text-decoration: none;
   }
 `;

@@ -33,7 +33,7 @@ const ActivitiesList = styled.section`
   & img {
     /* border-radius: 50%; */
     margin-bottom: 16px;
-    width: ${props => (props.isDesktop ? "30%" : "")};
+    width: ${props => (props.isDesktop ? "46%" : "")};
     align-self: center;
     margin: auto;
     margin-top: 18%;

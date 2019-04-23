@@ -7,10 +7,11 @@ import Heading from '../Heading'
 import Section from '../Section'
 
 const AboutStyle = styled.div`
-	margin: 0 auto;
-	background-color: ${props => props.backgroundColor || 'white'};
-	margin-top: 3em;
-`
+  margin: 0 auto;
+  background-color: ${props => props.backgroundColor || "white"};
+  margin-top: 3em;
+  /* width: ${props => props.isDesktop ? "80%" : ""}; */
+`;
 
 const StyledButton = styled.a`
 	width: 319px;
@@ -40,22 +41,31 @@ const About = props => {
 		// console.log(props.pageData)
 
 		return (
-			<AboutStyle>
-				<Section paddingTop="24px">
-					<Heading
-						position="relative"
-						heroText={props.pageData.title.rendered.toUpperCase()}
-						letterSpacing="4px"
-						marginTop="2%"
-					/>
-					{/* <Image position="relative" image={props.aboutImage} /> */}
-					<BodyText bodyText={props.pageData.content.rendered} />
-					<Link href="/about">
-						<StyledButton>READ MORE ABOUT OUR WORK</StyledButton>
-					</Link>
-				</Section>
-			</AboutStyle>
-		)
+      <AboutStyle>
+        <Section paddingTop="24px">
+          <Heading
+            position="relative"
+            heroText={props.pageData.title.rendered.toUpperCase()}
+            letterSpacing="4px"
+            marginTop="2%"
+            letterSpacing="0.04em"
+          />
+          {/* <Image position="relative" image={props.aboutImage} /> */}
+          <BodyText
+            bodyText={props.pageData.content.rendered}
+            // width={props.isDesktop ? "90%" : ""}
+            marginLeft={props.isDesktop ? "15%" : ""}
+			marginRight={props.isDesktop ? "15%" : ""}
+			fontSize={props.isDesktop ? "24px" : "16px" }
+			letterSpacing="0.04em"
+			lineHeight={props.isDesktop ? "44px" : "27px"}
+				  />
+          <Link href="/about">
+            <StyledButton>READ MORE ABOUT OUR WORK</StyledButton>
+          </Link>
+        </Section>
+      </AboutStyle>
+    );
 	} else {
 		return null
 	}

@@ -11,7 +11,7 @@ const StyledModal = styled.div`
   position: fixed;
   top: 0%;
   left: 0;
-  z-index: 99;
+  z-index: 999;
   p {
     line-height: 28px;
     letter-spacing: 0.04em;

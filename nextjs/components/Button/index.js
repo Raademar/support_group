@@ -18,6 +18,12 @@ const StyledButton = styled.button`
   margin-top: ${props => props.marginTop || "12px"};
   border-radius: 8px;
   z-index: ${props => props.zIndex || ""};
+  &:hover {
+    background-color: white;
+    color: ${props => (props.primary ? "#3D73CF" : "#1B1B1B")};
+    border: ${props =>
+      props.primary ? "4px solid #3d73cf" : "4px solid #F9C943"};
+  }
 `;
 
 const Button = props => {
