@@ -13,7 +13,7 @@ const StyledMenu = styled.div`
 	background: #3d73cf;
 	height: 100%;
 	width: 100vw;
-	z-index: 10;
+	z-index: 9999;
 	color: #fff;
 	display: grid;
 	grid-template-columns: ${props => (props.isDesktop ? '60% 40%' : '100%')};

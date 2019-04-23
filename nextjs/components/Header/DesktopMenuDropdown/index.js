@@ -33,7 +33,7 @@ const DesktopMenuDropdown = props => {
 						in={loaded}
 						appear={false}
 						classNames="menu-desktop"
-						timeout={600}
+						timeout={800}
 						unmountOnExit
 						key={2}
 					>

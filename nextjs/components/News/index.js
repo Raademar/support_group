@@ -4,16 +4,12 @@ import BodyText from '../BodyText'
 import Heading from '../Heading'
 import Section from '../Section'
 import Slider from 'react-slick'
+import NewsModal from '../NewsModal'
 
 const StyledNewsPosts = styled.div`
 	background-color: #dfeafa;
-	/* display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center; */
 	.news-container {
 		background-color: #fff;
-		/* width: 100vw; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -71,6 +67,13 @@ const NewsButton = styled.a`
 `
 
 class SimpleSlider extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			newsModalOpen: false,
+			newsInfo: {}
+		}
+	}
 	getExcerpted = (str, limit) => {
 		let fullText = str
 		let shortText = str
@@ -92,6 +95,17 @@ class SimpleSlider extends Component {
 		// Will display time in 10: format
 		const formattedTime = `${date}/${month} ${hours}:00`
 		return formattedTime
+	}
+
+	getClickedNewsItem(item) {
+		this.setState({
+			newsInfo: item
+		})
+	}
+	toggleNewsModal = () => {
+		this.setState({
+			newsModalOpen: !this.state.newsModalOpen
+		})
 	}
 
 	render() {
@@ -124,7 +138,14 @@ class SimpleSlider extends Component {
 						{posts.map((item, index) => (
 							<div className="news-container" key={index}>
 								<div className="news-image-container">
-									<img src={item.acf.image.sizes.large} alt="" />
+									<img
+										src={item.acf.image.sizes.large}
+										alt=""
+										onClick={event => {
+											this.getClickedNewsItem(item)
+											this.toggleNewsModal()
+										}}
+									/>
 								</div>
 								<div className="news-content-container">
 									<h3 className="news-header">{item.title.rendered}</h3>
@@ -143,6 +164,12 @@ class SimpleSlider extends Component {
 					</Slider>
 				</StyledNewsPosts>
 				<NewsButton href="/news">SEE ALL NEWS</NewsButton>
+				{this.state.newsModalOpen && (
+					<NewsModal
+						newsInfo={this.state.newsInfo}
+						toggleModal={this.toggleNewsModal}
+					/>
+				)}
 			</div>
 		)
 	}

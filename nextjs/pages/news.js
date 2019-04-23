@@ -3,6 +3,7 @@ import axios from 'axios'
 import Layout from '../components/Layout'
 import Heading from '../components/Heading'
 import styled from 'styled-components'
+import NewsModal from '../components/NewsModal'
 
 const StyledNewsPosts = styled.div`
 	background-color: #dfeafa;
@@ -51,6 +52,10 @@ const StyledNewsPosts = styled.div`
 `
 
 export default class extends Component {
+	state = {
+		newsModalOpen: false,
+		newsInfo: {}
+	}
 	// Resolve promise and get initial props
 	static async getInitialProps({ req }) {
 		// Make request for props
@@ -68,6 +73,17 @@ export default class extends Component {
 			posts: posts.data,
 			pages: pages.data
 		}
+	}
+
+	getClickedNewsItem(item) {
+		this.setState({
+			newsInfo: item
+		})
+	}
+	toggleNewsModal = () => {
+		this.setState({
+			newsModalOpen: !this.state.newsModalOpen
+		})
 	}
 
 	getExcerpted = (str, limit) => {
@@ -95,7 +111,7 @@ export default class extends Component {
 
 	render() {
 		const posts = this.props.posts
-		console.log(posts)
+		// console.log(posts)
 
 		return (
 			<Layout navigationMenu={this.props.pages}>
@@ -110,7 +126,14 @@ export default class extends Component {
 					{posts.map((item, index) => (
 						<div className="news-container" key={index}>
 							<div className="news-image-container">
-								<img src={item.acf.image.sizes.large} alt="" />
+								<img
+									src={item.acf.image.sizes.large}
+									alt=""
+									onClick={event => {
+										this.getClickedNewsItem(item)
+										this.toggleNewsModal()
+									}}
+								/>
 							</div>
 							<div className="news-content-container">
 								<h3 className="news-header">{item.title.rendered}</h3>
@@ -127,6 +150,12 @@ export default class extends Component {
 						</div>
 					))}
 				</StyledNewsPosts>
+				{this.state.newsModalOpen && (
+					<NewsModal
+						newsInfo={this.state.newsInfo}
+						toggleModal={this.toggleNewsModal}
+					/>
+				)}
 			</Layout>
 		)
 	}
