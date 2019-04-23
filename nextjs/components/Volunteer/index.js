@@ -26,7 +26,7 @@ const VolunteerStyle = styled.div`
 	img {
 		position: absolute;
 		bottom: 0;
-		z-index: 99;
+		z-index: 8;
 		width: 90%;
 		left: 0;
 	}
@@ -68,7 +68,7 @@ const Volunteer = props => {
 						<Button
 							position="absolute"
 							color="#000"
-							fontSize="16px"
+							fontSize="14px"
 							width="198px"
 							height="52px"
 							text="BECOME A VOLUNTEER"

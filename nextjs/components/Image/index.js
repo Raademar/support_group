@@ -11,7 +11,7 @@ const ImageStyle = styled.div`
 		position: ${props => props.position || 'absolute'};
 		bottom: ${props => props.bottom};
 		right: ${props => props.right};
-		z-index: 999;
+		z-index: 9;
 	}
 `
 

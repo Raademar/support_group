@@ -30,12 +30,13 @@ const ActivitiesPopupBoxStyle = styled.section`
 
   .imgPopup {
     border-radius: 0%;
+    width: 100%;
     margin-top: 10px;
   }
   .imgPopupBox {
     position: relative;
-    width: 50%;
-    margin-left: ${props => (props.isDesktop ? "" : "26%")};
+    width: 88%;
+    margin-left: ${props => (props.isDesktop ? "" : "6%")};
     top: ${props => (props.isDesktop ? "-258px" : "")};
     left: ${props => (props.isDesktop ? "5%" : "")};
     width: ${props => (props.isDesktop ? "%" : "")};
@@ -92,7 +93,7 @@ const ActivitiesPopupBox = props => {
       <div className="imgPopupBox">
         <img
           className="imgPopup"
-          src={`${props.item.acf.image.sizes.medium}`}
+          src={`${props.item.acf.image.sizes.large}`}
         />
       </div>
     </ActivitiesPopupBoxStyle>

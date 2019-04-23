@@ -17,16 +17,16 @@ const StyledMemberPage = styled.div`
 	}
 	.member-person-inscope {
 		background: #f2f2f2;
-		min-height: 523px;
+		min-height: 584px;
 		position: relative;
 		& .member-person-quote {
 			width: ${props => (props.isDesktop ? '340px' : '162px')};
-			line-height: 130%;
+			line-height: 25px;
 			letter-spacing: 0.4px;
 			font-weight: 200;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
-			top: ${props => (props.isDesktop ? '18%' : '13%')};
+			top: ${props => (props.isDesktop ? '18%' : '14%')};
 		}
 		& .member-person-quote-name {
 			font-weight: 600;
@@ -99,7 +99,7 @@ const StyledMemberPage = styled.div`
 				text-align: center;
 				font-weight: 200;
 				width: 215px;
-				line-height: 150%;
+				line-height: 25px;
 				letter-spacing: 0.05em;
 			}
 		}
@@ -141,82 +141,86 @@ const MemberPage = props => {
 		const { acf } = props.memberData[0]
 		// console.log(acf)
 		return (
-			<StyledMemberPage {...props}>
-				<div className="member-hero-colored-bg">
-					<Section>
-						<div className={props.isDesktop ? 'member-if-is-desktop' : ''}>
-							<Heading
-								textAlign="left"
-								position="relative"
-								heroText="BECOME A MEMBER"
-								width="90%"
-								paddingTop="32px"
-								color="black"
-								marginTop="0"
-							/>
-							<BodyText
-								position="relative"
-								bodyText={props.aboutData[0].content.rendered}
-								textAlign="left"
-								width={props.isDesktop ? '505px' : '96%'}
-								lineHeight="170%"
-								zIndex="3"
-							/>
-							<Button
-								color="#fff"
-								fontSize="16px"
-								width="198px"
-								height="52px"
-								text="Become a member"
-								marginTop="45px"
-								marginBottom="80px"
-								zIndex="2"
-								primary
-								onClick={props.toggleModal}
-							/>
-						</div>
-					</Section>
-					<img
-						className="hero-image-member-page"
-						src={acf.hero_image_member_page.sizes.medium}
-						alt={acf.hero_image_member_page.filename}
-					/>
-				</div>
-				<div
-					className={
-						props.isDesktop
-							? 'member-bullet-points-desktop'
-							: 'member-bullet-points-mobile'
-					}
-				>
-					{props.memberPercs.map((item, index) => (
-						<div
-							className={props.isDesktop ? 'members-desktop' : 'members-mobile'}
-							key={index}
-						>
-							<img src={`${item.acf.image.sizes.thumbnail}`} />
-							<h3>{item.title.rendered}</h3>
-							<p key={index}>{`${item.content.rendered}`}</p>
-						</div>
-					))}
-				</div>
-				<div className="member-person-inscope">
-					<p className="member-person-quote">
-						“As a member i get a democratic possibility to vote. That together
-						with all fun activities makes my membership a great thing.”
-					</p>
-					<p className="member-person-quote-name">Kasim Pontiga </p>
-					<img
-						src={
-							props.isDesktop
-								? '/static/images/member_in_scope_desktop.png'
-								: acf.member_page_bottom_image.sizes.large
-						}
-						alt=""
-					/>
-				</div>
-			</StyledMemberPage>
-		)
+      <StyledMemberPage {...props}>
+        <div className="member-hero-colored-bg">
+          <Section>
+            <div className={props.isDesktop ? "member-if-is-desktop" : ""}>
+              <Heading
+                textAlign="left"
+                position="relative"
+                heroText="BECOME A MEMBER"
+                width="90%"
+                paddingTop="32px"
+                color="black"
+                marginTop="0"
+              />
+              <BodyText
+                position="relative"
+                bodyText={props.aboutData[0].content.rendered}
+                textAlign="left"
+                width={props.isDesktop ? "505px" : "96%"}
+                lineHeight="170%"
+                zIndex="3"
+                lineHeight="25px"
+              />
+              <Button
+                color="#fff"
+                fontSize="16px"
+                width="198px"
+                height="52px"
+                text="Become a member"
+                marginTop="45px"
+                marginBottom="80px"
+                zIndex="2"
+                primary
+                onClick={props.toggleModal}
+              />
+            </div>
+          </Section>
+          <img
+            className="hero-image-member-page"
+            src={acf.hero_image_member_page.sizes.medium}
+            alt={acf.hero_image_member_page.filename}
+          />
+        </div>
+        <div
+          className={
+            props.isDesktop
+              ? "member-bullet-points-desktop"
+              : "member-bullet-points-mobile"
+          }
+        >
+          {props.memberPercs.map((item, index) => (
+            <div
+              className={
+                props.isDesktop ? "members-desktop" : "members-mobile"
+              }
+              key={index}
+            >
+              <img src={`${item.acf.image.sizes.thumbnail}`} />
+              <h3>{item.title.rendered}</h3>
+              <p key={index}>{`${item.content.rendered}`}</p>
+            </div>
+          ))}
+        </div>
+        <div className="member-person-inscope">
+          <p className="member-person-quote">
+            “As a member i get a democratic possibility to vote. That
+            together with all fun activities makes my membership a great
+            thing.”
+          </p>
+          <p className="member-person-quote-name">Kasim Pontiga </p>
+          <img
+            src={
+              props.isDesktop
+                ? "/static/images/member_in_scope_desktop.png"
+                : acf.member_page_bottom_image.sizes.large
+            }
+            alt=""
+          />
+        </div>
+      </StyledMemberPage>
+    );
 	} else {
 		return null
 	}
