@@ -102,7 +102,7 @@ export default class extends Component {
 				<Heading
 					heroText="NEWS"
 					position="initial"
-					paddingTop="24px"
+					paddingTop="120px"
 					paddingBottom="42px"
 					backgroundColor="#DFEAFA"
 				/>

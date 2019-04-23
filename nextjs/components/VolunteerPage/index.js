@@ -16,16 +16,16 @@ const StyledVolunteerPage = styled.div`
 	}
 	.volunteer-person-inscope {
 		background: #f2f2f2;
-		min-height: 523px;
+		min-height: 584px;
 		position: relative;
 		& .volunteer-person-quote {
 			width: ${props => (props.isDesktop ? '340px' : '162px')};
-			line-height: 130%;
+			line-height: 25px;
 			letter-spacing: 0.4px;
 			font-weight: 200;
 			position: absolute;
 			left: ${props => (props.isDesktop ? '26%' : '6%')};
-			top: ${props => (props.isDesktop ? '18%' : '10%')};
+			top: ${props => (props.isDesktop ? '18%' : '6%')};
 		}
 		& .volunteer-person-quote-name {
 			font-weight: 600;

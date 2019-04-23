@@ -6,11 +6,12 @@ import Heading from '../Heading'
 const HeroStyle = styled.section`
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height:90vh;
   text-align: center;
   position: relative;
   padding-top: 80px;
-  background: #dfeafa;
+  background: #fff;
+  /* background: #dfeafa; */
   z-index:1;
 
   & div {
@@ -76,32 +77,43 @@ const HeroStyle = styled.section`
 
 const Hero = props => {
 	return (
-		<HeroStyle {...props}>
-			<div className="infoBox">
-				<Heading
-					fontSize={props.isDesktop ? '64px' : '36px'}
-					className="firstWord"
-					heroText={props.heroText}
-					marginTop="18%"
-					// top="3rem"
-					isDesktop={props.isDesktop}
-					position="relative"
-				/>
-				<h4>{props.heroSmallText}</h4>
-				<div>
-					<Button width="198px" height="52px" text="Bli medlem" primary />
-					<Button
-						width="198px"
-						height="52px"
-						text="Bli volontär"
-						color="black"
-					/>
-				</div>
-			</div>
-			<div className="imgDiv">
-				<img src={props.heroImage} />
-			</div>
-		</HeroStyle>
-	)
+    <HeroStyle {...props}>
+      <div className="infoBox">
+        <Heading
+          fontSize={props.isDesktop ? "64px" : "36px"}
+          className="firstWord"
+          heroText={props.heroText}
+          marginTop="18%"
+          // top="3rem"
+          isDesktop={props.isDesktop}
+          position="relative"
+        />
+        <h4>{props.heroSmallText}</h4>
+        <div>
+          <Link href="/member">
+            <Button
+              width="198px"
+              height="52px"
+              text="BECOME A MEMBER"
+              fontSize="14px"
+              primary
+            />
+          </Link>
+          <Link href="/volunteer">
+            <Button
+              width="198px"
+              height="52px"
+              text="BECOME A VOLUNTEER"
+              fontSize="14px"
+              color="black"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="imgDiv">
+        <img src={props.heroImage} />
+      </div>
+    </HeroStyle>
+  );
 }
 export default Hero

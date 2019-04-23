@@ -18,7 +18,7 @@ const StyledNewsPosts = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 42px;
+		margin-bottom: 14px;
 		.news-image-container {
 			padding: 24px 0;
 			margin: 0 24px;
