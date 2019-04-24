@@ -22,9 +22,7 @@ const ActivitiesPopupBoxStyle = styled.section`
   left: ${props => props.left || "0"};
   z-index: ${props => props.zIndex};
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.25);
-
   text-align: ${props => (props.isDesktop ? "left" : "center")};
-
   align-content: center;
   justify-items: center;
 
@@ -34,21 +32,21 @@ const ActivitiesPopupBoxStyle = styled.section`
     margin-top: 10px;
   }
   .imgPopupBox {
-    position: relative;
-    width: 88%;
-    margin-left: ${props => (props.isDesktop ? "" : "6%")};
-    top: ${props => (props.isDesktop ? "-258px" : "")};
+    position: fixed;
+    width: ${props => props.isDesktop ? "30vw" : "88%"};
+    margin-left: ${props => (props.isDesktop ? "10vw" : "6%")};
+    top: ${props => (props.isDesktop ? "26vh" : "")};
     left: ${props => (props.isDesktop ? "5%" : "")};
     width: ${props => (props.isDesktop ? "%" : "")};
   }
   .infoPopupBox {
-    width: ${props => (props.isDesktop ? "50%" : "")};
+    width: ${props => (props.isDesktop ? "70%" : "")};
     left: ${props => (props.isDesktop ? "50%" : "")};
   }
   .closeImgPopup {
     position: fixed;
-    top: 16.5vh;
-    left: ${props => (props.isDesktop ? "78vw" : "83vw")};
+    top: 20.5vh;
+    left: ${props => (props.isDesktop ? "85vw" : "83vw")};
     width: auto;
   }
   .symbol {

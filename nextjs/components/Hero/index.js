@@ -21,17 +21,17 @@ const HeroStyle = styled.section`
     align-items: center;
     position: relative;
     & h1 {
-      width: ${props => (props.isDesktop ? '50%' : null)};
+      width: ${props => (props.isDesktop ? "60%" : null)};
 
     }
     & h4 {
       position: relative;
-      font-size: ${props => (props.isdesktop ? '64px' : '16px')};
-      /* top: ${props => (props.isDesktop ? '19rem' : '10rem')}; */
-      margin-top: 8%;
-      margin-bottom: 8%;
+      font-size: ${props => (props.isdesktop ? "64px" : "16px")};
+      /* top: ${props => (props.isDesktop ? "19rem" :"10rem")}; */
+      margin-top: 3%;
+      margin-bottom: 34%;
       color: #393939;
-      width: ${props => (props.isDesktop ? '25%' : '90%')};
+      width: ${props => (props.isDesktop ? "40%" : "90%")};
       text-align: center;
       letter-spacing: 0.04em;
       line-height: 27px;
@@ -40,7 +40,7 @@ const HeroStyle = styled.section`
       font-weight: 400;
     }
     /* & img {
-      width: ${props => (props.isDesktop ? null : '')};
+      width: ${props => (props.isDesktop ? null : "")};
       left: 0px;
       max-height: 100vh;
     } */
@@ -48,8 +48,8 @@ const HeroStyle = styled.section`
     & div {
       position: relative;
       z-index: 1;
-      display: ${props => (props.isDesktop ? 'flex' : null)};
-      flex-direction: ${props => (props.isDesktop ? 'row' : null)};
+      display: ${props => (props.isDesktop ? "flex" : null)};
+      flex-direction: ${props => (props.isDesktop ? "row" : null)};
       & button {
         margin-left: 8px;
         margin-right: 8px;
@@ -58,10 +58,14 @@ const HeroStyle = styled.section`
   }
   .imgDiv{
       overflow: hidden;
-      width: 100vw;
+      width: ${props => (props.isDesktop ? "50vw" : "100vw")};
       position: absolute; 
+      text-align: center;
       z-index: 1;
       bottom: 0;
+      left:0;right:0;
+      margin-left:auto;
+      margin-right:auto;
       img {
         width: 100%;
 
@@ -73,7 +77,7 @@ const HeroStyle = styled.section`
     width: 100vw;
     overflow: hidden;
   }
-`
+`;
 
 const Hero = props => {
 	return (
@@ -83,10 +87,11 @@ const Hero = props => {
           fontSize={props.isDesktop ? "64px" : "36px"}
           className="firstWord"
           heroText={props.heroText}
-          marginTop="18%"
+          marginTop={props.isDesktop ? "5%" : "18%"}
           // top="3rem"
           isDesktop={props.isDesktop}
           position="relative"
+          fontWeight="normal"
         />
         <h4>{props.heroSmallText}</h4>
         <div>

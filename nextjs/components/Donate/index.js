@@ -37,7 +37,7 @@ const DonateStyle = styled.div`
     }
   }
   .donateButtonDiv {
-    padding-bottom: 18%;
+    padding-bottom: ${props => props.isDesktop ? "0%" : "18%"};
   }
   a {
     text-decoration: none;

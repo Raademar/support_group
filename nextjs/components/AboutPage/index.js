@@ -6,56 +6,57 @@ import Heading from '../Heading'
 import Section from '../Section'
 
 const AboutStyle = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-	& .image {
-		margin-top: 1.6em;
-		width: ${props => (props.isDesktop ? '50vw' : '90vw')};
-		display: flex;
-		margin-left: 20px;
-	}
+  .membersBox {
+    grid-template-columns: ${props => props.isDesktop ? "1fr 1fr" : "1fr"};
+    display: grid;
+    margin-left: 36px;
+    margin-right: 36px;
 
-	& .image img {
-		width: ${props => (props.isDesktop ? '50%' : '90%')};
-		object-fit: contain;
-		margin-top: 4%;
-		width: 56%;
-		height: 88%;
-	}
+   >.members {
+    margin-top: 1em;
+    grid-template-columns: 1fr 3fr;
+    display: grid;
+    align-items: center;
+    margin-left: ${props => (props.isDesktop ? "24px" : "")};
+    margin-right: ${props => (props.isDesktop ? "24px" : "")};
 
-	& .membersBox {
-		grid-template-columns: ${props => (props.isDesktop ? '1fr 1fr' : '')};
-		display: grid;
-		margin-left: 36px;
-		margin-right: 36px;
-	}
-	& .members {
-		margin-top: 1em;
-		grid-template-columns: ${props =>
-		props.isDesktop ? '1fr 3fr' : '1fr 3fr'};
-		display: grid;
-		align-items: center;
-		margin-left: ${props => (props.isDesktop ? '24px' : '')};
-		margin-right: ${props => (props.isDesktop ? '24px' : '')};
+    >p {
+      /* margin-right: 12px; */
+      line-height: 28px;
+      color: #1c1c1c;
+    }
+  }
+  }
+  .image {
+    margin-top: 1.6em;
+    width: ${props => (props.isDesktop ? "50vw" : "90vw")};
+    display: flex;
+    margin-left: 20px;
+  }
 
-		p {
-			/* margin-right: 12px; */
-			line-height: 28px;
-			color: #1c1c1c;
-		}
-	}
-	& .divBox {
-		width: ${props => (props.isDesktop ? '50%' : '90%')};
-		display: ${props => (props.isDesktop ? 'relativ' : 'flex')};
-		margin-top: ${props => (props.isDesktop ? '16vh' : '1.6em')};
-		flex-direction: column;
-		align-content: center;
-		justify-items: center;
-	}
-`
+  .image img {
+    width: ${props => (props.isDesktop ? "50%" : "90%")};
+    object-fit: contain;
+    margin-top: 4%;
+    width: 56%;
+    height: 88%;
+  }
+
+  .divBox {
+    width: ${props => (props.isDesktop ? "50%" : "90%")};
+    display: ${props => (props.isDesktop ? "relativ" : "flex")};
+    /* margin-top: ${props => (props.isDesktop ? "16vh" : "1.6em")}; */
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    margin: auto;
+  }
+`;
 
 const AboutPage = props => {
 	if (
@@ -64,30 +65,32 @@ const AboutPage = props => {
 		props.ourVision ||
 		props.isDesktop
 	) {
-		// console.log(props.isDesktop)
+		console.log(props.isDesktop)
 
 		return (
-      <AboutStyle {...props}>
-        <Section>
+      <AboutStyle>
+        <Section {...props}>
           <Heading
-            textAlign={props => (props.isDesktop ? "center" : "left")}
+            textAlign={props.isDesktop ? "center" : "left"}
             heroText={props.whatWeDo[0].title.rendered}
             marginTop={props.isDesktop ? "9em" : "1em"}
             marginBottom={props.isDesktop ? "40px" : "1em"}
             left="0"
             position="relative"
-            fontSize={props => (props.isDesktop ? "36px" : "24px")}
+            fontSize={props.isDesktop ? "36px" : "24px"}
+            letterSpacing="0.04em"
           />
           <BodyText
             bodyText={props.whatWeDo[0].content.rendered}
-            lineHeight={props.isDesktop ? "220%" : "180%"}
+            lineHeight={props.isDesktop ? "43px" : "27px"}
             textAlign={props.isDesktop ? "center" : "left"}
-            fontSize={props => (props.isDesktop ? "20px" : "16px")}
+            fontSize={props.isDesktop ? "24px" : "16px"}
             width={props.isDesktop ? "auto" : "100%"}
             paddingBottom={props.isDesktop ? "7em" : "1em"}
             marginRight={props.isDesktop ? "12em" : ""}
             marginLeft={props.isDesktop ? "12em" : ""}
             marginBottom={props.isDesktop ? "80px" : ""}
+            letterSpacing="0.04em"
           />
         </Section>
         <Section
@@ -114,8 +117,9 @@ const AboutPage = props => {
               position="relative"
               textAlign="left"
               marginLeft="24px"
+              margintop="1.6em"
               color="#1c1c1c"
-              fontSize={props => (props.isDesktop ? "36px" : "24px")}
+              fontSize={props.isDesktop ? "36px" : "24px"}
             />
             <BodyText
               bodyText={props.background[0].content.rendered}
@@ -123,7 +127,7 @@ const AboutPage = props => {
               lineHeight="180%"
               marginLeft="24px"
               textAlign="left"
-              fontSize={props => (props.isDesktop ? "20px" : "16px")}
+              fontSize={props.isDesktop ? "20px" : "16px"}
               paddingBottom={props.isDesktop ? "0em" : "4em"}
             />
           </div>
@@ -145,7 +149,7 @@ const AboutPage = props => {
               textAlign="left"
               marginLeft="24px"
               color="#1c1c1c"
-              fontSize={props => (props.isDesktop ? "36px" : "24px")}
+              fontSize={props.isDesktop ? "36px" : "24px"}
               marginTop={props.isDesktop ? "0" : "1em"}
             />
             <BodyText
@@ -154,7 +158,7 @@ const AboutPage = props => {
               width={props.isDesktop ? "90%" : ""}
               textAlign="left"
               marginLeft="24px"
-              fontSize={props => (props.isDesktop ? "20px" : "16px")}
+              fontSize={props.isDesktop ? "20px" : "16px"}
               paddingBottom={props.isDesktop ? "5%" : "4em"}
             />
           </div>
@@ -175,7 +179,7 @@ const AboutPage = props => {
             position="relative"
             textAlign="left"
             color="#1c1c1c"
-            fontSize={props => (props.isDesktop ? "36px" : "24px")}
+            fontSize={props.isDesktop ? "36px" : "24px"}
             marginLeft="14.8vw"
             width="auto"
           />

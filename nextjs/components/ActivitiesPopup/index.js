@@ -51,10 +51,10 @@ class ActivitiesPopup extends React.Component {
         {this.state.showPopup ? (
           <ActivitiesPopupBox
             item={this.props.item}
-            width={this.props.isDesktop ? "66vw" : "95vw"}
+            width={this.props.isDesktop ? "80vw" : "95vw"}
             height={this.props.isDesktop ? "60vh" : "80vh"}
-            top={this.props.isDesktop ? "12.5vh" : "12.5vh"}
-            left={this.props.isDesktop ? "17vw" : "2vw"}
+            top={this.props.isDesktop ? "16.5vh" : "12.5vh"}
+            left={this.props.isDesktop ? "10vw" : "2vw"}
             zIndex="4"
             backgroundColor="white"
             position="fixed"

@@ -59,12 +59,12 @@ export default class extends Component {
 		return (
       <Layout navigationMenu={this.props.pages}>
         <AboutPage
+					isDesktop={this.props.isDesktop}
           missionData={missionData}
           whatWeDo={this.props.whatWeDo}
           background={this.props.background}
           ourVision={this.props.ourVision}
           pages={this.props.pages}
-          isDesktop={this.props.isDesktop}
         />
         <Activities activitiesData={this.props.activities} />
       </Layout>

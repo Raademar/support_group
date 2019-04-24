@@ -89,7 +89,7 @@ export default class extends Component {
 		return (
       <Layout navigationMenu={this.props.pages}>
         <Hero
-          heroText="Together for a bright future"
+					heroText="TOGETHER FOR A BETTER FUTURE"
           heroSmallText="We are a non-profit organization working hard to give refugees a better future"
           heroImage={correctHeroImagePath}
         />
