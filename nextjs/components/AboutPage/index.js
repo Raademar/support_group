@@ -36,15 +36,22 @@ const AboutStyle = styled.div`
     margin-top: 1.6em;
     width: ${props => (props.isDesktop ? "50vw" : "90vw")};
     display: flex;
-    margin-left: 20px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+  }
+  .image2 {
+    margin-top: 1.6em;
+    width: ${props => (props.isDesktop ? "50vw" : "90vw")};
+    display: flex;
+    margin-left: 12px;
+    margin-bottom: 30px;
   }
 
   .image img {
     width: ${props => (props.isDesktop ? "50%" : "90%")};
     object-fit: contain;
-    margin-top: 4%;
-    width: 56%;
-    height: 88%;
+    width: 94%;
+    /* height: 94%; */
   }
 
   .divBox {
@@ -116,7 +123,7 @@ const AboutPage = props => {
               left="0"
               position="relative"
               textAlign="left"
-              marginLeft="24px"
+              // marginLeft="24px"
               margintop="1.6em"
               color="#1c1c1c"
               fontSize={props.isDesktop ? "36px" : "24px"}
@@ -125,7 +132,7 @@ const AboutPage = props => {
               bodyText={props.background[0].content.rendered}
               width={props.isDesktop ? "90%" : ""}
               lineHeight="180%"
-              marginLeft="24px"
+              // marginLeft="24px"
               textAlign="left"
               fontSize={props.isDesktop ? "20px" : "16px"}
               paddingBottom={props.isDesktop ? "0em" : "4em"}
@@ -136,8 +143,9 @@ const AboutPage = props => {
           backgroundColor="#fff"
           display={props.isDesktop ? "flex" : "block"}
           justifyContent={props.isDesktop ? "center" : ""}
+          paddingTop="0"
         >
-          <div className="image">
+          <div className="image2">
             <img src={props.ourVision[0].acf.image} alt="alt" />
           </div>
           <div className="divBox">
@@ -147,7 +155,7 @@ const AboutPage = props => {
               left="0"
               position="relative"
               textAlign="left"
-              marginLeft="24px"
+              // marginLeft="24px"
               color="#1c1c1c"
               fontSize={props.isDesktop ? "36px" : "24px"}
               marginTop={props.isDesktop ? "0" : "1em"}
@@ -157,9 +165,9 @@ const AboutPage = props => {
               lineHeight="180%"
               width={props.isDesktop ? "90%" : ""}
               textAlign="left"
-              marginLeft="24px"
+              // marginLeft="24px"
               fontSize={props.isDesktop ? "20px" : "16px"}
-              paddingBottom={props.isDesktop ? "5%" : "4em"}
+              paddingBottom={props.isDesktop ? "5%" : "2em"}
             />
           </div>
         </Section>
@@ -169,7 +177,8 @@ const AboutPage = props => {
           left="0"
           marginLeft="0"
           marginRight="0"
-          paddingBottom="4em"
+          paddingBottom="2em"
+          paddingTop="0em"
         >
           <Heading
             paddingTop="2em"

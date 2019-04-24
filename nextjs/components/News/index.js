@@ -58,7 +58,7 @@ const NewsButton = styled.a`
 	font-family: Lato;
 	border-radius: 8px;
 	margin: 0 auto;
-	margin-top: 24px;
+	margin-top: 54px;
 	margin-bottom: 24px;
 	display: flex;
 	justify-content: center;

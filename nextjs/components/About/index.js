@@ -36,6 +36,18 @@ const StyledButton = styled.a`
 	}
 `
 
+function firstWordFromId(selectId, addClass) {
+	var jsIntro = document.getElementById(selectId);
+	var originalString = jsIntro.innerHTML;
+	var splitWords = originalString.split(" ");
+
+	jsIntro.innerHTML =
+		"<span class=" + addClass + ">"
+			.concat(splitWords[0], "</span>") + "&#32;" + originalString
+				.substr(originalString.indexOf(" ") + 1);
+}
+
+
 const About = props => {
 	if (props.pageData) {
 		// console.log(props.pageData)
@@ -55,10 +67,10 @@ const About = props => {
             bodyText={props.pageData.content.rendered}
             // width={props.isDesktop ? "90%" : ""}
             marginLeft={props.isDesktop ? "15%" : ""}
-			marginRight={props.isDesktop ? "15%" : ""}
-			fontSize={props.isDesktop ? "24px" : "16px" }
-			letterSpacing="0.04em"
-			lineHeight={props.isDesktop ? "44px" : "27px"}
+						marginRight={props.isDesktop ? "15%" : ""}
+						fontSize={props.isDesktop ? "24px" : "16px" }
+						letterSpacing="0.04em"
+						lineHeight={props.isDesktop ? "44px" : "27px"}
 				  />
           <Link href="/about">
             <StyledButton>READ MORE ABOUT OUR WORK</StyledButton>
