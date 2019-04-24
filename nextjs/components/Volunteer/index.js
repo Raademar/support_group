@@ -61,8 +61,9 @@ const Volunteer = props => {
 						width={props.isDesktop ? '80%' : '96%'}
 						color="#fff"
 						marginTop="18px"
-						lineHeight={props.isDesktop ? '180%' : '140%'}
 						bodyText={props.pageData.content.rendered}
+						lineHeight={props.isDesktop ? '180%' : '30px'}
+						letterSpacing="0.04em"
 					/>
 					<Link href="/volunteer">
 						<Button
@@ -95,7 +96,19 @@ const Volunteer = props => {
 						alt={acf.landing_page_image.filename}
 					/>
 
-					<svg width="376" height="386" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 386h376V72.354C163.557 119.013 86.924 77.59 6.676 5.872A163.658 163.658 0 0 0 0 .217V386z" fill="#fff" /></svg>
+					<svg
+						width="376"
+						height="386"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M0 386h376V72.354C163.557 119.013 86.924 77.59 6.676 5.872A163.658 163.658 0 0 0 0 .217V386z"
+							fill="#fff"
+						/>
+					</svg>
 				</Section>
 			</VolunteerStyle>
 		)

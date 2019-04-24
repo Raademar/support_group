@@ -40,6 +40,8 @@ const ProjectStyle = styled.div`
 		font-size: 18px;
 		font-weight: lighter;
 		margin-top: 8%;
+		line-height: 30px;
+		letter-spacing: 0.04em;
 	}
 `
 

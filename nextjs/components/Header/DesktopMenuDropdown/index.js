@@ -14,7 +14,6 @@ const DesktopMenuDropdown = props => {
 	const [loaded, setLoaded] = useState(false)
 
 	useEffect(() => {
-		console.log(loaded, '------')
 		setLoaded(true)
 	})
 

@@ -150,7 +150,7 @@ class SimpleSlider extends Component {
 								<div className="news-content-container">
 									<h3 className="news-header">{item.title.rendered}</h3>
 									<p className="news-content">
-										{this.getExcerpted(item.acf.text, 40).shortText}
+										{this.getExcerpted(item.acf.text, 80).shortText}
 									</p>
 								</div>
 								<div className="news-date">
