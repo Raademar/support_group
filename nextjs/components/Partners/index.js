@@ -6,7 +6,8 @@ import ActivitiesPopup from '../ActivitiesPopup'
 import React, { useEffect } from 'react'
 
 const ActivitiesList = styled.section`
-  background-color: #F6F6F6;    
+  /* background-color: #F6F6F6;     */
+  background-color: #dfeafa;    
   padding: 0;
   padding-left:${props => (props.isDesktop ? "5%" : "")};
   margin: 0;

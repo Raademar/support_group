@@ -14,8 +14,8 @@ const AboutStyle = styled.div`
   .membersBox {
     grid-template-columns: ${props => props.isDesktop ? "1fr 1fr" : "1fr"};
     display: grid;
-    margin-left: 36px;
-    margin-right: 36px;
+    margin-left: 24px;
+    margin-right: 44px;
 
    >.members {
     margin-top: 1em;
@@ -80,7 +80,7 @@ const AboutPage = props => {
           <Heading
             textAlign={props.isDesktop ? "center" : "left"}
             heroText={props.whatWeDo[0].title.rendered}
-            marginTop={props.isDesktop ? "9em" : "1em"}
+            marginTop={props.isDesktop ? "9em" : "2em"}
             marginBottom={props.isDesktop ? "40px" : "1em"}
             left="0"
             position="relative"
@@ -110,8 +110,8 @@ const AboutPage = props => {
           left="0"
           marginLeft="0"
           marginRight="0"
-          paddingTop="5%"
-          paddingBottom="5%"
+          paddingTop="7%"
+          paddingBottom="3%"
         >
           <div className="image">
             <img src={props.background[0].acf.image} alt="bild" />
@@ -189,7 +189,7 @@ const AboutPage = props => {
             textAlign="left"
             color="#1c1c1c"
             fontSize={props.isDesktop ? "36px" : "24px"}
-            marginLeft="14.8vw"
+            marginLeft="24px"
             width="auto"
           />
           <div className="membersBox">

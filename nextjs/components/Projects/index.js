@@ -47,28 +47,28 @@ const ProjectStyle = styled.div`
 
 const Projects = props => {
 	return (
-		<ProjectStyle {...props}>
-			<Heading
-				heroText="OUR PROJECTS"
-				position={props.isDesktop ? 'relative' : 'relative'}
-				fontSize={props.isDesktop ? '36px' : '24px'}
-				marginTop={props.isDesktop ? '4vh' : '2vh'}
-				paddingTop="8vh"
-				marginBottom={props.isDesktop ? '2vh' : '2vh'}
-				fontWeight="normal"
-			/>
-			<div className="projectsBox">
-				{props.projectsData.map((item, index) => (
-					<div key={index}>
-						<img src={item.acf.logo.sizes.large} />
-						<h1>{item.title.rendered}</h1>
-						<p>{item.acf.text}</p>
-					</div>
-				))}
-			</div>
-			.
-		</ProjectStyle>
-	)
+    <ProjectStyle {...props}>
+      <Heading
+        heroText="OUR PROJECTS"
+        position={props.isDesktop ? "relative" : "relative"}
+        fontSize={props.isDesktop ? "36px" : "24px"}
+        marginTop={props.isDesktop ? "4vh" : "2vh"}
+        paddingTop="8vh"
+        marginBottom={props.isDesktop ? "2vh" : "2vh"}
+        fontWeight="normal"
+      />
+      <div className="projectsBox">
+			{props.projectsData.reverse().map((item, index) => (
+          	<div key={index}>
+            <img src={item.acf.logo.sizes.large} />
+            <h1>{item.title.rendered}</h1>
+            <p>{item.acf.text}</p>
+          </div>
+        ))}
+      </div>
+      .
+    </ProjectStyle>
+  );
 }
 
 export default Projects
