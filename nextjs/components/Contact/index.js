@@ -87,7 +87,9 @@ const ContactStyle = styled.div`
 	}
 `
 
+
 const Contact = props => {
+	render()
 	return (
 		<ContactStyle>
 			<Section>

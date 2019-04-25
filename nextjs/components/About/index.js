@@ -36,18 +36,6 @@ const StyledButton = styled.a`
 	}
 `
 
-function firstWordFromId(selectId, addClass) {
-	var jsIntro = document.getElementById(selectId);
-	var originalString = jsIntro.innerHTML;
-	var splitWords = originalString.split(" ");
-
-	jsIntro.innerHTML =
-		"<span class=" + addClass + ">"
-			.concat(splitWords[0], "</span>") + "&#32;" + originalString
-				.substr(originalString.indexOf(" ") + 1);
-}
-
-
 const About = props => {
 	if (props.pageData) {
 		// console.log(props.pageData)

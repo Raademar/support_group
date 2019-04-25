@@ -79,7 +79,7 @@ const HeroStyle = styled.section`
   }
   #heroText{
     font-size: ${props => (props.isDesktop ? "64px" : "36px")};
-    margin-top: ${props => (props.isDesktop ? "5%" : "18%")};
+    margin-top: ${props => (props.isDesktop ? "5%" : "14%")};
     font-family: ${props => props.fontFamily || "'Paytone One', sans-serif"};
     /* isDesktop={props.isDesktop} */
     position: relative;
@@ -91,14 +91,12 @@ const HeroStyle = styled.section`
 `;
 // console.log(document.getElementById(heroText));
 
-if (typeof window !== 'undefined') {
-  
+if (typeof window !== "undefined" && location.path === "/") {
   function firstWordFromId(selectId, addClass) {
     var firstWord = document.getElementById(selectId);
     var originalString = firstWord.innerHTML;
     var splitWords = originalString.split(" ");
-    console.log(splitWords);
-    
+
     firstWord.innerHTML =
       "<span class=" +
       addClass +
@@ -106,7 +104,7 @@ if (typeof window !== 'undefined') {
       "&#32;" +
       originalString.substr(originalString.indexOf(" ") + 1);
   }
-  firstWordFromId('heroText', 'heroTextFirstWord');
+  firstWordFromId("heroText", "heroTextFirstWord");
 }
   
 const Hero = props => {
@@ -114,8 +112,7 @@ const Hero = props => {
     <HeroStyle {...props}>
       <div className="infoBox">
         <h1 
-          id="heroText" 
-          class=""
+          id="heroText"
           >
           {props.heroText}
 
